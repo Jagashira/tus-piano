@@ -1,0 +1,35 @@
+.container{
+    height: 100vh;
+    background-color: black;
+}
+.name{
+}
+
+.introduction{
+
+}
+.newsHeadline{
+    display: flex;
+    justify-content: center;
+}
+.newsList{
+
+}
+.news{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-bottom: 2px solid black;
+    width: 90%;
+    position: relative;
+}
+.newsAt{
+}
+.newsTitle{
+    position: absolute;
+    left: calc(200px);
+}
+.activityDetail{
+
+}
