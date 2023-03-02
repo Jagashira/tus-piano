@@ -1,0 +1,13 @@
+.container {
+  padding: 20px 30px;
+  display: flex;
+}
+.left {
+  flex: 2;
+  background-color: aquamarine;
+}
+
+.right{
+    flex: 1;
+    background-color: beige ;
+}
