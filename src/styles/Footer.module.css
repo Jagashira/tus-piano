@@ -1,0 +1,49 @@
+.container{
+    height: auto;
+    background-color: black;
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    color: white;
+}
+.footerNav{
+    width: 70%;
+    margin: auto    ;
+
+    
+}
+.list{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.snsIcons{
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    justify-content: space-around;
+    margin: auto;
+    
+
+}
+.icon{
+    display: flex;
+    flex-direction: column;
+}
+.iconSize{
+    font-size: 50px;
+}
+.iconName{
+    font-size: 10px;
+    text-align: center;    
+}
+.name{
+    text-align: center;
+
+}
+.copyright{
+    text-align: center;
+
+}
