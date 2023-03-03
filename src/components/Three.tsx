@@ -8,10 +8,12 @@ import {
   useLoader,
   useFrame,
 } from "@react-three/fiber";
-import { OrbitControls, Sky } from "@react-three/drei";
-import { Water } from "three-stdlib";
+import { BakeShadows, OrbitControls, Sky, Effects } from "@react-three/drei";
+import { Water, UnrealBloomPass } from "three-stdlib";
+import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 
 extend({ Water });
+extend({ UnrealBloomPass });
 
 function Ocean() {
   const loadingManager = new THREE.LoadingManager();
@@ -49,31 +51,45 @@ function Ocean() {
 function Box() {
   const ref = useRef();
   useFrame((state, delta) => {
-    ref.current.position.y = 10 + Math.sin(state.clock.elapsedTime) * 20;
+    ref.current.position.y = 10 + Math.sin(state.clock.elapsedTime) * 6;
     ref.current.rotation.x =
       ref.current.rotation.y =
       ref.current.rotation.z +=
         delta;
   });
   return (
-    <mesh ref={ref} scale={20}>
+    <mesh ref={ref} scale={6}>
       <boxGeometry />
       <meshStandardMaterial />
     </mesh>
   );
 }
+const Piano = () => {
+  const obj = useLoader(OBJLoader, "obj/piano.obj");
+  return (
+    <primitive
+      object={obj}
+      position={[0, 0, 0]}
+      rotation={[Math.PI / 2, Math.PI, Math.PI]}
+      scale={0.007}
+    />
+  );
+};
 
 export default function Three() {
   return (
-    <Canvas camera={{ position: [0, 5, 100], fov: 55, near: 1, far: 20000 }}>
+    <Canvas camera={{ position: [-40, 40, -40] }}>
       <pointLight position={[100, 100, 100]} />
       <pointLight position={[-100, -100, -100]} />
       <Suspense fallback={null}>
         <Ocean />
-        <Box />
+        <Piano />
       </Suspense>
-      <Sky scale={1000} sunPosition={[500, 150, -1000]} turbidity={0.1} />
-      <OrbitControls />
+      {/* <Sky scale={1000} sunPosition={[500, 150, -1000]} turbidity={0.1} /> */}
+      <Effects disableGamma>
+        <unrealBloomPass threshold={1} strength={1.0} radius={0.5} />
+      </Effects>
+      <OrbitControls autoRotate />
     </Canvas>
   );
 }

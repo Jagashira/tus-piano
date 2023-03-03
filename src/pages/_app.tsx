@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 import InitPage from "@/components/InitPage";
 import RainyBackground from "@/components/water";
 import styles from "@/styles/Home.module.css";
-import Ripple from "@/components/Ripple";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [initialLoad, setInitialLoad] = useState<boolean>(true);
@@ -24,28 +23,26 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       {initialLoad ? (
-        // <div className={styles.feedIn}>
-        //   <Layout>
-        //     <Component {...pageProps} />
-        //     <div
-        //       style={{
-        //         height: "100vh",
-        //         width: "100vw",
-        //         zIndex: -1,
-        //         position: "fixed",
-        //         top: 0,
-        //         left: 0,
-        //       }}
-        //     >
-        //       <Three />
-        //     </div>
-        //   </Layout>
-        // </div>
-        <Ripple />
+        <div className={styles.feedIn}>
+          <Layout>
+            <Component {...pageProps} />
+            <div
+              style={{
+                height: "100vh",
+                width: "100vw",
+                zIndex: -100,
+                position: "fixed",
+                top: 0,
+                left: 0,
+              }}
+            >
+              <Three />
+            </div>
+          </Layout>
+        </div>
       ) : (
-        // <InitPage />
+        <InitPage />
         // <RainyBackground />
-        <Ripple />
       )}
     </>
   );
