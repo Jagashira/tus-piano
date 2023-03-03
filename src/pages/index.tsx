@@ -11,7 +11,7 @@ export default function Home() {
           content="こちらは東京理科大学ピアノの会のホームページです。"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/icon.jpg" />
+        <link rel="icon" href="/icon.png" />
       </Head>
       <MainPage />
     </>

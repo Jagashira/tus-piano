@@ -4,10 +4,10 @@
 }
 .left {
   flex: 2;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
 }
 
 .right{
     flex: 1;
-    background-color: beige ;
+    /* background-color: beige ; */
 }
