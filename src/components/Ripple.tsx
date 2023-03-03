@@ -1,3 +1,4 @@
+//@ts-nocheck
 import React, { Suspense, useCallback, useMemo, useRef } from "react";
 import * as THREE from "three";
 import {
@@ -23,7 +24,6 @@ const CameraControls = () => {
       ref={controlsRef}
       args={[camera, gl.domElement]}
       autoRotate
-      enableZoom={false}
     />
   );
 };
