@@ -1,8 +1,32 @@
 import React, { Suspense, useCallback, useMemo, useRef } from "react";
 import * as THREE from "three";
-import { Canvas, useFrame, useLoader } from "react-three-fiber";
+import {
+  Canvas,
+  extend,
+  useFrame,
+  useLoader,
+  useThree,
+} from "react-three-fiber";
 import circleImg from "public/img/circle.png";
 import styles from "../styles/Ripple.module.css";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+
+extend({ OrbitControls });
+
+const CameraControls = () => {
+  const { camera, gl } = useThree<any>();
+  const controlsRef = useRef();
+  useFrame(() => controlsRef.current.update());
+
+  return (
+    <orbitControls
+      ref={controlsRef}
+      args={[camera, gl.domElement]}
+      autoRotate
+      enableZoom={false}
+    />
+  );
+};
 
 const Points = () => {
   const imgTex = useLoader(THREE.TextureLoader, "/img/circle.png");
@@ -64,6 +88,7 @@ const Points = () => {
           count={positions.length / 3}
         ></bufferAttribute>
       </bufferGeometry>
+      <CameraControls />
       <pointsMaterial
         attach="material"
         map={imgTex}
