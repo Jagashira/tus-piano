@@ -1,4 +1,5 @@
 import MainPage from "@/components/MainPage";
+import Three from "@/components/Three";
 import Head from "next/head";
 
 export default function Home() {
@@ -11,9 +12,12 @@ export default function Home() {
           content="こちらは東京理科大学ピアノの会のホームページです。"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/icon.jpg" />
+        <link rel="icon" href="/icon.png" />
       </Head>
       <MainPage />
+      <div style={{ height: "100vh", width: "100vw", zIndex: -1 }}>
+        <Three />
+      </div>
     </>
   );
 }
