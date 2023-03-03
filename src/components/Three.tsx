@@ -16,9 +16,8 @@ extend({ Water });
 function Ocean() {
   const loadingManager = new THREE.LoadingManager();
   useEffect(() => {
-    loadingManager.onProgress = function (url, loaded, total) {
-      console.log("start");
-    };
+    loadingManager.onProgress = function (url, loaded, total) {};
+    console.log("start");
   }, []);
   const textureImage = "img/Water_2_M_Normal.jpg";
   //   const textureImage = "img/water.jpg";
