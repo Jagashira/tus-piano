@@ -1,6 +1,6 @@
 // @ts-nocheck
 import * as THREE from "three";
-import React, { Suspense, useRef, useMemo } from "react";
+import React, { Suspense, useRef, useMemo, useEffect } from "react";
 import {
   Canvas,
   extend,
@@ -14,6 +14,12 @@ import { Water } from "three-stdlib";
 extend({ Water });
 
 function Ocean() {
+  const loadingManager = new THREE.LoadingManager();
+  useEffect(() => {
+    loadingManager.onProgress = function (url, loaded, total) {
+      console.log("start");
+    };
+  }, []);
   const textureImage = "img/Water_2_M_Normal.jpg";
   //   const textureImage = "img/water.jpg";
   const ref = useRef();

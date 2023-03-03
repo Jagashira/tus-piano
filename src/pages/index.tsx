@@ -1,5 +1,4 @@
 import MainPage from "@/components/MainPage";
-import Three from "@/components/Three";
 import Head from "next/head";
 
 export default function Home() {
@@ -15,9 +14,6 @@ export default function Home() {
         <link rel="icon" href="/icon.png" />
       </Head>
       <MainPage />
-      <div style={{ height: "100vh", width: "100vw", zIndex: -1 }}>
-        <Three />
-      </div>
     </>
   );
 }
