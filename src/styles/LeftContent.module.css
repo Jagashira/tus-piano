@@ -5,12 +5,25 @@
 .name{
 }
 
-.introduction{
-
+.introBack{
+    
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    padding: 10px;
+}
+.introDesc{
+    color: white;   
+}
+.newsContainer{
+  border-radius: 20px;
+  margin: 10px 50px;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 .newsHeadline{
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    transform: translateX(100%); /* 要素を右端に配置 */
+  animation: slide-in 0.5s ease-out forwards; /* アニメーションの設定 */
+
 }
 .newsList{
 
@@ -18,18 +31,30 @@
 .news{
     display: flex;
     flex-direction: row;
-    margin-top: 20px;
-    margin-left: 20px;
+    margin: 20px 20px 5px 20px;
     border-bottom: 2px solid black;
-    width: 90%;
+    width: auto; 
     position: relative;
+}
+.news:last-child{
+  border: none;
 }
 .newsAt{
 }
 .newsTitle{
     position: absolute;
-    left: calc(200px);
+    left: calc(180px);
 }
 .activityDetail{
 
 }
+
+  
+  @keyframes slide-in {
+    from {
+      transform: translateX(100%); /* 要素を右端に配置 */
+    }
+    to {
+      transform: translateX(0); /* 要素を左に移動して表示 */
+    }
+  }
