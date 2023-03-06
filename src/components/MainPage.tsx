@@ -4,7 +4,7 @@ import LeftContent from "./LeftContent";
 import News from "./News";
 import RIghtContent from "./RIghtContent";
 
-const MainPage = () => {
+const Home = () => {
   return (
     <div className={styles.container}>
       <div className={styles.title}>
@@ -25,4 +25,4 @@ const MainPage = () => {
   );
 };
 
-export default MainPage;
+export default Home;

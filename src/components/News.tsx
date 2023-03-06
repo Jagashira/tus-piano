@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "../styles/News.module.css";
-import { Fade } from "react-awesome-reveal";
 
 const News = () => {
   const newsObjects = [
@@ -17,22 +16,20 @@ const News = () => {
     },
   ];
   return (
-    <Fade direction="up">
-      <div className={styles.container}>
-        <h1 className={styles.newsHeadline}>お知らせ</h1>
+    <div className={styles.container}>
+      <h1 className={styles.newsHeadline}>お知らせ</h1>
 
-        <div className={styles.newsList}>
-          {newsObjects.map((news, index) => {
-            return (
-              <div key={index} className={styles.news}>
-                <div className={styles.newsAt}>{news.at}</div>
-                <div className={styles.newsTitle}>{news.title}</div>
-              </div>
-            );
-          })}
-        </div>
+      <div className={styles.newsList}>
+        {newsObjects.map((news, index) => {
+          return (
+            <div key={index} className={styles.news}>
+              <div className={styles.newsAt}>{news.at}</div>
+              <div className={styles.newsTitle}>{news.title}</div>
+            </div>
+          );
+        })}
       </div>
-    </Fade>
+    </div>
   );
 };
 
