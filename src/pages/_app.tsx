@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <div className={styles.feedIn}>
           <Layout>
             <Component {...pageProps} />
-            <div
+            {/* <div
               style={{
                 height: "100vh",
                 width: "100vw",
@@ -37,7 +37,7 @@ export default function App({ Component, pageProps }: AppProps) {
               }}
             >
               <Three />
-            </div>
+            </div> */}
           </Layout>
         </div>
       ) : (
