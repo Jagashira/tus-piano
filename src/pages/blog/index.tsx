@@ -1,14 +1,19 @@
 import { Pagination } from "@/components/news/Pagination";
 import { clientBlog } from "@/modules/lib/client";
+import { Content, getCMSType } from "@/modules/types/microCmsTypes";
 import Link from "next/link";
 
-export default function Home({ blog, totalCount }) {
+interface Props {
+  blog: getCMSType;
+  totalCount: number;
+}
+export default function Home({ blog, totalCount }: any) {
   return (
     <div>
       <ul>
-        {blog.map((blog) => (
+        {blog.map((blog: any) => (
           <li key={blog.id}>
-            <Link href={`/blog/${blog.id}`}>{blog.title}</Link>
+            <Link href={`/blog/id/${blog.id}`}>{blog.title}</Link>
           </li>
         ))}
       </ul>

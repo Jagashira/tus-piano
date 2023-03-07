@@ -1,17 +1,22 @@
 import { Pagination } from "@/components/news/Pagination";
 import { clientBlog } from "@/modules/lib/client";
+import { Content, getCMSType } from "@/modules/types/microCmsTypes";
 import Link from "next/link";
 
 const PER_PAGE = 5;
 
 // pages/blog/[id].js
-export default function BlogPageId({ blog, totalCount }) {
+interface Props {
+  blog: getCMSType;
+  totalCount: number;
+}
+export default function BlogPageId({ blog, totalCount }: any) {
   return (
     <div>
       <ul>
-        {blog.map((blog) => (
+        {blog.map((blog: any) => (
           <li key={blog.id}>
-            <Link href={`/blog/${blog.id}`}>{blog.title}</Link>
+            <Link href={`/blog/id/${blog.id}`}>{blog.title}</Link>
           </li>
         ))}
       </ul>
@@ -24,7 +29,7 @@ export default function BlogPageId({ blog, totalCount }) {
 export const getStaticPaths = async () => {
   const repos = await clientBlog.get({ endpoint: "blog" });
 
-  const range = (start, end) =>
+  const range = (start: number, end: number) =>
     [...Array(end - start + 1)].map((_, i) => start + i);
 
   const paths = range(1, Math.ceil(repos.totalCount / PER_PAGE)).map(
@@ -35,7 +40,7 @@ export const getStaticPaths = async () => {
 };
 
 // データを取得
-export const getStaticProps = async (context) => {
+export const getStaticProps = async (context: any) => {
   const id = context.params.pageId;
   console.log(id);
 

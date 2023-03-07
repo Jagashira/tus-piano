@@ -2,6 +2,7 @@
 
 import { clientNews } from "@/modules/lib/client";
 import { FormatDate } from "@/modules/lib/formattedData";
+import { Content } from "@/modules/types/microCmsTypes";
 
 export default function newsId({ news }: any) {
   //const date = FormatDate(news.publishedAt, "YYYY-MM-DD-HH-mm");

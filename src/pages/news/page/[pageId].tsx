@@ -1,17 +1,22 @@
 import { Pagination } from "@/components/news/Pagination";
 import { clientNews } from "@/modules/lib/client";
+import { Content, getCMSType } from "@/modules/types/microCmsTypes";
 import Link from "next/link";
 
 const PER_PAGE = 5;
+interface Props {
+  news: getCMSType;
+  totalCount: number;
+}
 
 // pages/news/[id].js
-export default function newsPageId({ news, totalCount }) {
+export default function newsPageId({ news, totalCount }: any) {
   return (
     <div>
       <ul>
-        {news.map((news) => (
+        {news.map((news: any) => (
           <li key={news.id}>
-            <Link href={`/news/${news.id}`}>{news.title}</Link>
+            <Link href={`/news/id/${news.id}`}>{news.title}</Link>
           </li>
         ))}
       </ul>
@@ -24,7 +29,7 @@ export default function newsPageId({ news, totalCount }) {
 export const getStaticPaths = async () => {
   const repos = await clientNews.get({ endpoint: "news" });
 
-  const range = (start, end) =>
+  const range = (start: number, end: number) =>
     [...Array(end - start + 1)].map((_, i) => start + i);
 
   const paths = range(1, Math.ceil(repos.totalCount / PER_PAGE)).map(
@@ -35,7 +40,7 @@ export const getStaticPaths = async () => {
 };
 
 // データを取得
-export const getStaticProps = async (context) => {
+export const getStaticProps = async (context: any) => {
   const id = context.params.pageId;
   console.log(id);
 

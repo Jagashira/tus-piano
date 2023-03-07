@@ -2,6 +2,7 @@
 
 import { clientBlog } from "@/modules/lib/client";
 import { FormatDate } from "@/modules/lib/formattedData";
+import { Content } from "@/modules/types/microCmsTypes";
 
 export default function BlogId({ blog }: any) {
   //const date = FormatDate(blog.publishedAt, "YYYY-MM-DD-HH-mm");
@@ -28,7 +29,7 @@ export const getStaticPaths = async () => {
 
 // データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps = async (context: any) => {
-  const id = context.params.id;
+  const id = context.params.blogId;
   const data = await clientBlog.get({ endpoint: "blog", contentId: id });
 
   return {

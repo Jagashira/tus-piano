@@ -1,14 +1,19 @@
 import { Pagination } from "@/components/news/Pagination";
 import { clientNews } from "@/modules/lib/client";
+import { Content, getCMSType } from "@/modules/types/microCmsTypes";
 import Link from "next/link";
 
-export default function Home({ news, totalCount }) {
+interface Props {
+  news: getCMSType;
+  totalCount: number;
+}
+export default function Home({ news, totalCount }: any) {
   return (
     <div>
       <ul>
-        {news.map((news) => (
+        {news.map((news: any) => (
           <li key={news.id}>
-            <Link href={`/news/${news.id}`}>{news.title}</Link>
+            <Link href={`/news/id/${news.id}`}>{news.title}</Link>
           </li>
         ))}
       </ul>
