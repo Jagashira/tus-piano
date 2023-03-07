@@ -16,11 +16,6 @@ extend({ Water });
 extend({ UnrealBloomPass });
 
 function Ocean() {
-  const loadingManager = new THREE.LoadingManager();
-  useEffect(() => {
-    loadingManager.onProgress = function (url, loaded, total) {};
-    console.log("start");
-  }, []);
   const textureImage = "img/Water_2_M_Normal.jpg";
   //   const textureImage = "img/water.jpg";
   const ref = useRef();
@@ -46,23 +41,6 @@ function Ocean() {
     (state, delta) => (ref.current.material.uniforms.time.value += delta)
   );
   return <water ref={ref} args={[geom, config]} rotation-x={-Math.PI / 2} />;
-}
-
-function Box() {
-  const ref = useRef();
-  useFrame((state, delta) => {
-    ref.current.position.y = 10 + Math.sin(state.clock.elapsedTime) * 6;
-    ref.current.rotation.x =
-      ref.current.rotation.y =
-      ref.current.rotation.z +=
-        delta;
-  });
-  return (
-    <mesh ref={ref} scale={6}>
-      <boxGeometry />
-      <meshStandardMaterial />
-    </mesh>
-  );
 }
 const Piano = () => {
   const obj = useLoader(OBJLoader, "obj/piano.obj");
