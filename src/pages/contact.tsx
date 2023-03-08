@@ -1,29 +1,3 @@
-// import React from "react";
-
-// const Contact = () => {
-//   return (
-//     <div>
-//       <h2>contact</h2>
-//       <form>
-//         <div>
-//           <label htmlFor="name">お名前</label>
-//           <input type="text" id="name" required />
-//         </div>
-//         <div>
-//           <label htmlFor="email">メールアドレス</label>
-//           <input type="email" id="email" required />
-//         </div>
-//         <div>
-//           <label htmlFor="message">メッセージ</label>
-//           <textarea name="message" id="message" required />
-//         </div>
-//         <button type="submit">メール送信</button>
-//       </form>
-//     </div>
-//   );
-// };
-
-// export default Contact;
 import { useState } from "react";
 import type { NextPage } from "next";
 
