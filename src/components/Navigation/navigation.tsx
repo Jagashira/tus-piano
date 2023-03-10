@@ -54,7 +54,7 @@ export const ForMobileNavigation = () => {
         className="absolute inset-0 bg-white w-[300px] h-[100vh]"
         variants={sidebar}
       />
-      <Navigation toggle={() => toggleOpen()} />
+      {isOpen ? <Navigation toggle={() => toggleOpen()} /> : null}
       <MenuToggle toggle={() => toggleOpen()} />
     </motion.nav>
   );
