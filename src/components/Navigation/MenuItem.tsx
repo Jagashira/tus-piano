@@ -61,11 +61,20 @@ const variantsNav = {
 export const Navigation = ({ toggle }: { toggle: () => void }) => (
   <Ul
     variants={variantsNav}
-    className="p-[25px] absolute top-[100px] w-[230px]"
+    className="p-[25px] absolute top-[100px] w-[230px] flex flex-col"
+    style={{ height: "calc(100vh - 125px)" }}
   >
     {items.map((item) => (
       <MenuItem item={item} key={item.name} toggle={toggle} />
     ))}
+    <Li
+      variants={variants}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}
+      className="m-0 absolute bottom-1 left-auto"
+    >
+      ログイン
+    </Li>
   </Ul>
 );
 
