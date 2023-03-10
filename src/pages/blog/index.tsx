@@ -1,4 +1,4 @@
-import { Pagination } from "@/components/news/Pagination";
+import { Pagination } from "@/components/Pagination/Pagination";
 import { clientBlog } from "@/modules/lib/client";
 import { Content, getCMSType } from "@/modules/types/microCmsTypes";
 import Link from "next/link";

@@ -16,24 +16,23 @@ const About = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={`${styles.flexCenter} ${styles.innerWidth} mx-auto flex-col`}
       >
-        <TypingText title={"| About Metaverse"} textStyles="text-center" />
+        <TypingText title={"ピアノの会について"} textStyles="text-center" />
         <motion.p
           variants={fadeIn("up", "tween", 0.2, 1)}
           className="mt-[8px] font-normal sm:text-[32px] text-[20px] text-center text-slate-300"
         >
-          <span className="font-extrabold text-white">Metaverse</span> is a new
-          thing in the future, where you can enjoy the virtual world by feeling
-          like it&apos;s really real, you can feel what you feel in this
-          metaverse world, because this is really the{" "}
           <span className="font-extrabold text-white">
-            madness of the metaverse
-          </span>{" "}
-          of today, using only{" "}
-          <span className="font-extrabold text-white">VR</span> devices you can
-          easily explore the metaverse world you want, turn your dreams into
-          reality. Let&apos;s{" "}
-          <span className="font-extrabold text-white">explore</span> the madness
-          of the metaverse by scrolling down
+            東京理科大学ピアノの会
+          </span>
+          は、東京理科大学野田キャンパスをメインに活動している部活です。
+          現在の主な活動として、 １．ホームページ等を通した会員同士の交流
+          ２．練習会や食事会を通した会員同士の交流
+          ３．卒業後の演奏活動の場所の提供 を行なっています。
+          卒業・就職して離れ離れになった後も、東京理科大学ピアノの会
+          ＯＢ会を通じて、会員同士ささやかでも交流を続けて行ければと思っています。
+          東京理科大学ピアノの会ＯＢ会に関するお問い合わせは
+          piakaitus.entry@gmail.com までお気軽にお問い合わせください。
+          <span className="font-extrabold text-white"></span>
         </motion.p>
         <motion.img
           variants={fadeIn("up", "tween", 0.3, 1)}

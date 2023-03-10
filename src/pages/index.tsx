@@ -26,9 +26,8 @@ export default function Home() {
         <link rel="icon" href="/icon.png" />
       </Head>
 
-      <div className="overflow-hidden  bg-gray-800">
-        <Navbar />
-        <Hero />
+      <div className="overflow-hidden">
+        {/* <Hero />
         <div className="relative">
           <div style={{ marginTop: "250px" }}>
             <About />
@@ -48,7 +47,7 @@ export default function Home() {
           <div className="gradient-04 z-0" />
           <Feedback />
         </div>
-        <Footer />
+        <Footer /> */}
       </div>
     </>
   );

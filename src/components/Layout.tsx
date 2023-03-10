@@ -8,11 +8,11 @@ interface Props {
 
 const Layout = ({ children }: Props) => {
   return (
-    <>
+    <div className="bg-gray-800">
       <Navbar />
       {children}
       <Footer />
-    </>
+    </div>
   );
 };
 

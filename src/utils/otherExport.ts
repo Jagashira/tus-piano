@@ -1,4 +1,4 @@
-import Navbar from '@/components/other/Navbar';
+import Navbar from '@/components/Navbar';
 import Footer from '@/components/other/Footer';
 import ExploreCard from '@/components/other/ExploreCard';
 import StartSteps from '@/components/other/StartSteps';
