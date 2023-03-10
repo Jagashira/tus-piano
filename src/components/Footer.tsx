@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../styles/Footer.module.css";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+import LINE from "public/img/LINEIcon.svg";
 const Footer = () => {
   const date = new Date();
   const footerNav = ["home", "blog", "contact", "お知らせ", "部員限定ページ"];
@@ -22,6 +23,7 @@ const Footer = () => {
       icon: "mdi:instagram",
       url: "https://www.instagram.com/tus_piakai/",
     },
+    { name: "LINE", icon: LINE, url: "" },
   ];
   return (
     <div className={styles.container}>
@@ -36,12 +38,16 @@ const Footer = () => {
           })}
         </ul>
       </div> */}
-      <div className={styles.snsIcons} style={{ maxWidth: "1000px" }}>
+      <div className={styles.snsIcons}>
         {SNSItems.map((SNSItem, index) => {
           return (
             <div className={styles.icon} key={index}>
               <Link href={SNSItem.url}>
-                <Icon icon={SNSItem.icon} className={styles.iconSize} />
+                {SNSItem.name === "LINE" ? (
+                  <LINE />
+                ) : (
+                  <Icon icon={SNSItem.icon} className={styles.iconSize} />
+                )}
                 <p className={styles.iconName}>{SNSItem.name}</p>
               </Link>
             </div>

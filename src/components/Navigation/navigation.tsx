@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { motion, useCycle } from "framer-motion";
+import { AnimatePresence, motion, useCycle } from "framer-motion";
 import { sidebar } from "@/modules/motion/sider";
 import { Navigation } from "./MenuItem";
 import { MenuToggle } from "./MenuToggle";
@@ -54,7 +54,9 @@ export const ForMobileNavigation = () => {
         className="absolute inset-0 bg-white w-[300px] h-[100vh]"
         variants={sidebar}
       />
-      {isOpen ? <Navigation toggle={() => toggleOpen()} /> : null}
+      <AnimatePresence>
+        {isOpen ? <Navigation toggle={() => toggleOpen()} /> : null}
+      </AnimatePresence>
       <MenuToggle toggle={() => toggleOpen()} />
     </motion.nav>
   );

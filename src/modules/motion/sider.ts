@@ -4,7 +4,7 @@ export const sidebar = {
       transition: {
         type: "spring",
         stiffness: 20,
-        restDelta: 2
+        restDelta: 2,
       }
     }),
     closed: {

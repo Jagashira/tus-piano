@@ -43,7 +43,9 @@ const MenuItem = ({ item, toggle }: Props) => {
         <IconPlaceholder style={style} className="pt-[3.1px] pl-[3px]">
           <Icon icon={item.icon} style={{ fontSize: 30 }} />
         </IconPlaceholder>
-        <TextPlaceholder style={style}>{item.name}</TextPlaceholder>
+        <TextPlaceholder style={style}>
+          <p className="mt-[-4px] ml-[34px]">{item.name}</p>
+        </TextPlaceholder>
       </Li>
     </Link>
   );
