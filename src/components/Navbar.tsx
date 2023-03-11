@@ -20,6 +20,7 @@ import {
 import { prepare } from "@react-three/fiber/dist/declarations/src/core/renderer";
 import { useScroll } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
+import Link from "next/link";
 
 const Navbar = () => {
   const isDesktop: boolean = useMediaQuery({ query: "(min-width: 768px)" });
@@ -31,7 +32,7 @@ const Navbar = () => {
         whileInView="show"
         className={`${styles.xPaddings} py-8 relative `}
       >
-        <div className="absolute w-[50%] inset-0 gradient-01" />
+        <div className="absolute w-[50%] inset-0 gradient-01 z-[-1]" />
         <div
           className={`${styles.innerWidth} mx-auto flex justify-between gap-8`}
         >
@@ -44,7 +45,7 @@ const Navbar = () => {
             className="w-[24px] h-[24px] object-contain text-white"
           /> */}
           <h2 className="font-extrabold text-[24px] leading-[30px]  text-white m-auto">
-            東京理科大 ピアノの会
+            <Link href="/">東京理科大 ピアノの会</Link>
           </h2>
           {/* <Image
             src="/img/menu.svg"

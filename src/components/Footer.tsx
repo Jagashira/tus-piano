@@ -3,6 +3,7 @@ import styles from "../styles/Footer.module.css";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import LINE from "public/img/LINEIcon.svg";
+
 const Footer = () => {
   const date = new Date();
   const footerNav = ["home", "blog", "contact", "お知らせ", "部員限定ページ"];
@@ -46,6 +47,7 @@ const Footer = () => {
                 {SNSItem.name === "LINE" ? (
                   <LINE />
                 ) : (
+                  //@ts-ignore
                   <Icon icon={SNSItem.icon} className={styles.iconSize} />
                 )}
                 <p className={styles.iconName}>{SNSItem.name}</p>

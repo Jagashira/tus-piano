@@ -42,6 +42,7 @@
   "devDependencies": {
     "@iconify/react": "^4.1.0",
     "@svgr/webpack": "^6.5.1",
+    "@types/styled-components": "^5.1.26",
     "@types/three": "^0.149.0",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",

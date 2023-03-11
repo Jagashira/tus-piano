@@ -16,7 +16,7 @@ const Hero = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={`${styles.innerWidth} mx-auto flex flex-col`}
       >
-        <div className="flex justify-center items-center flex-col relative z-10">
+        <div className="flex justify-center items-center flex-col relative z-0">
           <motion.h1 variants={textVariant(1.1)} className={styles.heroHeading}>
             東京理科大
             <br />
@@ -33,25 +33,14 @@ const Hero = () => {
           variants={slideIn("right", "tween", 0.2, 1)}
           className="relative w-full md:mt-[20px] -mt-[12px]"
         >
-          <div className="absolute w-full h-[300px] hero-gradient rounded-top-[140px] z-[0] -top-[30px]">
-            <Image
+          <div className="absolute w-full h-[300px] rounded-top-[140px]  -top-[30px]">
+            {/* <Image
               src="/img/piano2.jpg"
               alt="cover"
               width={100}
               height={100}
-              className="w-full sm:h[500px] h-[350px] object-contain rounded-tl-[140px] z-10 relative"
-            />
-            <a href="#explore">
-              <div className="w-full flex justify-end sm:-mt-[70px] -mt-[50px] pr-[40px] relative z-10">
-                <Image
-                  src="/img/stamp.png"
-                  alt="stamp"
-                  width={100}
-                  height={100}
-                  className="sm:w-[155px] w-[100px] sm:h-[155px] h-[100px] object-contain"
-                />
-              </div>
-            </a>
+              className="w-full sm:h[500px] h-[350px] object-contain rounded-tl-[140px]  relative"
+            /> */}
           </div>
         </motion.div>
       </motion.div>
