@@ -13,7 +13,14 @@ export const Calendar = () => {
     setCurrentMonth(getMonth(monthIndex));
   }, [monthIndex]);
   return (
-    <div style={{ backgroundColor: "white", width: "80vw" }}>
+    <div
+      style={{
+        backgroundColor: "white",
+        width: "80vw",
+        borderRadius: "3%",
+        overflow: "hidden",
+      }}
+    >
       <React.Fragment>
         <div className="h-[80vh] flex flex-col">
           <CalendarHeader />

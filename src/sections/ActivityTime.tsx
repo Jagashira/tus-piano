@@ -24,9 +24,9 @@ const ActivityTime = () => {
           <TypingText title="| 活動日程・時間" />
           {/* <TitleText title={<>What&apos;s new about Metaversus</>} /> */}
           <div className="mt-[48px] flex  flex-wrap justify-between gap-[24px]">
-            {newFeatures.map((feature, index) => (
+            {/* {newFeatures.map((feature, index) => (
               <NewFeatures key={feature.title} {...feature} />
-            ))}
+            ))} */}
           </div>
         </motion.div>
         <motion.div
