@@ -7,17 +7,18 @@ import styles from "@/styles";
 import { fadeIn, staggerContainer } from "@/utils/motion";
 import { TitleText, TypingText } from "@/utils/otherExport";
 import { Calendar } from "./Calendar";
+import { RecoilRoot } from "recoil";
 
 const CalendarContainer = () => {
   const [date, setDate] = useState<Date>(new Date());
   return (
-    <section className={`${styles.paddings} relative z-10`}>
+    <section className={`relative z-10  text-center`}>
       <motion.div
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className={`${styles.innerWidth} mx-auto flex flex-col gap-8`}
+        className={`flex flex-col gap-8`}
       >
         <TypingText title="| カレンダー" textStyles="text-center" />
 
@@ -27,9 +28,18 @@ const CalendarContainer = () => {
         />
         <motion.div
           variants={fadeIn("up", "tween", 0.3, 1)}
-          className="relative mt-[68px] flex w-full h-[550px]"
+          className="relative flex "
         >
-          <Calendar />
+          <RecoilRoot>
+            <div
+              style={{
+                minWidth: "350px",
+                margin: "auto",
+              }}
+            >
+              <Calendar />
+            </div>
+          </RecoilRoot>
         </motion.div>
       </motion.div>
     </section>
