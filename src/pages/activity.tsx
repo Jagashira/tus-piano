@@ -1,12 +1,12 @@
 import { BigTitle, BigTitleActivity } from "@/modules/lib/textStyle";
-import Feedback from "@/sections/Feedback";
-import Activities from "@/sections/Activities";
-import Insights from "@/sections/Insights";
-import ActivityTime from "@/sections/ActivityTime";
-import CalendaComponentr from "@/sections/CalendarContainer";
+import Feedback from "@/components/sections/Feedback";
+import Activities from "@/components/sections/Activities";
+import Insights from "@/components/sections/Insights";
+import ActivityTime from "@/components/sections/ActivityTime";
+import CalendaComponentr from "@/components/sections/CalendarContainer";
 import React from "react";
 import styles from "../styles/Activity.module.css";
-import CalendarContainer from "@/sections/CalendarContainer";
+import CalendarContainer from "@/components/sections/CalendarContainer";
 
 const Activity = () => {
   return (
