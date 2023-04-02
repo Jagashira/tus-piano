@@ -33,7 +33,6 @@ const CalendarContainer = () => {
           <RecoilRoot>
             <div
               style={{
-                minWidth: "350px",
                 margin: "auto",
               }}
             >

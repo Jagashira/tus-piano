@@ -4,6 +4,14 @@ import { getMonth } from "@/modules/lib/dayUtil";
 import React, { useContext, useEffect, useState } from "react";
 import { MonthKey } from "@/modules/recoil/calendarMonth";
 import { useRecoilValue } from "recoil";
+import styled from "styled-components";
+
+const CalendarStyled = styled.div`
+  background-color: white;
+  width: 80vw;
+  border-radius: 40px;
+  overflow: hidden;
+`;
 
 export const Calendar = () => {
   const [currentMonth, setCurrentMonth] = useState(getMonth);
@@ -13,22 +21,13 @@ export const Calendar = () => {
     setCurrentMonth(getMonth(monthIndex));
   }, [monthIndex]);
   return (
-    <div
-      style={{
-        backgroundColor: "white",
-        width: "80vw",
-        borderRadius: "3%",
-        overflow: "hidden",
-      }}
-    >
-      <React.Fragment>
-        <div className="h-[80vh] flex flex-col">
-          <CalendarHeader />
-          <div className="flex flex-1">
-            <Month month={currentMonth} />
-          </div>
+    <CalendarStyled>
+      <div className="h-[80vh] flex flex-col">
+        <CalendarHeader />
+        <div className="flex flex-1">
+          <Month month={currentMonth} />
         </div>
-      </React.Fragment>
-    </div>
+      </div>
+    </CalendarStyled>
   );
 };
