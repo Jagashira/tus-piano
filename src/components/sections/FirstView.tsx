@@ -6,6 +6,7 @@ import { BigName, BigTitle } from "@/modules/lib/textStyle";
 const FirstView = () => {
   return (
     <motion.div
+      //@ts-ignore
       variants={staggerContainer}
       initial="hidden"
       whileInView="show"
