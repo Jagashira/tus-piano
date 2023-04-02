@@ -31,10 +31,11 @@ export const SNSDescription = [
   { id: "TikTok", imgUrl: "/img/SNSlogo/tiktok.jpg", title: "TikTok" ,url:"https://www.tiktok.com/"},
   { id: "YouTube", imgUrl: "/img/SNSlogo/youtube.jpg", title: "YouTube",url:"https://www.youtube.com/" },
 ];
-export const startingFeatures = [
-  "Find a world that suits you and you want to enter",
-  "Enter the world by reading basmalah to be safe",
-  "No need to beat around the bush, just stay on the gas and have fun",
+export const ActivitiesDesc = [
+  "ピアノ部屋でピアノの練習（任意）",
+  "１か月に１回の部会",
+  "２か月に１回の音楽発表会",
+  "BBQや合宿などのイベント"
 ];
 
 export const newFeatures = [
@@ -54,22 +55,28 @@ export const newFeatures = [
 
 export const insights = [
   {
-    imgUrl: "/img/planet-06.png",
-    title: "The launch of the Metaverse makes Elon musk ketar-ketir",
+    imgUrl: "/img/animePiano.png  ",
+    title: "ピアノ部屋でピアノの練習",
     subtitle:
-      "Magna etiam tempor orci eu lobortis elementum nibh tellus molestie. Diam maecenas sed enim ut sem viverra alique.",
+      "東京理科大学野田キャンパスにはピアノが4台あり、自由に使用できます。音楽発表会に向けて活用しましょう",
   },
   {
-    imgUrl: "/img/planet-07.png",
-    title: "7 tips to easily master the madness of the Metaverse",
+    imgUrl: "/img/animePiano.png  ",
+    title: "１か月に１回の部会",
     subtitle:
-      "Vitae congue eu consequat ac felis donec. Et magnis dis parturient montes nascetur ridiculus mus. Convallis tellus id interdum",
+      "月に一回部会を行い、どのように部活を進めていくか話し合います。去年まではコロナのため、オンラインで行っていましたが、今後は対面でも行っていく予定なのでぜひ参加して交流を深めましょう",
   },
   {
-    imgUrl: "/img/planet-08.png",
-    title: "With one platform you can explore the whole world virtually",
+    imgUrl: "/img/animePiano.png  ",
+    title: "２か月に１回の音楽発表会",
     subtitle:
-      "Quam quisque id diam vel quam elementum. Viverra nam libero justo laoreet sit amet cursus sit. Mauris in aliquam sem",
+      "ピアノの会の一番大きな活動である音楽発表会。部員たちはピアノ演奏で才能を披露し、誰でも自由に聴くことができます。準備に力を注いでいるので、美しい音楽を楽しんでもらえることを願っています。",
+  },
+  {
+    imgUrl: "/img/animePiano.png  ",
+    title: "BBQや合宿などのイベント",
+    subtitle:
+      "ピアノの会ではBBQや合宿など、様々なイベントを企画しています。メンバー同士の交流を深めることを目的に行っており、参加者からは毎回大きな好評を得ています。",
   },
 ];
 

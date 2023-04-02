@@ -1,37 +1,32 @@
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { staggerContainer, textVariant } from "@/utils/motion";
+import { BigName, BigTitle } from "@/modules/lib/textStyle";
 const FirstView = () => {
   return (
-    <div>
-      <div
+    <motion.div
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}
+    >
+      <motion.h1
+        variants={textVariant(1.1)}
         style={{
-          position: "fixed",
-          backgroundColor: "rgba(0,0,0,0.3)",
-          width: "100vw",
-          height: "100vh",
-          zIndex: 2,
-        }}
-      />
-      <div
-        style={{
-          width: "100vw",
-          height: "100vh",
-          zIndex: -100,
+          color: "white",
+          zIndex: 10,
+          paddingTop: "10vh",
+          paddingLeft: "10vw",
         }}
       >
-        <Image
-          src="/img/background.png"
-          alt="background"
-          layout="fill"
-          objectFit="cover"
-        />
-      </div>
-      {/* <h1
-        style={{ zIndex: 1, position: "absolute", top: "30vh", color: "white" }}
-      >
-        東京理科大学ピアノの会へようこそ！私たちは音楽を愛する学生たちが集まり、ピアノを通じて共に学び、演奏する場を提供しています。一緒に音楽を奏で、感動を分かち合いましょう。
-      </h1> */}
-    </div>
+        <BigName>
+          東京理科大学
+          <br />
+          ピアノの会
+        </BigName>
+      </motion.h1>
+    </motion.div>
   );
 };
 

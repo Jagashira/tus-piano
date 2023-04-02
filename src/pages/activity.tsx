@@ -1,18 +1,29 @@
+import { BigTitle, BigTitleActivity } from "@/modules/lib/textStyle";
+import Feedback from "@/sections/Feedback";
+import Activities from "@/sections/Activities";
+import Insights from "@/sections/Insights";
+import ActivityTime from "@/sections/ActivityTime";
+import CalendaComponentr from "@/sections/Calendar";
 import React from "react";
 import styles from "../styles/Activity.module.css";
+import CalendarComponent from "@/sections/Calendar";
 
 const Activity = () => {
   return (
     <>
-      <div className={styles.container}>
-        <div className={styles.name}>
-          <h1>東京理科大学　ピアノの会へようこそ</h1>
-        </div>
-        <div className={styles.introBack}>
-          <div className={styles.introDesc}>
-            
-          </div>
-        </div>
+      <div style={{ position: "fixed" }}>
+        <BigTitleActivity>Activity</BigTitleActivity>
+      </div>
+      <div className="relative">
+        <Activities />
+        <Insights />
+        {/* <div className="gradient-04 z-0" /> */}
+        <ActivityTime />
+      </div>
+      <CalendarComponent />
+      <div className="relative">
+        {/* <div className="gradient-04 z-0" /> */}
+        <Feedback />
       </div>
     </>
   );

@@ -6,9 +6,9 @@ import Image from "next/image";
 import styles from "@/styles";
 import { fadeIn, planetVariants, staggerContainer } from "@/utils/motion";
 import { StartSteps, TitleText, TypingText } from "@/utils/otherExport";
-import { startingFeatures } from "@/utils/data";
+import { ActivitiesDesc, startingFeatures } from "@/utils/data";
 
-const GetStarted = () => {
+const Activities = () => {
   return (
     <section className={`${styles.paddings} relative z-10`}>
       <motion.div
@@ -23,22 +23,29 @@ const GetStarted = () => {
           variants={planetVariants("left")}
           className={`flex-1 ${styles.flexCenter}`}
         >
-          <Image
-            src="/img/get-started.png"
-            alt="get-started"
-            width={500}
-            height={500}
-            className="w-[90%] h-[90%] object-contain"
-          />
+          <div
+            style={{
+              borderRadius: "10%",
+              overflow: "hidden",
+            }}
+          >
+            <Image
+              src="/img/animePiano.png"
+              alt="get-started"
+              width={500}
+              height={500}
+              className=" object-contain"
+            />
+          </div>
         </motion.div>
         <motion.div
           variants={fadeIn("left", "tween", 0.2, 1)}
           className="flex-[0.75] flex justify-center flex-col"
         >
-          <TypingText title="| How Metaversus Works" />
-          <TitleText title={<>Get started with just a few clicks</>} />
-          <div className="mt-[31px] flex flex-col max-w-[370px] gap-[24px]">
-            {startingFeatures.map((feature, index) => (
+          <TypingText title="| 活動内容" />
+          <TitleText title={<>ピアノの会の主な活動内容</>} />
+          <div className="mt-[31px] flex flex-col max-w-[400px] gap-[24px]">
+            {ActivitiesDesc.map((feature, index) => (
               <StartSteps
                 key={feature}
                 number={`${index < 10 ? "0" : ""}${index + 1}`}
@@ -52,4 +59,4 @@ const GetStarted = () => {
   );
 };
 
-export default GetStarted;
+export default Activities;

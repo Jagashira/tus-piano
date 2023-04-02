@@ -20,7 +20,9 @@ const Layout = ({ children }: Props) => {
       </div>
       <div style={{ paddingTop: "10vh" }} />
       {children}
-      <Footer />
+      <div style={{ zIndex: 10, position: "relative" }}>
+        <Footer />
+      </div>
     </div>
   );
 };

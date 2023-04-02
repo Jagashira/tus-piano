@@ -4,26 +4,56 @@ import { BigTitle, BlogContainer } from "@/modules/lib/textStyle";
 import { Content, getCMSType } from "@/modules/types/microCmsTypes";
 import Image from "next/image";
 import Link from "next/link";
+import { useMediaQuery } from "react-responsive";
+import { motion } from "framer-motion";
+import { staggerContainer, textVariant } from "@/utils/motion";
 
 interface Props {
-  news: getCMSType;
+  blog: getCMSType;
   totalCount: number;
 }
 export default function Home({ news, totalCount }: any) {
+  const isDesktop: boolean = useMediaQuery({ query: "(min-width: 500px)" });
   return (
     <div>
-      <BigTitle>News</BigTitle>
+      <div style={{ position: "fixed" }}>
+        <BigTitle>News</BigTitle>
+      </div>
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+        className="relative"
+      >
+        <motion.h1
+          variants={textVariant(1.1)}
+          style={{
+            textAlign: "center",
+            color: "white",
+            zIndex: 10,
+            paddingTop: "225px",
+            margin: "0 20px 0 20px",
+          }}
+        >
+          今後の部活動の予定やイベントの情報、部活動の紹介など、
+          <br />
+          部員たちの活動に関する最新情報を掲載していきます。
+        </motion.h1>
+      </motion.div>
+
       <div
         style={{
-          padding: "50px",
+          padding: "20px 50px 50px 50px",
           display: "flex",
           flexDirection: "row",
           flexWrap: "wrap",
-          justifyContent: "space-around",
+          justifyContent: "center",
+          gap: 20,
         }}
       >
         {news.map((news: any) => (
-          <div key={news.id}>
+          <div key={news.id} style={{ zIndex: 10 }}>
             <Link href={`/news/id/${news.id}`}>
               <BlogContainer>
                 <div

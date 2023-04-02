@@ -2,19 +2,19 @@
 import About from '@/sections/About';
 import Explore from '@/sections/Explore';
 import Feedback from '@/sections/Feedback';
-import GetStarted from '@/sections/GetStarted';
+import Activities from '@/sections/Activities';
 import Hero from '@/sections/Hero';
 import Insights from '@/sections/Insights';
-import WhatsNew from '@/sections/WhatsNew';
-import World from '@/sections/World';
+import ActivityTime from '@/sections/ActivityTime';
+import Calendar from '@/sections/Calendar';
 
 export {
     Hero,
     About,
     Explore,
-    GetStarted,
-    WhatsNew,
-    World,
+    Activities,
+    ActivityTime,
+    Calendar,
     Insights,
     Feedback,
   };

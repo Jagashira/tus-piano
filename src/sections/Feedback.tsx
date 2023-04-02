@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import styles from "@/styles";
 import { fadeIn, staggerContainer, zoomIn } from "@/utils/motion";
+import Link from "next/link";
 
 const Feedback = () => {
   return (
@@ -20,46 +21,30 @@ const Feedback = () => {
           variants={fadeIn("right", "tween", 0.2, 1)}
           className="flex-[0.5] lg:max-[370px] flex justify-end flex-col gradient-05 sm:p-8 p-4 rounded-[32px] border-[1#6a6a6a relative"
         >
-          <div className="feedback-gradient" />
+          <div className="" />
           <div>
             <h4 className="font-bold sm:text-[32px] text-[26px] sm:leading:[40px] leading-[36px] text-white">
-              Samantha
+              まだ入部されてない方へ
             </h4>
-            <p className="mt-[8px] font-normal sm:text-[18px] text-[12px] sm:leading-[22px] leading-[16px] text-white">
+            {/* <p className="mt-[8px] font-normal sm:text-[18px] text-[12px] sm:leading-[22px] leading-[16px] text-white">
               Founder | Metaversus
-            </p>
+            </p> */}
           </div>
           <p className="mt-[24px] font-normal sm:text-[24px] text-[18px] sm:leading-[45px] leading-[39px] text-white">
             {" "}
-            &quot;With the development of today&apos;s technology, metaverse is
-            very useful for today&apos;s work, or can be called web 3.0. by
-            using metaverse you can use it as anything &quot;
+            東京理科大学ピアノの会に入部を考えている方は
+            <Link href="/blog/as">こちら（入部手続きの手順）</Link>
+            にて説明しています。
           </p>
         </motion.div>
         <motion.div
           variants={fadeIn("left", "tween", 0.2, 1)}
           className="relative flex-1 flex justify-center items-center"
-        >
-          <Image
-            src="/img/planet-09.png"
-            alt="planet-09"
-            className="w-full lg:h-[610px] h-auto min-h-[210px] object-cover rounded-[40px]"
-            width={300}
-            height={300}
-          />
-        </motion.div>
+        ></motion.div>
         <motion.div
           variants={zoomIn(0.4, 1)}
           className="lg:block hidden absolute left-[10%] top-[3%]"
-        >
-          <Image
-            src="/img/stamp.png"
-            alt="stamp"
-            className="w-[155px] h-[155px] object-contain"
-            width={155}
-            height={155}
-          />
-        </motion.div>
+        ></motion.div>
       </motion.div>
     </section>
   );

@@ -16,6 +16,7 @@ import Slider from "@/sections/SideImg";
 import FirstView from "@/sections/FirstView";
 import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
+import BackGround from "@/sections/BackGround";
 
 export default function Home() {
   const isDesktop: boolean = useMediaQuery({ query: "(min-width: 768px)" });
@@ -35,8 +36,12 @@ export default function Home() {
         <div style={{ top: "10vh", position: "fixed" }} />
 
         <div className={isDesktop ? "fixed top-0" : "fixed top-[10vh]"}>
+          <BackGround />
+        </div>
+        <div className="relative">
           <FirstView />
         </div>
+
         {/* <Slider /> */}
         <div className="relative">
           <div style={{ marginTop: "250px" }}>
@@ -45,19 +50,6 @@ export default function Home() {
           {/* <div className="gradient-03 z-0" /> */}
           <Explore />
         </div>
-        <div className="relative">
-          <GetStarted />
-          {/* <div className="gradient-04 z-0" /> */}
-          <WhatsNew />
-        </div>
-        <World />
-        <div className="relative">
-          <Insights />
-
-          {/* <div className="gradient-04 z-0" /> */}
-          <Feedback />
-        </div>
-        <Footer />
       </div>
     </>
   );

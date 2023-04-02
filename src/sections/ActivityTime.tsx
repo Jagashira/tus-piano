@@ -7,7 +7,7 @@ import { fadeIn, planetVariants, staggerContainer } from "@/utils/motion";
 import { NewFeatures, TitleText, TypingText } from "@/utils/otherExport";
 import { newFeatures } from "@/utils/data";
 
-const WhatsNew = () => {
+const ActivityTime = () => {
   return (
     <section className={`${styles.paddings} relative z-10`}>
       <motion.div
@@ -21,8 +21,8 @@ const WhatsNew = () => {
           variants={fadeIn("right", "tween", 0.2, 1)}
           className="flex-[0.75] flex justify-center flex-col"
         >
-          <TypingText title="| What's New?" />
-          <TitleText title={<>What&apos;s new about Metaversus</>} />
+          <TypingText title="| 活動日程・時間" />
+          {/* <TitleText title={<>What&apos;s new about Metaversus</>} /> */}
           <div className="mt-[48px] flex  flex-wrap justify-between gap-[24px]">
             {newFeatures.map((feature, index) => (
               <NewFeatures key={feature.title} {...feature} />
@@ -33,17 +33,17 @@ const WhatsNew = () => {
           variants={planetVariants("right")}
           className={`flex-1 ${styles.flexCenter}`}
         >
-          <Image
+          {/* <Image
             src="/img/whats-new.png"
             alt="get-started"
             width={500}
             height={500}
             className="w-[90%] h-[90%] object-contain"
-          />
+          /> */}
         </motion.div>
       </motion.div>
     </section>
   );
 };
 
-export default WhatsNew;
+export default ActivityTime;

@@ -5,6 +5,8 @@ import { Content, getCMSType } from "@/modules/types/microCmsTypes";
 import Image from "next/image";
 import Link from "next/link";
 import { useMediaQuery } from "react-responsive";
+import { motion } from "framer-motion";
+import { staggerContainer, textVariant } from "@/utils/motion";
 
 interface Props {
   blog: getCMSType;
@@ -14,18 +16,44 @@ export default function Home({ blog, totalCount }: any) {
   const isDesktop: boolean = useMediaQuery({ query: "(min-width: 500px)" });
   return (
     <div>
-      <BigTitle>Blog</BigTitle>
+      <div style={{ position: "fixed" }}>
+        <BigTitle>Blog</BigTitle>
+      </div>
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+        className="relative"
+      >
+        <motion.h1
+          variants={textVariant(1.1)}
+          style={{
+            textAlign: "center",
+            color: "white",
+            zIndex: 10,
+            paddingTop: "225px",
+            margin: "0 20px 0 20px",
+          }}
+        >
+          ピアノの会の部活のブログページでは、
+          <br />
+          部員たちの練習やイベントの様子など、部活動に関する情報を共有しています。
+        </motion.h1>
+      </motion.div>
+
       <div
         style={{
-          padding: "50px",
+          padding: "20px 50px 50px 50px",
           display: "flex",
           flexDirection: "row",
           flexWrap: "wrap",
-          justifyContent: "space-around",
+          justifyContent: "center",
+          gap: 20,
         }}
       >
         {blog.map((blog: any) => (
-          <div key={blog.id}>
+          <div key={blog.id} style={{ zIndex: 10 }}>
             <Link href={`/blog/id/${blog.id}`}>
               <BlogContainer>
                 <div
