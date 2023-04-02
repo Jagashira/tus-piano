@@ -20,6 +20,7 @@ export default function Home({ news, totalCount }: any) {
         <BigTitle>News</BigTitle>
       </div>
       <motion.div
+        //@ts-ignore
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"

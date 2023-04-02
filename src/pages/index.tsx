@@ -2,16 +2,7 @@ import MainPage from "@/components/MainPage";
 import Head from "next/head";
 
 import { Footer, Navbar } from "@/utils/otherExport";
-import {
-  About,
-  Explore,
-  Feedback,
-  GetStarted,
-  Hero,
-  Insights,
-  WhatsNew,
-  World,
-} from "@/utils/uiExport";
+import { About, Explore, Feedback, Hero, Insights } from "@/utils/uiExport";
 import Slider from "@/sections/SideImg";
 import FirstView from "@/sections/FirstView";
 import { useMediaQuery } from "react-responsive";
