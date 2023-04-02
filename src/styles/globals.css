@@ -5,12 +5,12 @@
   @import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap');
 
 
-* {
+body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Zen Old Mincho', serif;
-  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .gradient-01 {

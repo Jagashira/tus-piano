@@ -1,5 +1,5 @@
 import styles from "@/styles";
-import { exploreWorlds } from "@/utils/data";
+import { exploreWorlds, SNSDescription } from "@/utils/data";
 import { staggerContainer } from "@/utils/motion";
 import { ExploreCard, TitleText, TypingText } from "@/utils/otherExport";
 import { motion } from "framer-motion";
@@ -19,18 +19,19 @@ const Explore = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={`${styles.innerWidth} mx-auto flex flex-col`}
       >
-        <TypingText title="| The World" textStyles="text-center" />
+        <TypingText title="| SNS" textStyles="text-center" />
         <TitleText
           title={
             <>
-              Choose the world you want <br className="md:block hidden" />
-              to explore
+              日々の活動を
+              <br className="md:block hidden" />
+              SNSに投稿しています
             </>
           }
           textStyles="text-center"
         />
         <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
-          {exploreWorlds.map((world, index) => (
+          {SNSDescription.map((world, index) => (
             <ExploreCard
               key={world.id}
               {...world}

@@ -3,10 +3,12 @@ import { motion } from "framer-motion";
 import { fadeIn } from "@/utils/motion";
 import Image from "next/image";
 import styles from "@/styles";
+import Link from "next/link";
 
 interface Props {
   id: string;
   imgUrl: string;
+  url: string;
   title: string;
   index: number;
   active: string;
@@ -16,6 +18,7 @@ interface Props {
 const ExploreCard = ({
   id,
   imgUrl,
+  url,
   title,
   index,
   active,
@@ -40,23 +43,15 @@ const ExploreCard = ({
           {title}
         </h3>
       ) : (
-        <div className="absolute bottom-0 p-8 flex justify-start w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-b-[24px]">
-          <div
-            className={`${styles.flexCenter} w-[60px] h-[60px] rounded-[24px] glassmorphism mb-[16px]`}
-          >
-            <Image
-              src="/img/headset.svg"
-              alt="headset"
-              className="w-1/2 h-1/2 object-contain"
-              layout="fill"
-            />
-          </div>
-          <p className="font-normal text-[16px] leading-[20.16px] text-white uppercase">
-            Enter Metaverse
-          </p>
-          <h2 className="mt-[24px] font-semibold sm:text-[32px] text-[24px] text-white">
-            {title}
-          </h2>
+        <div className="absolute bottom-0 p-8 flex justify-start w-full flex-col  rounded-b-[24px]">
+          <Link href={url}>
+            <p className="font-normal text-[16px] leading-[20.16px] text-white uppercase">
+              Enter SNS
+            </p>
+            <h2 className="mt-[24px] font-semibold sm:text-[32px] text-[24px] text-white">
+              {title}
+            </h2>
+          </Link>
         </div>
       )}
     </motion.div>

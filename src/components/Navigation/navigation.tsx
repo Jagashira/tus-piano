@@ -62,11 +62,12 @@ export const ForMobileNavigation = () => {
       className="inset-0 absolute "
     >
       <motion.div
-        className="absolute inset-0 w-[300px] h-[100vh] bg-gray-800 z-9"
+        className="absolute inset-0 w-[300px] h-[100vh]  z-9"
         style={{
-          opacity: "30%",
+          opacity: "50%",
           filter: "blur(10px)",
           borderBottomRightRadius: "40px",
+          backgroundColor: "#242423",
         }}
         variants={sidebar}
       />

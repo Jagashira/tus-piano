@@ -1,6 +1,8 @@
 import { Pagination } from "@/components/Pagination/Pagination";
 import { clientNews } from "@/modules/lib/client";
+import { BigTitle, BlogContainer } from "@/modules/lib/textStyle";
 import { Content, getCMSType } from "@/modules/types/microCmsTypes";
+import Image from "next/image";
 import Link from "next/link";
 
 interface Props {
@@ -10,13 +12,49 @@ interface Props {
 export default function Home({ news, totalCount }: any) {
   return (
     <div>
-      <ul>
+      <BigTitle>News</BigTitle>
+      <div
+        style={{
+          padding: "50px",
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "wrap",
+          justifyContent: "space-around",
+        }}
+      >
         {news.map((news: any) => (
-          <li key={news.id}>
-            <Link href={`/news/id/${news.id}`}>{news.title}</Link>
-          </li>
+          <div key={news.id}>
+            <Link href={`/news/id/${news.id}`}>
+              <BlogContainer>
+                <div
+                  style={{
+                    borderRadius: "5% 5% 0% 0%",
+                    overflow: "hidden",
+                  }}
+                >
+                  <Image
+                    src="/img/piano.jpg"
+                    alt="piano"
+                    width={310}
+                    height={230}
+                  />
+                </div>
+                {/*     <div
+          style={{
+            margin: "10px",
+            backgroundColor: "black",
+            width: "100%",
+            // height: "100%",
+          }}
+        >
+          2023
+        </div> */}
+                {news.title}
+              </BlogContainer>
+            </Link>
+          </div>
         ))}
-      </ul>
+      </div>
       <Pagination totalCount={totalCount} contentType={"news"} />
     </div>
   );

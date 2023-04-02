@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import Footer from "./Footer";
-import Navbar from "./Navbar";
+import Navbar from "./Navigation/Navbar";
 
 interface Props {
   children?: ReactNode;
@@ -8,10 +8,17 @@ interface Props {
 
 const Layout = ({ children }: Props) => {
   return (
-    <div className="bg-gray-800">
-      <div className="z-10">
+    <div style={{ backgroundColor: "#242423" }}>
+      <div
+        style={{
+          position: "fixed",
+          zIndex: 100,
+          width: "100vw",
+        }}
+      >
         <Navbar />
       </div>
+      <div style={{ paddingTop: "10vh" }} />
       {children}
       <Footer />
     </div>

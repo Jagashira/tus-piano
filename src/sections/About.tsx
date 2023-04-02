@@ -8,7 +8,7 @@ import Link from "next/link";
 const About = () => {
   return (
     <section className={`${styles.paddings} relative z-10`}>
-      <div className="gradient-02 z-0" />
+      {/* <div className="gradient-02 z-0" /> */}
       <motion.div
         //@ts-ignore
         variants={staggerContainer}
@@ -22,25 +22,19 @@ const About = () => {
           variants={fadeIn("up", "tween", 0.2, 1)}
           className="mt-[8px] font-normal sm:text-[32px] text-[20px] text-center text-slate-300"
         >
+          東京理科大学の
           <span className="font-extrabold text-white">
-            東京理科大学ピアノの会
+            ピアノの会は、音楽を愛する仲間たちが集まり、演奏や交流を楽しむサークル
           </span>
-          は、
-          <br />
-          東京理科大学野田キャンパスをメインに活動している部活です。
-          <br />
-          現在の主な活動は、
-          <span className="font-extrabold text-white">定期発表会</span>
-          に向けて練習です。また、
-          <span className="font-extrabold text-white">BBQ</span>や
-          <span className="font-extrabold text-white">合宿</span>
-          等の交流の場もあるので、
-          <span className="font-extrabold text-white">上下の関わりも多い</span>
-          部活です。 詳しくは
+          です。ピアノを中心に、様々な楽器の演奏や合唱も行っています。また、
           <span className="font-extrabold text-white">
-            <Link href="/activity">Activity</Link>
+            BBQや合宿などのイベントも定期的に開催
           </span>
-          を参照してください。
+          し、親睦を深めています。初心者から上級者まで、どなたでも参加できますので、
+          <span className="font-extrabold text-white">
+            音楽を通じた新しい出会いを楽し
+          </span>
+          みましょう。
         </motion.p>
         <motion.img
           variants={fadeIn("up", "tween", 0.3, 1)}

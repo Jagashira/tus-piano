@@ -1,23 +1,63 @@
 import { Pagination } from "@/components/Pagination/Pagination";
 import { clientBlog } from "@/modules/lib/client";
+import { BigTitle, BlogContainer } from "@/modules/lib/textStyle";
 import { Content, getCMSType } from "@/modules/types/microCmsTypes";
+import Image from "next/image";
 import Link from "next/link";
+import { useMediaQuery } from "react-responsive";
 
 interface Props {
   blog: getCMSType;
   totalCount: number;
 }
 export default function Home({ blog, totalCount }: any) {
+  const isDesktop: boolean = useMediaQuery({ query: "(min-width: 500px)" });
   return (
     <div>
-      <ul>
+      <BigTitle>Blog</BigTitle>
+      <div
+        style={{
+          padding: "50px",
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "wrap",
+          justifyContent: "space-around",
+        }}
+      >
         {blog.map((blog: any) => (
-          <li key={blog.id}>
-            <Link href={`/blog/id/${blog.id}`}>{blog.title}</Link>
-          </li>
+          <div key={blog.id}>
+            <Link href={`/blog/id/${blog.id}`}>
+              <BlogContainer>
+                <div
+                  style={{
+                    borderRadius: "5% 5% 0% 0%",
+                    overflow: "hidden",
+                  }}
+                >
+                  <Image
+                    src="/img/piano.jpg"
+                    alt="piano"
+                    width={310}
+                    height={230}
+                  />
+                </div>
+                {/*     <div
+          style={{
+            margin: "10px",
+            backgroundColor: "black",
+            width: "100%",
+            // height: "100%",
+          }}
+        >
+          2023
+        </div> */}
+                {blog.title}
+              </BlogContainer>
+            </Link>
+          </div>
         ))}
-      </ul>
-      <Pagination totalCount={totalCount} contentType="blog" />
+      </div>
+      <Pagination totalCount={totalCount} contentType={"blog"} />
     </div>
   );
 }
