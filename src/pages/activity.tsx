@@ -3,10 +3,10 @@ import Feedback from "@/sections/Feedback";
 import Activities from "@/sections/Activities";
 import Insights from "@/sections/Insights";
 import ActivityTime from "@/sections/ActivityTime";
-import CalendaComponentr from "@/sections/Calendar";
+import CalendaComponentr from "@/sections/CalendarContainer";
 import React from "react";
 import styles from "../styles/Activity.module.css";
-import CalendarComponent from "@/sections/Calendar";
+import CalendarContainer from "@/sections/CalendarContainer";
 
 const Activity = () => {
   return (
@@ -20,7 +20,7 @@ const Activity = () => {
         {/* <div className="gradient-04 z-0" /> */}
         <ActivityTime />
       </div>
-      <CalendarComponent />
+      <CalendarContainer />
       <div className="relative">
         {/* <div className="gradient-04 z-0" /> */}
         <Feedback />

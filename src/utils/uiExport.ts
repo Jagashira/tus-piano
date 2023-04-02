@@ -6,7 +6,7 @@ import Activities from '@/sections/Activities';
 import Hero from '@/sections/Hero';
 import Insights from '@/sections/Insights';
 import ActivityTime from '@/sections/ActivityTime';
-import Calendar from '@/sections/Calendar';
+import CalendarContainer from '@/sections/CalendarContainer';
 
 export {
     Hero,
@@ -14,7 +14,7 @@ export {
     Explore,
     Activities,
     ActivityTime,
-    Calendar,
+    CalendarContainer,
     Insights,
     Feedback,
   };

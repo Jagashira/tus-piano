@@ -5,7 +5,7 @@ import { ExploreCard, TitleText, TypingText } from "@/utils/otherExport";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 
-import World from "./Calendar";
+import CalendarContainer from "./CalendarContainer";
 
 const Explore = () => {
   const [active, setActive] = useState<string>("world-2");
