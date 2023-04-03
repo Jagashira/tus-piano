@@ -7,15 +7,30 @@ import { Content } from "@/modules/types/microCmsTypes";
 export default function newsId({ news }: any) {
   //const date = FormatDate(news.publishedAt, "YYYY-MM-DD-HH-mm");
   return (
-    <main>
-      <h1>{news.title}</h1>
-      <p>{FormatDate(news.publishedAt)}</p>
+    <div
+      style={{
+        color: "white",
+        zIndex: 10,
+        position: "relative",
+        textAlign: "center",
+        width: "70%",
+        margin: "50px auto",
+      }}
+    >
+      <p style={{ fontWeight: "800", fontSize: "26px", marginBottom: "5px" }}>
+        {news.title}
+      </p>
+      <hr style={{ margin: "10px" }} />
+      <p style={{ textAlign: "start", fontSize: "13px" }}>
+        {FormatDate(news.publishedAt)}
+      </p>
       <div
+        style={{ lineHeight: "3", marginTop: "20px" }}
         dangerouslySetInnerHTML={{
           __html: `${news.content}`,
         }}
       />
-    </main>
+    </div>
   );
 }
 

@@ -1,12 +1,34 @@
 import React from "react";
 import styles from "../styles/Footer.module.css";
 import { Icon } from "@iconify/react";
+import Link from "next/link";
+import LINE from "public/img/LINEIcon.svg";
+
 const Footer = () => {
   const date = new Date();
   const footerNav = ["home", "blog", "contact", "お知らせ", "部員限定ページ"];
+  const SNSItems = [
+    {
+      name: "TikTok",
+      icon: "ic:outline-tiktok",
+      url: "https://www.tiktok.com/",
+    },
+    { name: "YouTube", icon: "ci:youtube", url: "https://www.youtube.com/" },
+    {
+      name: "Twitter",
+      icon: "mdi:twitter",
+      url: "https://twitter.com/TUS_Piakai",
+    },
+    {
+      name: "TikTok",
+      icon: "mdi:instagram",
+      url: "https://www.instagram.com/tus_piakai/",
+    },
+    { name: "LINE", icon: LINE, url: "" },
+  ];
   return (
     <div className={styles.container}>
-      <div className={styles.footerNav}>
+      {/* <div className={styles.footerNav}>
         <ul className={styles.list}>
           {footerNav.map((nav, index) => {
             return (
@@ -16,25 +38,23 @@ const Footer = () => {
             );
           })}
         </ul>
-      </div>
+      </div> */}
       <div className={styles.snsIcons}>
-        <div className={styles.icon}>
-          <Icon icon="ic:outline-tiktok" className={styles.iconSize} />
-          <p className={styles.iconName}>tiktok</p>
-        </div>
-
-        <div className={styles.icon}>
-          <Icon icon="ci:youtube" className={styles.iconSize} />
-          <p className={styles.iconName}>YouTube</p>
-        </div>
-        <div className={styles.icon}>
-          <Icon icon="mdi:twitter" className={styles.iconSize} />
-          <p className={styles.iconName}>Twitter</p>
-        </div>
-        <div className={styles.icon}>
-          <Icon icon="mdi:instagram" className={styles.iconSize} />
-          <p className={styles.iconName}>Instagram</p>
-        </div>
+        {SNSItems.map((SNSItem, index) => {
+          return (
+            <div className={styles.icon} key={index}>
+              <Link href={SNSItem.url}>
+                {SNSItem.name === "LINE" ? (
+                  <LINE />
+                ) : (
+                  //@ts-ignore
+                  <Icon icon={SNSItem.icon} className={styles.iconSize} />
+                )}
+                <p className={styles.iconName}>{SNSItem.name}</p>
+              </Link>
+            </div>
+          );
+        })}
       </div>
       <div className={styles.name}>
         <h1>東京理科大学　ピアノの会</h1>

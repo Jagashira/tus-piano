@@ -1,23 +1,89 @@
-import { Pagination } from "@/components/news/Pagination";
+import { Pagination } from "@/components/Pagination/Pagination";
 import { clientBlog } from "@/modules/lib/client";
+import { BigTitle, BlogContainer } from "@/modules/lib/textStyle";
 import { Content, getCMSType } from "@/modules/types/microCmsTypes";
+import Image from "next/image";
 import Link from "next/link";
+import { useMediaQuery } from "react-responsive";
+import { motion } from "framer-motion";
+import { staggerContainer, textVariant } from "@/utils/motion";
 
 interface Props {
   blog: getCMSType;
   totalCount: number;
 }
 export default function Home({ blog, totalCount }: any) {
+  const isDesktop: boolean = useMediaQuery({ query: "(min-width: 500px)" });
   return (
     <div>
-      <ul>
+      <motion.div
+        //@ts-ignore
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+        className="relative"
+      >
+        <motion.h1
+          variants={textVariant(1.1)}
+          style={{
+            textAlign: "center",
+            color: "white",
+            zIndex: 10,
+            paddingTop: "225px",
+            margin: "0 20px 0 20px",
+          }}
+        >
+          ピアノの会の部活のブログページでは、
+          <br />
+          部員たちの練習やイベントの様子など、部活動に関する情報を共有しています。
+        </motion.h1>
+      </motion.div>
+
+      <div
+        style={{
+          padding: "20px 50px 50px 50px",
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          gap: 20,
+        }}
+      >
         {blog.map((blog: any) => (
-          <li key={blog.id}>
-            <Link href={`/blog/id/${blog.id}`}>{blog.title}</Link>
-          </li>
+          <div key={blog.id} style={{ zIndex: 10 }}>
+            <Link href={`/blog/id/${blog.id}`}>
+              <BlogContainer>
+                <div
+                  style={{
+                    borderRadius: "5% 5% 0% 0%",
+                    overflow: "hidden",
+                  }}
+                >
+                  <Image
+                    src="/img/piano.jpg"
+                    alt="piano"
+                    width={310}
+                    height={230}
+                  />
+                </div>
+                {/*     <div
+          style={{
+            margin: "10px",
+            backgroundColor: "black",
+            width: "100%",
+            // height: "100%",
+          }}
+        >
+          2023
+        </div> */}
+                {blog.title}
+              </BlogContainer>
+            </Link>
+          </div>
         ))}
-      </ul>
-      <Pagination totalCount={totalCount} contentType="blog" />
+      </div>
+      <Pagination totalCount={totalCount} contentType={"blog"} />
     </div>
   );
 }
