@@ -12,7 +12,7 @@ const CalendarStyled = styled.div`
   margin: 20px 100px;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 80vh;
   overflow: hidden;
 `;
 

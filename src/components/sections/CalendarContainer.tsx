@@ -1,7 +1,6 @@
 // @ts-nocheck
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-
 import Image from "next/image";
 import styles from "@/styles";
 import { fadeIn, staggerContainer } from "@/utils/motion";
@@ -31,9 +30,7 @@ const CalendarContainer = () => {
           className="relative flex "
         >
           <RecoilRoot>
-            <div style={{ width: "100%" }}>
-              <Calendar />
-            </div>
+            <div style={{ width: "100%" }}>{/* <Calendar /> */}</div>
           </RecoilRoot>
         </motion.div>
       </motion.div>
