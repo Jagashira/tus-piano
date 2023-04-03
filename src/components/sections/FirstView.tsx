@@ -21,11 +21,13 @@ const FirstView = () => {
           paddingLeft: "10vw",
         }}
       >
-        <BigName>
-          東京理科大学
-          <br />
-          ピアノの会
-        </BigName>
+        <div style={{ textAlign: "center" }}>
+          <BigName>
+            東京理科大学
+            <br />
+            ピアノの会
+          </BigName>
+        </div>
       </motion.h1>
     </motion.div>
   );

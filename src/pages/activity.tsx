@@ -12,9 +12,7 @@ import styled from "styled-components";
 const Activity = () => {
   return (
     <>
-      <div className="flex-1">
-        <Activities />
-      </div>
+      <div className="flex-1">{/* <Activities /> */}</div>
       <div className="flex-1">
         <Insights />
       </div>
@@ -24,7 +22,9 @@ const Activity = () => {
       <div className="flex-1">
         <CalendarContainer />
       </div>
-      <div className="flex-1"><Feedback /></div>
+      <div className="flex-1">
+        <Feedback />
+      </div>
     </>
   );
 };
