@@ -12,7 +12,7 @@ import { RecoilRoot } from "recoil";
 const CalendarContainer = () => {
   const [date, setDate] = useState<Date>(new Date());
   return (
-    <section className={`relative z-10  text-center`}>
+    <section className={`z-10 text-center`}>
       <motion.div
         variants={staggerContainer}
         initial="hidden"
