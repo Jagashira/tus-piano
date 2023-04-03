@@ -14,6 +14,7 @@ interface Props {
 }
 export default function Home({ news, totalCount }: any) {
   const isDesktop: boolean = useMediaQuery({ query: "(min-width: 500px)" });
+  console.log(news);
   return (
     <div>
       <motion.div

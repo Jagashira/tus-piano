@@ -18,7 +18,7 @@ const FirstView = () => {
           color: "white",
           zIndex: 10,
           paddingTop: "10vh",
-          paddingLeft: "10vw",
+          margin: "auto",
         }}
       >
         <div style={{ textAlign: "center" }}>

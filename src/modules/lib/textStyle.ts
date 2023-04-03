@@ -24,7 +24,7 @@ line-height:150px;
 letter-spacing:0.01em;
 color:#363637;
 padding:50px;
-margin-top:60px;
+margin-top:100px;
 z-index:-1;
  @media screen and (max-width: 750px) {
     font-size: 140px;
