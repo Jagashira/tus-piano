@@ -64,9 +64,7 @@ const Layout = ({ children }: Props) => {
       <div
         style={{
           zIndex: 10,
-          position: "relative",
-          overflow: "auto",
-          bottom: 0,
+          position: "absolute",
         }}
       >
         <Footer />
