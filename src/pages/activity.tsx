@@ -16,7 +16,7 @@ const Activity = () => {
 
       <Insights />
 
-      <ActivityTime />
+      {/* <ActivityTime /> */}
 
       {/* 
         <CalendarContainer /  >
