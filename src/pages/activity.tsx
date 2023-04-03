@@ -7,16 +7,24 @@ import CalendaComponentr from "@/components/sections/CalendarContainer";
 import React from "react";
 import styles from "../styles/Activity.module.css";
 import CalendarContainer from "@/components/sections/CalendarContainer";
+import styled from "styled-components";
+const ActivityContainer = styled.div`
+  scrollbar-width: none; /*Firefox対応のスクロールバー非表示コード*/
+  -ms-overflow-style: none; /*Internet Explorer対応のスクロールバー非表示コード*/
+  &::-webkit-scrollbar {
+    display: none; /*Google Chrome、Safari、Microsoft Edge対応のスクロールバー非表示コード*/
+  }
+`;
 
 const Activity = () => {
   return (
     <>
-      <div>
+      <ActivityContainer>
         <Activities />
         <Insights />
 
         <ActivityTime />
-      </div>
+      </ActivityContainer>
       <CalendarContainer />
 
       <Feedback />
