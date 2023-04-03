@@ -9,8 +9,11 @@ import styled from "styled-components";
 const CalendarStyled = styled.div`
   background-color: white;
   border-radius: 40px;
-  overflow: hidden;
   margin: 20px 100px;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  overflow: hidden;
 `;
 
 export const Calendar = () => {
@@ -22,11 +25,9 @@ export const Calendar = () => {
   }, [monthIndex]);
   return (
     <CalendarStyled>
-      <div className="h-[80vh] flex flex-col">
-        <CalendarHeader />
-        <div className="flex flex-1">
-          <Month month={currentMonth} />
-        </div>
+      <CalendarHeader />
+      <div className="flex flex-1 ">
+        <Month month={currentMonth} />
       </div>
     </CalendarStyled>
   );
