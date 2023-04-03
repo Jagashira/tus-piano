@@ -21,7 +21,9 @@ const Activity = () => {
       <div className="flex-1">
         <ActivityTime />
       </div>
-      <div className="flex-1">{/* <CalendarContainer /> */}</div>
+      <div className="flex-1">
+        <CalendarContainer />
+      </div>
       <div className="flex-1">{/* <Feedback /> */}</div>
     </>
   );
