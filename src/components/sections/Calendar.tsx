@@ -13,7 +13,6 @@ const CalendarStyled = styled.div`
   display: flex;
   flex-direction: column;
   height: 80vh;
-  overflow: hidden;
 `;
 
 export const Calendar = () => {
