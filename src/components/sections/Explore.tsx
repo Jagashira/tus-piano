@@ -20,7 +20,7 @@ const Explore = () => {
         className={`${styles.innerWidth} mx-auto flex flex-col`}
       >
         <TypingText title="| SNS" textStyles="text-center" />
-        <TitleText
+        {/* <TitleText
           title={
             <>
               日々の活動を
@@ -29,7 +29,7 @@ const Explore = () => {
             </>
           }
           textStyles="text-center"
-        />
+        /> */}
         <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
           {SNSDescription.map((world, index) => (
             <ExploreCard

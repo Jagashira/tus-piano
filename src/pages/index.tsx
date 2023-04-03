@@ -42,7 +42,7 @@ export const getStaticProps = async () => {
     queries: { offset: 0, limit: 3 },
   });
   const dataBlog = await clientBlog.get({
-    endpoint: "news",
+    endpoint: "blog",
     queries: { offset: 0, limit: 3 },
   });
 

@@ -3,52 +3,59 @@ import { BlogContainer } from "@/modules/lib/textStyle";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { TypingText } from "./other/TypingText";
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer } from "@/utils/motion";
 
 const NewBlog = ({ blog }: any) => {
   return (
-    <div
-      style={{
-        padding: "20px 50px 50px 50px",
-        display: "flex",
-        flexDirection: "row",
-        flexWrap: "wrap",
-        justifyContent: "center",
-        gap: 20,
-      }}
-    >
-      {blog.map((blog: any) => (
-        <div key={blog.id} style={{ zIndex: 10 }}>
-          <Link href={`/news/id/${blog.id}`}>
-            <BlogContainer>
-              <div
-                style={{
-                  borderRadius: "5% 5% 0% 0%",
-                  overflow: "hidden",
-                }}
-              >
-                <Image
-                  src="/img/piano.jpg"
-                  alt="piano"
-                  width={310}
-                  height={230}
-                />
-              </div>
-              {/*     <div
+    <>
+      <motion.div
+        //@ts-ignore
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+        className={` mx-auto flex-col`}
+      >
+        <TypingText title={"|新着 Blog"} textStyles="text-center" />
+        <motion.div
+          variants={fadeIn("up", "tween", 0.2, 1)}
           style={{
-            margin: "10px",
-            backgroundColor: "black",
-            width: "100%",
-            // height: "100%",
+            padding: "20px 50px 50px 50px",
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            gap: 20,
           }}
         >
-          2023
-        </div> */}
-              {blog.title}
-            </BlogContainer>
-          </Link>
-        </div>
-      ))}
-    </div>
+          {blog.map((blog: any) => (
+            <div key={blog.id} style={{ zIndex: 10 }}>
+              <Link href={`/blog/id/${blog.id}`}>
+                <BlogContainer>
+                  <div
+                    style={{
+                      borderRadius: "5% 5% 0% 0%",
+                      overflow: "hidden",
+                    }}
+                  >
+                    <Image
+                      src="/img/piano.jpg"
+                      alt="piano"
+                      width={310}
+                      height={230}
+                    />
+                  </div>
+                  {blog.title}
+                </BlogContainer>
+              </Link>
+            </div>
+          ))}
+        </motion.div>
+      </motion.div>
+      ;
+    </>
   );
 };
 
