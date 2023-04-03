@@ -11,9 +11,6 @@ import CalendarContainer from "@/components/sections/CalendarContainer";
 const Activity = () => {
   return (
     <>
-      <div style={{ position: "fixed" }}>
-        <BigTitleActivity>Activity</BigTitleActivity>
-      </div>
       <div className="relative">
         <Activities />
         <Insights />

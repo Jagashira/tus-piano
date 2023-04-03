@@ -14,15 +14,10 @@ export default function Home() {
   return (
     <>
       <div className="overflow-hidden">
-        <div style={{ top: "10vh", position: "fixed" }} />
-
-        <div className={isDesktop ? "fixed top-0" : "fixed top-[10vh]"}>
-          <BackGround />
-        </div>
+        <div style={{ top: "10vh", position: "fixed" }} />{" "}
         <div className="relative">
           <FirstView />
         </div>
-
         {/* <Slider /> */}
         <div className="relative">
           <div style={{ marginTop: "250px" }}>

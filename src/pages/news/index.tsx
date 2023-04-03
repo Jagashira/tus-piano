@@ -16,9 +16,6 @@ export default function Home({ news, totalCount }: any) {
   const isDesktop: boolean = useMediaQuery({ query: "(min-width: 500px)" });
   return (
     <div>
-      <div style={{ position: "fixed" }}>
-        <BigTitle>News</BigTitle>
-      </div>
       <motion.div
         //@ts-ignore
         variants={staggerContainer}
