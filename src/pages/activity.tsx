@@ -12,7 +12,9 @@ import styled from "styled-components";
 const Activity = () => {
   return (
     <>
-      <div className="flex-1">{/* <Activities /> */}</div>
+      <div className="flex-1">
+        <Activities />
+      </div>
       <div className="flex-1">{/* <Insights /> */}</div>
       <div className="flex-1">{/* <ActivityTime /> */}</div>
       <div className="flex-1">{/* <CalendarContainer /> */}</div>
