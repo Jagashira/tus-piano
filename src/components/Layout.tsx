@@ -19,7 +19,7 @@ const Layout = ({ children }: Props) => {
       >
         <Navbar />
       </div>
-      <div style={{ paddingTop: "10vh" }} />
+      <div style={{ paddingTop: "10vh", backgroundColor: "#242423" }} />
       {children}
       <div style={{ zIndex: 10, position: "relative" }}>
         <Footer />
