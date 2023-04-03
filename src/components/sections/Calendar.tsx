@@ -25,10 +25,10 @@ export const Calendar = () => {
   }, [monthIndex]);
   return (
     <CalendarStyled>
-      {/* <CalendarHeader /> */}
-      <div className="flex flex-1 ">
+      <CalendarHeader />
+      {/* <div className="flex flex-1 ">
         <Month month={currentMonth} />
-      </div>
+      </div> */}
     </CalendarStyled>
   );
 };
