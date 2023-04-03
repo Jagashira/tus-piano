@@ -18,11 +18,9 @@ const Activity = () => {
 
       {/* <ActivityTime /> */}
 
-      {/* 
-        <CalendarContainer /  >
-       */}
+      <CalendarContainer />
 
-      {/* <Feedback /> */}
+      <Feedback />
     </>
   );
 };
