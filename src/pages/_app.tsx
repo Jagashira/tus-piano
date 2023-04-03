@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import InitPage from "@/components/InitPage";
 import RainyBackground from "@/components/water";
 import styles from "@/styles/Home.module.css";
+import Head from "next/head";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -25,6 +26,18 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <Head>
+        <title>東京理科大学ピアノの会</title>
+        <meta
+          name="description"
+          content="こちらは東京理科大学ピアノの会のホームページです。"
+        />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=0"
+        />
+        <link rel="icon" href="/img/logo.png" />
+      </Head>
       {isLoading ? (
         <InitPage />
       ) : (

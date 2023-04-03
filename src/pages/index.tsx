@@ -13,16 +13,6 @@ export default function Home() {
   const isDesktop: boolean = useMediaQuery({ query: "(min-width: 768px)" });
   return (
     <>
-      <Head>
-        <title>東京理科大学ピアノの会</title>
-        <meta
-          name="description"
-          content="こちらは東京理科大学ピアノの会のホームページです。"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/img/logo.png" />
-      </Head>
-
       <div className="overflow-hidden">
         <div style={{ top: "10vh", position: "fixed" }} />
 
