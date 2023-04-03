@@ -9,7 +9,7 @@ import styled from "styled-components";
 const CalendarStyled = styled.div`
   background-color: white;
   border-radius: 40px;
-  margin: 20px 100px;
+  margin: 20px 10vw;
   display: flex;
   flex-direction: column;
   height: 80vh;
