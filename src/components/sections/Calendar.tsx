@@ -25,7 +25,7 @@ export const Calendar = () => {
   }, [monthIndex]);
   return (
     <CalendarStyled>
-      <CalendarHeader />
+      {/* <CalendarHeader /> */}
       <div className="flex flex-1 ">
         <Month month={currentMonth} />
       </div>

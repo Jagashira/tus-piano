@@ -30,7 +30,9 @@ const CalendarContainer = () => {
           className="relative flex "
         >
           <RecoilRoot>
-            <div style={{ width: "100%" }}>{/* <Calendar /> */}</div>
+            <div style={{ width: "100%" }}>
+              <Calendar />
+            </div>
           </RecoilRoot>
         </motion.div>
       </motion.div>
