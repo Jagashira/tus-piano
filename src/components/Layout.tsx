@@ -64,7 +64,7 @@ const Layout = ({ children }: Props) => {
       <div
         style={{
           zIndex: 10,
-          position: "relative",
+          position: "fixed",
           overflowY: "auto",
           bottom: 0,
         }}
