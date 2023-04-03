@@ -8,26 +8,23 @@ import React from "react";
 import styles from "../styles/Activity.module.css";
 import CalendarContainer from "@/components/sections/CalendarContainer";
 import styled from "styled-components";
-const ActivityContainer = styled.div`
-  scrollbar-width: none; /*Firefox対応のスクロールバー非表示コード*/
-  -ms-overflow-style: none; /*Internet Explorer対応のスクロールバー非表示コード*/
-  &::-webkit-scrollbar {
-    display: none; /*Google Chrome、Safari、Microsoft Edge対応のスクロールバー非表示コード*/
-  }
-`;
 
 const Activity = () => {
   return (
     <>
-      <ActivityContainer>
+      <div className="flex-1">
         <Activities />
+      </div>
+      <div className="flex-1">
         <Insights />
-
+      </div>
+      <div className="flex-1">
         <ActivityTime />
-      </ActivityContainer>
-      <CalendarContainer />
-
-      <Feedback />
+      </div>
+      <div className="flex-1">
+        <CalendarContainer />
+      </div>
+      <div className="flex-1"><Feedback /></div>
     </>
   );
 };

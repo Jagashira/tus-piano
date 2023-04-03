@@ -30,7 +30,7 @@ const Layout = ({ children }: Props) => {
       console.log(UpperCase(getLastPathSegment(router.pathname)));
       return (
         <>
-          <div style={{ position: "fixed" }}>
+          <div style={{ position: "fixed", width: "100vw" }}>
             {getLastPathSegment(router.pathname) === "activity" ? (
               <BigTitleActivity>
                 {UpperCase(getLastPathSegment(router.pathname))}
