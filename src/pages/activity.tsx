@@ -12,15 +12,15 @@ import styled from "styled-components";
 const Activity = () => {
   return (
     <>
-      {/* <Activities />
+      <Activities />
 
-      <Insights /> */}
+      <Insights />
 
       <ActivityTime />
 
-      {/* <CalendarContainer />
+      <CalendarContainer />
 
-      <Feedback /> */}
+      <Feedback />
     </>
   );
 };
