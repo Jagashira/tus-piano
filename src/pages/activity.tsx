@@ -24,7 +24,9 @@ const Activity = () => {
       <div className="flex-1">
         <CalendarContainer />
       </div>
-      <div className="flex-1">{/* <Feedback /> */}</div>
+      <div className="flex-1">
+        <Feedback />
+      </div>
     </>
   );
 };

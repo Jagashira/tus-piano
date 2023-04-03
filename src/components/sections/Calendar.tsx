@@ -8,9 +8,9 @@ import styled from "styled-components";
 
 const CalendarStyled = styled.div`
   background-color: white;
-  width: 80vw;
   border-radius: 40px;
   overflow: hidden;
+  margin: 20px 100px;
 `;
 
 export const Calendar = () => {

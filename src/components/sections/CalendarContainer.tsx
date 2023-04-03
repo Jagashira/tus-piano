@@ -31,11 +31,7 @@ const CalendarContainer = () => {
           className="relative flex "
         >
           <RecoilRoot>
-            <div
-              style={{
-                margin: "auto",
-              }}
-            >
+            <div style={{ width: "100%" }}>
               <Calendar />
             </div>
           </RecoilRoot>
