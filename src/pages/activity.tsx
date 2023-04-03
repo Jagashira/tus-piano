@@ -11,15 +11,14 @@ import CalendarContainer from "@/components/sections/CalendarContainer";
 const Activity = () => {
   return (
     <>
-      <div className="relative">
+      <div>
         <Activities />
         <Insights />
-        {/* <div className="gradient-04 z-0" /> */}
+
         <ActivityTime />
       </div>
       <CalendarContainer />
       <div className="relative">
-        {/* <div className="gradient-04 z-0" /> */}
         <Feedback />
       </div>
     </>
