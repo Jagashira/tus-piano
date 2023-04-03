@@ -18,9 +18,8 @@ const Activity = () => {
         <ActivityTime />
       </div>
       <CalendarContainer />
-      <div className="relative">
-        <Feedback />
-      </div>
+
+      <Feedback />
     </>
   );
 };
