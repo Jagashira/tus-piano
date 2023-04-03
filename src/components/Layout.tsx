@@ -14,6 +14,7 @@ const Layout = ({ children }: Props) => {
           position: "fixed",
           zIndex: 100,
           width: "100vw",
+          overflowX: "hidden",
         }}
       >
         <Navbar />
