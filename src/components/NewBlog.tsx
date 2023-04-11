@@ -1,5 +1,9 @@
 import { clientNews } from "@/modules/lib/client";
-import { BlogContainer } from "@/modules/lib/textStyle";
+import {
+  BlogContainer,
+  NoneScrollBar,
+  SheetContainer,
+} from "@/modules/lib/textStyle";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -19,40 +23,32 @@ const NewBlog = ({ blog }: any) => {
         className={` mx-auto flex-col`}
       >
         <TypingText title={"|新着 Blog"} textStyles="text-center" />
-        <motion.div
-          variants={fadeIn("up", "tween", 0.2, 1)}
-          style={{
-            padding: "20px 50px 50px 50px",
-            display: "flex",
-            flexDirection: "row",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            gap: 20,
-          }}
-        >
-          {blog.map((blog: any) => (
-            <div key={blog.id} style={{ zIndex: 10 }}>
-              <Link href={`/blog/id/${blog.id}`}>
-                <BlogContainer>
-                  <div
-                    style={{
-                      borderRadius: "5% 5% 0% 0%",
-                      overflow: "hidden",
-                    }}
-                  >
-                    <Image
-                      src="/img/piano.jpg"
-                      alt="piano"
-                      width={310}
-                      height={230}
-                    />
-                  </div>
-                  {blog.title}
-                </BlogContainer>
-              </Link>
-            </div>
-          ))}
-        </motion.div>
+        <NoneScrollBar>
+          <SheetContainer variants={fadeIn("up", "tween", 0.2, 1)} style={{}}>
+            {blog.map((blog: any) => (
+              <div key={blog.id} style={{ zIndex: 10, paddingRight: "20px" }}>
+                <Link href={`/blog/id/${blog.id}`}>
+                  <BlogContainer>
+                    <div
+                      style={{
+                        borderRadius: "5% 5% 0% 0%",
+                        overflow: "hidden",
+                      }}
+                    >
+                      <Image
+                        src="/img/piano.jpg"
+                        alt="piano"
+                        width={310}
+                        height={230}
+                      />
+                    </div>
+                    {blog.title}
+                  </BlogContainer>
+                </Link>
+              </div>
+            ))}
+          </SheetContainer>
+        </NoneScrollBar>
       </motion.div>
       ;
     </>

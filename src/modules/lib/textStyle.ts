@@ -1,4 +1,6 @@
 import Styled from "styled-components";
+import { motion } from "framer-motion";
+import { useWindowSize } from "./useWindowSize";
 
 export const BigTitle = Styled.h2`
 font-style:normal;
@@ -56,7 +58,6 @@ width:310px;
 height:350px;
 background-color:#F5F5F5;
 border-radius: 5% 5% 5% 5%;
-
 `;
 
 export const BigName = Styled.h2`
@@ -83,3 +84,37 @@ color:white;
     padding-top:20px;
   }
 `;
+
+export const NoneScrollBar = Styled.div`
+@media screen and (max-width: 1050px){
+  overflow-x:scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch; 
+  /* scroll-snap-type: x mandatory; */
+  &::-webkit-scrollbar{
+    display: none;
+  }
+
+}
+`
+
+export const SheetContainer = Styled(motion.div)`
+padding-top:30px ;
+padding-bottom:100px;
+display:flex;
+/* gap:20px; */
+@media screen and  (min-width: 1000px){
+  justify-content: center;
+}
+@media screen and  (min-width: 400px) and (max-width: 1000px){
+  padding-left: 30px
+
+}
+@media screen and  (max-width: 400px){
+  padding-left: calc( (100vw - 310px)/2 );
+}
+`
+
+
