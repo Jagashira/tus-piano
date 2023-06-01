@@ -19,12 +19,23 @@ const BackGround = () => {
           zIndex: -100,
         }}
       >
-        <Image
+        <div
+          style={{
+            backgroundImage: "url(/img/background.png)",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            position: "fixed",
+            width: "100vw",
+            height: "100vh",
+          }}
+        />
+        {/* <Image
           src="/img/background.png"
           alt="background"
           layout="fill"
           objectFit="cover"
-        />
+        /> */}
       </div>
     </div>
   );
