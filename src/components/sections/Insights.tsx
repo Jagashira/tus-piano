@@ -16,7 +16,7 @@ const Insights = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={`${styles.innerWidth} mx-auto flex flex-col gap-8`}
       >
-        <TypingText title="| 詳しく" textStyles="text-center" />
+        <TypingText title="| 詳しく" textStyles="text-center" fontSize={20}/>
         {/* <TitleText
           title={<>Insight about metaverse</>}
           textStyles="text-center"

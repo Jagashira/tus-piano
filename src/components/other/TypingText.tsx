@@ -16,6 +16,7 @@ export const TypingText = ({
   textStyles,
   fontSize,
 }: TypingTextProps) => {
+  const Size =fontSize
   return (
     <motion.p
       variants={textContainer}

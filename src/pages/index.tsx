@@ -21,10 +21,10 @@ export default function Home({ news, blog }: any) {
           <Hero />
         </div>
         <div className="relative">
-          <div className="h-[100vh]">
+          <div className="h-[100vh]" style={{backgroundColor: "rgba(0,0,0,0.3)",paddingTop:"20vh"}}>
             <NewNews newsGroup={news} />
           </div>
-          <div className="h-[100vh]">
+          <div className="h-[100vh] pt-[20vh]">
             <NewBlog blogGroup={blog} />
           </div>
         </div>

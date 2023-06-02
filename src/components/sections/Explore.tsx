@@ -19,7 +19,7 @@ const Explore = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={`${styles.innerWidth} mx-auto flex flex-col`}
       >
-        <TypingText title="| SNS" textStyles="text-center" />
+        <TypingText title="| SNS" textStyles="text-center" fontSize={20}/>
         {/* <TitleText
           title={
             <>

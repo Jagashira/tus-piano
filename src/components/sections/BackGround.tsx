@@ -8,7 +8,6 @@ const BackGround = () => {
       <div
         style={{
           position: "fixed",
-          backgroundColor: "rgba(0,0,0,0.3)",
           width: "100vw",
           height: "100vh",
           zIndex: 1,
