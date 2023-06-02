@@ -15,6 +15,9 @@ const Layout = ({ children }: Props) => {
   const router = useRouter();
 
   const isDesktop: boolean = useMediaQuery({ query: "(min-width: 768px)" });
+  const isDesktopBackground: boolean = useMediaQuery({
+    query: "(min-width: 1415px)",
+  });
 
   const background = () => {
     if (router.pathname === "/") {
@@ -47,7 +50,7 @@ const Layout = ({ children }: Props) => {
   };
 
   return (
-    <div style={{ backgroundColor: "#242423" }}>
+    <div style={{}}>
       {background()}
       <div
         style={{
@@ -59,7 +62,7 @@ const Layout = ({ children }: Props) => {
         <Navbar />
       </div>
 
-      <div style={{ paddingTop: "10vh", backgroundColor: "#242423" }} />
+      <div style={{ paddingTop: "10vh" }} />
       <div>{children}</div>
       <div
         style={{

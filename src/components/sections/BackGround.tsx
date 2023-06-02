@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import styles from "@/styles/Background.module.css";
+
 const BackGround = () => {
   return (
     <div>
@@ -21,21 +23,19 @@ const BackGround = () => {
       >
         <div
           style={{
-            backgroundImage: "url(/img/background.png)",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            position: "fixed",
-            width: "100vw",
-            height: "100vh",
+            width: "auto",
+            height: "100%",
+            transform: "translateX(-50%)",
+            left: "50%",
           }}
         />
-        {/* <Image
-          src="/img/background.png"
+        <Image
+          src="/img/background_piano_monochrome.png"
           alt="background"
           layout="fill"
-          objectFit="cover"
-        /> */}
+          objectFit="contain"
+          // style={{ width: "100%", height: "auto" }}
+        />
       </div>
     </div>
   );

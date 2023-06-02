@@ -67,7 +67,6 @@ export const ForMobileNavigation = () => {
           opacity: "50%",
           filter: "blur(10px)",
           borderBottomRightRadius: "40px",
-          backgroundColor: "#242423",
         }}
         variants={sidebar}
       />
