@@ -24,7 +24,7 @@ const Layout = ({ children }: Props) => {
       console.log(router.pathname);
       return (
         <div style={{ zIndex: -100 }}>
-          <div className={isDesktop ? "fixed top-0" : "fixed top-[10vh]"}>
+          <div className="fixed top-0">
             <BackGround />
           </div>
         </div>
@@ -52,17 +52,7 @@ const Layout = ({ children }: Props) => {
   return (
     <div style={{}}>
       {background()}
-      <div
-        style={{
-          position: "fixed",
-          zIndex: 100,
-          width: "100vw",
-        }}
-      >
-        <Navbar />
-      </div>
 
-      <div style={{ paddingTop: "10vh" }} />
       <div>{children}</div>
       <div
         style={{

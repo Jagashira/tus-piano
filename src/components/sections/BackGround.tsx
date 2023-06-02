@@ -34,7 +34,6 @@ const BackGround = () => {
           alt="background"
           layout="fill"
           objectFit="contain"
-          // style={{ width: "100%", height: "auto" }}
         />
       </div>
     </div>

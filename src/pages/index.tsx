@@ -2,9 +2,9 @@ import MainPage from "@/components/MainPage";
 import Head from "next/head";
 
 import { Footer, Navbar, NewFeatures } from "@/utils/otherExport";
-import { About, Explore, Feedback, Hero, Insights } from "@/utils/uiExport";
+import { About, Explore, Feedback, Insights } from "@/utils/uiExport";
 import Slider from "@/components/sections/SideImg";
-import FirstView from "@/components/sections/FirstView";
+import Hero from "@/components/sections/Hero";
 import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
 import BackGround from "@/components/sections/BackGround";
@@ -17,19 +17,16 @@ export default function Home({ news, blog }: any) {
   return (
     <>
       <div className="overflow-hidden">
-        <div style={{ top: "10vh", position: "fixed" }} />{" "}
-        <div className="relative">
-          <FirstView />
+        <div className="relative h-[100vh]">
+          <Hero />
         </div>
-        {/* <Slider /> */}
         <div className="relative">
-          <div style={{ marginTop: "250px" }}>
-            <About />
+          <div className="h-[100vh]">
+            <NewNews newsGroup={news} />
           </div>
-          {/* <div className="gradient-03 z-0" /> */}
-          <Explore />
-          <NewNews news={news} />
-          <NewBlog blog={blog} />
+          <div className="h-[100vh]">
+            <NewBlog blogGroup={blog} />
+          </div>
         </div>
       </div>
     </>

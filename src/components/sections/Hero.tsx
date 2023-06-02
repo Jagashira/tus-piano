@@ -1,51 +1,73 @@
-// @ts-nocheck
 import React from "react";
-import { motion } from "framer-motion";
-
 import Image from "next/image";
-import styles from "@/styles";
-import { slideIn, staggerContainer, textVariant } from "@/utils/motion";
+import { motion } from "framer-motion";
+import { staggerContainer, textVariant } from "@/utils/motion";
+import { BigName, BigTitle, CircleName } from "@/modules/lib/textStyle";
+import Styled from "styled-components";
 
-const Hero = () => {
+const FirstView = () => {
   return (
-    <section className={`${styles.yPaddings} sm:pl-16 pl-6`}>
-      <motion.div
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
-        className={`${styles.innerWidth} mx-auto flex flex-col`}
+    <motion.div
+      //@ts-ignore
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}
+    >
+      <motion.h1
+        variants={textVariant(1.1)}
+        style={{
+          zIndex: 10,
+        }}
       >
-        <div className="flex justify-center items-center flex-col relative z-0">
-          <motion.h1 variants={textVariant(1.1)} className={styles.heroHeading}>
-            東京理科大
-            <br />
-            ピアノの会
-          </motion.h1>
-          <motion.div
-            variants={textVariant(1.2)}
-            className="flex flex-row justify-center items-center"
-          >
-            <h1 className={styles.heroHeading}></h1>
-          </motion.div>
-        </div>
-        <motion.div
-          variants={slideIn("right", "tween", 0.2, 1)}
-          className="relative w-full md:mt-[20px] -mt-[12px]"
+        <div
+          style={{
+            paddingTop: "30vh",
+            paddingLeft: "20vw",
+            display: "flex",
+            flexDirection: "column",
+            width: "30vw",
+            textAlign: "center",
+          }}
         >
-          <div className="absolute w-full h-[300px] rounded-top-[140px]  -top-[30px]">
-            {/* <Image
-              src="/img/piano2.jpg"
-              alt="cover"
-              width={100}
-              height={100}
-              className="w-full sm:h[500px] h-[350px] object-contain rounded-tl-[140px]  relative"
-            /> */}
+          <div
+            style={{
+              paddingLeft: "0px",
+              fontStyle: "normal",
+              fontWeight: "500",
+              fontSize: "33px",
+              lineHeight: "30px",
+              letterSpacing: "0.01em",
+              color: "#000000",
+            }}
+          >
+            <CircleName>
+              東京理科大学
+              <br />
+              ピアノの会
+            </CircleName>
           </div>
-        </motion.div>
-      </motion.div>
-    </section>
+
+          <div
+            style={{
+              listStyle: "none",
+              color: "#000000",
+              maxWidth: "200px",
+              textAlign: "center",
+              paddingTop: "20px",
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            <li style={{ padding: "20px 0px" }}>Activity</li>
+            <li style={{ padding: "20px 0px" }}>Blog</li>
+            <li style={{ padding: "20px 0px" }}>News</li>
+            <li style={{ padding: "20px 0px" }}>Sponsor</li>
+          </div>
+        </div>
+      </motion.h1>
+    </motion.div>
   );
 };
 
-export default Hero;
+export default FirstView;

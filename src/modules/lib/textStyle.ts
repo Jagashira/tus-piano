@@ -58,7 +58,22 @@ width:310px;
 height:350px;
 background-color:#F5F5F5;
 border-radius: 5% 5% 5% 5%;
+padding-bottom:0px;
+margin-bottom:0px;
 `;
+
+export const CircleName = Styled.p`
+max-width: 200px;
+text-align: center;
+font-style:normal;
+font-weight:500;
+font-size:24px;
+line-height:30px;
+letter-spacing:0.01em;
+color:#000000;
+padding-top:0px;
+margin-top:0px;
+`
 
 export const BigName = Styled.h2`
 font-style:normal;
@@ -102,7 +117,7 @@ export const NoneScrollBar = Styled.div`
 
 export const SheetContainer = Styled(motion.div)`
 padding-top:30px ;
-padding-bottom:100px;
+padding-bottom:0px;
 display:flex;
 /* gap:20px; */
 @media screen and  (min-width: 1000px){
