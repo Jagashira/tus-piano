@@ -35,13 +35,17 @@ const Layout = ({ children }: Props) => {
         <>
           <div style={{ position: "fixed", width: "100vw" }}>
             {getLastPathSegment(router.pathname) === "activity" ? (
-              <BigTitleActivity>
-                {UpperCase(getLastPathSegment(router.pathname))}
-              </BigTitleActivity>
+              <><BigTitleActivity>
+              {UpperCase(getLastPathSegment(router.pathname))}
+            </BigTitleActivity>
+            <BackGround />
+            </>
+              
             ) : (
-              <BigTitle>
-                {UpperCase(getLastPathSegment(router.pathname))}
-              </BigTitle>
+              <><BigTitle>
+              {UpperCase(getLastPathSegment(router.pathname))}
+            </BigTitle>
+            <BackGround /></>
             )}
           </div>
         </>
@@ -53,14 +57,15 @@ const Layout = ({ children }: Props) => {
     <div style={{}}>
       {background()}
 
-      <div>{children}</div>
+      <div style={{minHeight:"80vh"}}>{children}</div>
       <div
         style={{
           zIndex: 10,
           position: "absolute",
+          maxHeight:"20vh"
         }}
       >
-        <Footer />
+       <Footer />
       </div>
     </div>
   );

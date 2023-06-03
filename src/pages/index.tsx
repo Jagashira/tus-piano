@@ -21,7 +21,7 @@ export default function Home({ news, blog }: any) {
         <div className="relative h-[100vh]">
           <Hero />
         </div>
-        <div className="relative" style={{backgroundColor: "rgba(0,0,0,0.3)"}}>
+        <div className="relative" style={{backgroundColor: "rgba(0,0,0,0.5)"}}>
           <div className="h-[100vh pt-[20vh]" >
             <NewNews newsGroup={news} />
           </div>
