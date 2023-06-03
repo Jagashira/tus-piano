@@ -40,7 +40,7 @@ const NewNews = ({ newsGroup }: any) => {
                    <NewsContainer>
                     <p style={{padding:'0 1vw'}}>{FormatDate
                     (news.publishedAt)}</p>
-                    <TagSvg tag="イベント"/>
+                    <TagSvg tag="重要"/>
                     <p>{news.title}</p>
                     
                    </NewsContainer>
