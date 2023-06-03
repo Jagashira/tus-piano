@@ -1,6 +1,8 @@
 import { clientNews } from "@/modules/lib/client";
 import {
   BlogContainer,
+
+  NewsContainer,
   NoneScrollBar,
   SheetContainer,
 } from "@/modules/lib/textStyle";
@@ -12,6 +14,8 @@ import { TypingText } from "./other/TypingText";
 import { fadeIn, staggerContainer } from "@/utils/motion";
 import { useWindowSize } from "@/modules/lib/useWindowSize";
 import { Icon } from "@iconify/react";
+import { FormatDate } from "@/modules/lib/formattedData";
+import { MoreArrowSvgNews, TagSvg } from "@/modules/lib/tagSvg";
 const NewNews = ({ newsGroup }: any) => {
   const [width] = useWindowSize();
   return (
@@ -21,37 +25,32 @@ const NewNews = ({ newsGroup }: any) => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className={` mx-auto flex-col`}
+      className={` mx-auto `}
     >
-      <TypingText title={"News"} textStyles="text-center" fontSize={36} />
-      <TypingText title={"お知らせ"} textStyles="text-center" fontSize={13} />
+      <TypingText title={"News"} textStyles="text-center text-[36px]"  />
+      <TypingText title={"お知らせ"} textStyles="text-center text-[13px]"  />
       <div style={{ paddingTop: "10vh" }}>
         <NoneScrollBar>
           <SheetContainer variants={fadeIn("up", "tween", 0.2, 1)}>
-            {newsGroup.map((news: any, index: number) => {
+           <div style={{display:"flex",flexDirection:"column",width:"80%",margin:"auto"}}> {newsGroup.map((news: any, index: number) => {
               return (
-                <div key={news.id} style={{ zIndex: 10, paddingRight: "20px" }}>
+                <li  key={news.id} style={{ zIndex: 10 ,listStyle:"none",}}>
+                  
                   <Link href={`/news/id/${news.id}`}>
-                    <BlogContainer>
-                      <div
-                        style={{
-                          borderRadius: "5% 5% 0% 0%",
-                          overflow: "hidden",
-                        }}
-                      >
-                        <Image
-                          src="/img/piano.jpg"
-                          alt="piano"
-                          width={310}
-                          height={230}
-                        />
-                      </div>
-                      {news.title}
-                    </BlogContainer>
+                   <NewsContainer>
+                    <p style={{padding:'0 1vw'}}>{FormatDate
+                    (news.publishedAt)}</p>
+                    <TagSvg tag="イベント"/>
+                    <p>{news.title}</p>
+                    
+                   </NewsContainer>
                   </Link>
-                </div>
+                
+                </li>
               );
             })}
+            <Link href="/news" style={ {marginLeft:'1vw'}}><MoreArrowSvgNews/></Link></div>
+            
           </SheetContainer>
         </NoneScrollBar>
       </div>

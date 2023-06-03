@@ -11,6 +11,7 @@ import { TypingText } from "./other/TypingText";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "@/utils/motion";
 import { Icon } from "@iconify/react";
+import { MoreArrowSvgBlog } from "@/modules/lib/tagSvg";
 
 const NewBlog = ({ blogGroup }: any) => {
   return (
@@ -23,8 +24,8 @@ const NewBlog = ({ blogGroup }: any) => {
         viewport={{ once: false, amount: 0.25 }}
         className={` mx-auto flex-col`}
       >
-        <TypingText title={"Blog"} textStyles="text-center" fontSize={36} />
-        <TypingText title={"ブログ"} textStyles="text-center" fontSize={13} />
+        <TypingText title={"Blog"} textStyles="text-center text-[36px]" />
+        <TypingText title={"ブログ"} textStyles="text-center text-[13px]" />
         <div style={{ paddingTop: "10vh" }}>
           <NoneScrollBar>
             <SheetContainer variants={fadeIn("up", "tween", 0.2, 1)} style={{}}>
@@ -56,8 +57,7 @@ const NewBlog = ({ blogGroup }: any) => {
                         alignItems: "center",
                       }}
                     >
-                      <p>もっと見る</p>
-                      <Icon icon="ion:arrow-redo" />
+                      <Link href="/blog"style={{width:"9vw" }}><div ><MoreArrowSvgBlog/></div></Link>
                     </div>
                   ) : null}
                 </div>

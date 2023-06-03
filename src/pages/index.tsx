@@ -11,6 +11,7 @@ import BackGround from "@/components/sections/BackGround";
 import NewBlog from "@/components/NewBlog";
 import NewNews from "@/components/NewNews";
 import { clientBlog, clientNews } from "@/modules/lib/client";
+import SNS from "@/components/sections/SNS";
 
 export default function Home({ news, blog }: any) {
   const isDesktop: boolean = useMediaQuery({ query: "(min-width: 768px)" });
@@ -20,12 +21,14 @@ export default function Home({ news, blog }: any) {
         <div className="relative h-[100vh]">
           <Hero />
         </div>
-        <div className="relative">
-          <div className="h-[100vh]" style={{backgroundColor: "rgba(0,0,0,0.3)",paddingTop:"20vh"}}>
+        <div className="relative" style={{backgroundColor: "rgba(0,0,0,0.3)"}}>
+          <div className="h-[100vh pt-[20vh]" >
             <NewNews newsGroup={news} />
           </div>
           <div className="h-[100vh] pt-[20vh]">
             <NewBlog blogGroup={blog} />
+          </div><div className="h-[150vh] pt-[20vh]">
+            <SNS />
           </div>
         </div>
       </div>

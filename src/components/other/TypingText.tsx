@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 interface TypingTextProps {
   title: any;
   textStyles: string;
-  fontSize: number;
+ 
 }
 interface TitleTextProps {
   title: React.ReactNode;
@@ -14,13 +14,11 @@ interface TitleTextProps {
 export const TypingText = ({
   title,
   textStyles,
-  fontSize,
 }: TypingTextProps) => {
-  const Size =fontSize
   return (
     <motion.p
       variants={textContainer}
-      className={`${textStyles} font-normal text-[${fontSize}px] text-white `}
+      className={`${textStyles} font-normal `}
     >
       {Array.from(title).map((letter, index) => (
         <motion.span variants={textVariant2} key={index}>
@@ -37,7 +35,7 @@ export const TitleText = ({ title, textStyles }: TitleTextProps) => {
       variants={textVariant2}
       initial="hidden"
       whileInView="show"
-      className={`mt-[8px] font-bold md:text-[64px] text-[40px] text-white ${textStyles}`}
+      className={`mt-[8px] font-bold md:text-[64px] text-[40px] ${textStyles}`}
     >
       {title}
     </motion.h2>

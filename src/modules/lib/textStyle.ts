@@ -61,13 +61,36 @@ border-radius: 5% 5% 5% 5%;
 padding-bottom:0px;
 margin-bottom:0px;
 `;
+export const NewsContainer = Styled.div`
+display:flex;
+flex-direction:row;
+width:100%;
+padding:5px 0px;
+font-size:20px;
+
+`;
+export const MoreArrowNews = Styled.div`
+display:flex;
+flex-direction:row;
+align-items:center;
+width:9vw;
+
+`;
+export const MoreArrowBlog = Styled.div`
+display:flex;
+flex-direction:row;
+align-items:center;
+width:9vw;
+justify-content:right;
+`;
+
 
 export const CircleName = Styled.p`
 max-width: 200px;
 text-align: center;
 font-style:normal;
 font-weight:500;
-font-size:24px;
+
 line-height:30px;
 letter-spacing:0.01em;
 color:#000000;

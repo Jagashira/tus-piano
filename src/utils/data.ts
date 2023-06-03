@@ -26,10 +26,10 @@ export const exploreWorlds = [
   },
 ];
 export const SNSDescription = [
-  { id: "Twitter", imgUrl: "/img/SNSlogo/twitter.jpg", title: "Twitter" ,url:"https://twitter.com/"},
-  { id: "Instagram", imgUrl: "/img/SNSlogo/instagram.jpg", title: "Instagram" ,url:"https://www.instagram.com/"},
-  { id: "TikTok", imgUrl: "/img/SNSlogo/tiktok.jpg", title: "TikTok" ,url:"https://www.tiktok.com/"},
-  { id: "YouTube", imgUrl: "/img/SNSlogo/youtube.jpg", title: "YouTube",url:"https://www.youtube.com/" },
+  { id: "Twitter", imgUrl: "/img/SNSlogo/twitterBird.png", title: "Twitter" ,url:"https://twitter.com/"},
+  { id: "Instagram", imgUrl: "/img/SNSlogo/instagram.png", title: "Instagram" ,url:"https://www.instagram.com/"},
+  { id: "YouTube", imgUrl: "/img/SNSlogo/youtube.png", title: "YouTube",url:"https://www.youtube.com/" },
+  { id: "TikTok", imgUrl: "/img/SNSlogo/tiktok.png", title: "TikTok" ,url:"https://www.tiktok.com/"},
 ];
 export const ActivitiesDesc = [
   "ピアノ部屋でピアノの練習（任意）",
