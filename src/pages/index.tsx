@@ -21,7 +21,7 @@ export default function Home({ news, blog }: any) {
         <div className="relative h-[100vh]">
           <Hero />
         </div>
-        <div className="relative" style={{backgroundColor: "rgba(0,0,0,0.5)"}}>
+        <div className="relative" style={{backgroundColor: "rgba(0,0,0,0.1)"}}>
           <div className="h-[100vh pt-[20vh]" >
             <NewNews newsGroup={news} />
           </div>
@@ -39,11 +39,11 @@ export default function Home({ news, blog }: any) {
 export const getStaticProps = async () => {
   const dataNews = await clientNews.get({
     endpoint: "news",
-    queries: { offset: 0, limit: 3 },
+    queries: { offset: 0, limit: 5   },
   });
   const dataBlog = await clientBlog.get({
     endpoint: "blog",
-    queries: { offset: 0, limit: 3 },
+    queries: { offset: 0, limit: 4 },
   });
 
   return {

@@ -17,7 +17,7 @@ const FirstView = () => {
   const fontSize = ()=>{
     
     if(isLarge){
-      return 33
+      return 36
     }else if(isMiddle){
       return 20;
     }else{
@@ -44,7 +44,7 @@ const FirstView = () => {
             paddingLeft: "20vw",
             display: "flex",
             flexDirection: "column",
-            width: "30vw",
+            width: "40vw",
             textAlign: "center",
           }}
         >
@@ -53,8 +53,8 @@ const FirstView = () => {
               paddingLeft: "0px",
               fontStyle: "normal",
               fontWeight: "500",
-              fontSize: `23px`,
-              lineHeight: "30px",
+              fontSize: `30px`,
+              
               letterSpacing: "0.01em",
               color: "#000000",
             }}
@@ -70,7 +70,8 @@ const FirstView = () => {
             style={{
               listStyle: "none",
               color: "#000000",
-              maxWidth: "200px",
+            
+          
               textAlign: "center",
               paddingTop: "20px",
               display: "flex",

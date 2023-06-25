@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import styles from "@/styles";
@@ -7,9 +7,11 @@ import { fadeIn, staggerContainer } from "@/utils/motion";
 import { TitleText, TypingText } from "@/utils/otherExport";
 import { Calendar } from "./Calendar";
 import { RecoilRoot } from "recoil";
+import { google } from 'googleapis';
 
 const CalendarContainer = () => {
   const [date, setDate] = useState<Date>(new Date());
+
   return (
     <section className={`relative z-10 text-center`}>
       <motion.div
@@ -36,7 +38,7 @@ const CalendarContainer = () => {
           </RecoilRoot>
         </motion.div>
       </motion.div>
-    </section>
+      </section>
   );
 };
 

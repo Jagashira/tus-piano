@@ -35,17 +35,21 @@ const Layout = ({ children }: Props) => {
         <>
           <div style={{ position: "fixed", width: "100vw" }}>
             {getLastPathSegment(router.pathname) === "activity" ? (
-              <><BigTitleActivity>
+              <><div className="z-1 fixed"><BigTitleActivity>
               {UpperCase(getLastPathSegment(router.pathname))}
-            </BigTitleActivity>
+            </BigTitleActivity></div>
+            <div className="fixed top-0 z-0">
             <BackGround />
+          </div>
             </>
               
             ) : (
-              <><BigTitle>
+              <><div className="fixed z-1 top-0"><BigTitle>
               {UpperCase(getLastPathSegment(router.pathname))}
-            </BigTitle>
-            <BackGround /></>
+            </BigTitle></div>
+            <div className="fixed top-0 z-0">
+            <BackGround />
+          </div></>
             )}
           </div>
         </>

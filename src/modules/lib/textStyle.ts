@@ -86,12 +86,12 @@ justify-content:right;
 
 
 export const CircleName = Styled.p`
-max-width: 200px;
+/* max-width: 200px; */
 text-align: center;
 font-style:normal;
 font-weight:500;
 
-line-height:30px;
+line-height:40px;
 letter-spacing:0.01em;
 color:#000000;
 padding-top:0px;

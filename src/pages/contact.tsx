@@ -1,5 +1,7 @@
 import { useState } from "react";
 import type { NextPage } from "next";
+// import Calendara from "@/components/calendartest";
+import Homea from "@/components/calendartest";
 
 const Contact: NextPage = () => {
   const [form, setForm] = useState({
@@ -34,7 +36,9 @@ const Contact: NextPage = () => {
   };
 
   return (
+    
     <form>
+      <Homea/>
       <input
         onChange={(e) => {
           const val = e.currentTarget.value;

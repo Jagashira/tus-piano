@@ -32,9 +32,10 @@ const NewNews = ({ newsGroup }: any) => {
       <div style={{ paddingTop: "10vh" }}>
         <NoneScrollBar>
           <SheetContainer variants={fadeIn("up", "tween", 0.2, 1)}>
-           <div style={{display:"flex",flexDirection:"column",width:"80%",margin:"auto"}}> {newsGroup.map((news: any, index: number) => {
+          
+          <div style={{display:"flex",flexDirection:"column",width:"80%",margin:"auto",backgroundColor:"white",padding:"20px 0",borderRadius:"20px"}}> {newsGroup.map((news: any, index: number) => {
               return (
-                <li  key={news.id} style={{ zIndex: 10 ,listStyle:"none",}}>
+                <li  key={news.id} style={{ zIndex: 10 ,listStyle:"none"}}>
                   
                   <Link href={`/news/id/${news.id}`}>
                    <NewsContainer>
@@ -51,6 +52,7 @@ const NewNews = ({ newsGroup }: any) => {
             })}
             <Link href="/news" style={ {marginLeft:'1vw'}}><MoreArrowSvgNews/></Link></div>
             
+      
           </SheetContainer>
         </NoneScrollBar>
       </div>
