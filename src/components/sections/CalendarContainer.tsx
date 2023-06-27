@@ -8,6 +8,7 @@ import { TitleText, TypingText } from "@/utils/otherExport";
 import { Calendar } from "./Calendar";
 import { RecoilRoot } from "recoil";
 import { google } from 'googleapis';
+import CalendarComponent from "../Calendar/CalendarComponent";
 
 const CalendarContainer = () => {
   const [date, setDate] = useState<Date>(new Date());
@@ -19,23 +20,17 @@ const CalendarContainer = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className={`flex flex-col gap-8`}
+        className={`flex flex-col `}
       >
-        <TypingText title="| カレンダー" textStyles="text-center" />
-
-        <TitleText
-          title={<>年間の日程を下記にまとめました</>}
-          textStyles="text-center"
-        />
+       <TypingText title={"Calendar"} textStyles="text-center text-[36px]" />
+       <TypingText title={"カレンダー"} textStyles="text-center text-[13px]" />
         <motion.div
           variants={fadeIn("up", "tween", 0.3, 1)}
-          className="relative flex "
+          className="relative flex mt-3"
         >
-          <RecoilRoot>
-            <div style={{ width: "100%" }}>
-              <Calendar />
-            </div>
-          </RecoilRoot>
+     
+          <CalendarComponent />
+        
         </motion.div>
       </motion.div>
       </section>

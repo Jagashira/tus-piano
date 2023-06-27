@@ -11,10 +11,6 @@ const Activity = () => {
 
       <Insights />
 
-      {/* <ActivityTime /> */}
-
-      <CalendarContainer />
-
       <Feedback />
     </>
   );

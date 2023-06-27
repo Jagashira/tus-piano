@@ -2,7 +2,7 @@ import MainPage from "@/components/MainPage";
 import Head from "next/head";
 
 import { Footer, Navbar, NewFeatures } from "@/utils/otherExport";
-import { About, Explore, Feedback, Insights } from "@/utils/uiExport";
+import { About, CalendarContainer, Explore, Feedback, Insights } from "@/utils/uiExport";
 import Slider from "@/components/sections/SideImg";
 import Hero from "@/components/sections/Hero";
 import { useMediaQuery } from "react-responsive";
@@ -29,6 +29,9 @@ export default function Home({ news, blog }: any) {
             <NewBlog blogGroup={blog} />
           </div><div className="h-[150vh] pt-[20vh]">
             <SNS />
+          </div>
+          <div className="h-[150vh] pt-[20vh]">
+            <CalendarContainer/>
           </div>
         </div>
       </div>

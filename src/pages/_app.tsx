@@ -38,8 +38,8 @@ export default function App({ Component, pageProps }: AppProps) {
           content="width=device-width, initial-scale=1, user-scalable=0"
         />
         <link rel="icon" href="/img/logo.png" />
-      </Head>
-
+      </Head>  
+     
       {isLoading ? (
         <InitPage />
       ) : (
