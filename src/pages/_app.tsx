@@ -9,7 +9,7 @@ import styles from "@/styles/Home.module.css";
 import Head from "next/head";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   // useEffect(() => {
   //   if (sessionStorage.getItem("access")) {
