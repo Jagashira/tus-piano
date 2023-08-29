@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../styles/Footer.module.css";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
-import LINE from "public/img/LINEIcon.svg";
+import LINE from "public/svg/LINEIcon.svg";
 
 const Footer = () => {
   const date = new Date();

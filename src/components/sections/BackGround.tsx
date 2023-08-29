@@ -10,7 +10,6 @@ const BackGround = () => {
           position: "fixed",
           width: "100vw",
           height: "100vh",
-         
         }}
       />
       <div
@@ -28,7 +27,7 @@ const BackGround = () => {
           }}
         />
         <Image
-          src="/img/background_piano_monochrome.png"
+          src="/img/background/background_piano_mono.png"
           alt="background"
           layout="fill"
           objectFit="contain"

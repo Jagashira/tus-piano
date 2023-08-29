@@ -6,6 +6,7 @@ import { useMediaQuery } from "react-responsive";
 import Footer from "./Footer";
 import Navbar from "./Navigation/Navbar";
 import BackGround from "./sections/BackGround";
+import Header from "./Header";
 
 interface Props {
   children?: ReactNode;
@@ -60,6 +61,10 @@ const Layout = ({ children }: Props) => {
   return (
     <div style={{}}>
       {background()}
+      <div style={{position:"absolute",height:"10vh"}}>
+        <Header/>
+      </div>
+      
 
       <div style={{minHeight:"80vh"}}>{children}</div>
       <div
