@@ -1,7 +1,6 @@
 import { clientNews } from "@/modules/lib/client";
 import {
   BlogContainer,
-
   NewsContainer,
   NoneScrollBar,
   SheetContainer,
@@ -27,32 +26,42 @@ const NewNews = ({ newsGroup }: any) => {
       viewport={{ once: false, amount: 0.25 }}
       className={` mx-auto `}
     >
-      <TypingText title={"News"} textStyles="text-center text-[36px]"  />
-      <TypingText title={"お知らせ"} textStyles="text-center text-[13px]"  />
+      <TypingText title={"News"} textStyles="text-center text-[36px]" />
+      <TypingText title={"お知らせ"} textStyles="text-center text-[13px]" />
       <div style={{ paddingTop: "10vh" }}>
         <NoneScrollBar>
           <SheetContainer variants={fadeIn("up", "tween", 0.2, 1)}>
-          
-          <div style={{display:"flex",flexDirection:"column",width:"80%",margin:"auto",backgroundColor:"white",padding:"20px 0",borderRadius:"20px"}}> {newsGroup.map((news: any, index: number) => {
-              return (
-                <li  key={news.id} style={{ zIndex: 10 ,listStyle:"none"}}>
-                  
-                  <Link href={`/news/id/${news.id}`}>
-                   <NewsContainer>
-                    <p style={{padding:'0 1vw'}}>{FormatDate
-                    (news.publishedAt)}</p>
-                    <TagSvg tag="重要"/>
-                    <p>{news.title}</p>
-                    
-                   </NewsContainer>
-                  </Link>
-                
-                </li>
-              );
-            })}
-            <Link href="/news" style={ {marginLeft:'1vw'}}><MoreArrowSvgNews/></Link></div>
-            
-      
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                width: "60vw",
+                margin: "auto",
+                backgroundColor: "white",
+                padding: "20px 0",
+                borderRadius: "20px",
+              }}
+            >
+              {" "}
+              {newsGroup.map((news: any, index: number) => {
+                return (
+                  <li key={news.id} style={{ zIndex: 10, listStyle: "none" }}>
+                    <Link href={`/news/id/${news.id}`}>
+                      <NewsContainer>
+                        <p style={{ padding: "0 1vw" }}>
+                          {FormatDate(news.publishedAt)}
+                        </p>
+                        <TagSvg tag="重要" />
+                        <p>{news.title}</p>
+                      </NewsContainer>
+                    </Link>
+                  </li>
+                );
+              })}
+              <Link href="/news" style={{ marginLeft: "1vw" }}>
+                <MoreArrowSvgNews />
+              </Link>
+            </div>
           </SheetContainer>
         </NoneScrollBar>
       </div>

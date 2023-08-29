@@ -65,7 +65,7 @@ export const NewsContainer = Styled.div`
 display:flex;
 flex-direction:row;
 width:100%;
-padding:5px 0px;
+padding:10px 0px;
 font-size:20px;
 
 `;
@@ -84,7 +84,6 @@ width:9vw;
 justify-content:right;
 `;
 
-
 export const CircleName = Styled.p`
 /* max-width: 200px; */
 text-align: center;
@@ -96,7 +95,7 @@ letter-spacing:0.01em;
 color:#000000;
 padding-top:0px;
 margin-top:0px;
-`
+`;
 
 export const BigName = Styled.h2`
 font-style:normal;
@@ -136,7 +135,7 @@ export const NoneScrollBar = Styled.div`
   }
 
 }
-`
+`;
 
 export const SheetContainer = Styled(motion.div)`
 padding-top:30px ;
@@ -153,6 +152,4 @@ display:flex;
 @media screen and  (max-width: 400px){
   padding-left: calc( (100vw - 310px)/2 );
 }
-`
-
-
+`;
