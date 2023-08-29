@@ -1,5 +1,5 @@
 .list {
-  margin-bottom: 40px;
+  list-style: none;
 }
 
 .link {
@@ -16,6 +16,7 @@
   font-size: 1.6rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
+  width: 30vw;
 }
 
 @media (max-width: 640px) {

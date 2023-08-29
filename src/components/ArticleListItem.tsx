@@ -9,19 +9,27 @@ export default function ArticleListItem({ blog }: any) {
     <li className={styles.list}>
       <Link href={`/blog/id/${blog.id}`} className={styles.link}>
         {blog.image ? (
-          <Image src={blog.image.url} alt="思い出" width={300} height={200} />
+          <div
+            style={{
+              width: "250px",
+              height: "250px",
+              overflowY: "hidden",
+            }}
+          >
+            <Image src={blog.image.url} alt="思い出" width={250} height={250} />
+          </div>
         ) : (
           <div
             style={{
-              width: "300px",
-              height: "200px",
+              width: "250px",
+              height: "250px",
               backgroundColor: "black",
             }}
           ></div>
         )}
         <dl className={styles.content}>
           <dt className={styles.title}>{blog.title}</dt>
-          <dd></dd>
+          {FormatDate(blog.createdAt)}
           <dd className={styles.date}></dd>
         </dl>
       </Link>

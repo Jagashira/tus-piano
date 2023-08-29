@@ -46,50 +46,18 @@ export default function Home({ blog, totalCount }: any) {
         <div
           style={{
             padding: "50px 50px 50px 50px",
+            margin: "64px auto",
             display: "flex",
             flexDirection: "column",
             width: "60vw",
-            margin: "auto",
+
+            backgroundColor: "white",
+            borderRadius: "20px",
+            gap: "40px",
           }}
         >
           {blog.map((blog: any) => {
-            return (
-              <ArticleListItem blog={blog} />
-              // <div key={blog.id} style={{ margin: "20px" }}>
-              //   <Link href={`/blog/id/${blog.id}`}>
-              //     <div style={{ display: "flex", flexDirection: "row" }}>
-              //       <div
-              //         style={{
-              //           width: "300px",
-              //           height: "200px",
-              //           overflow: "hidden",
-              //         }}
-              //       >
-              //         {blog.image ? (
-              //           <Image
-              //             src={blog.image.url}
-              //             alt="思い出"
-              //             width={300}
-              //             height={200}
-              //           />
-              //         ) : (
-              //           <div
-              //             style={{
-              //               width: "300px",
-              //               height: "200px",
-              //               backgroundColor: "black",
-              //             }}
-              //           ></div>
-              //         )}
-              //       </div>
-              //     </div>
-              //     <div>
-              //       {blog.title}
-              //       <div>{FormatDate(blog.publishedAt)} </div>
-              //     </div>
-              //   </Link>
-              // </div>
-            );
+            return <ArticleListItem blog={blog} />;
           })}
         </div>
 
