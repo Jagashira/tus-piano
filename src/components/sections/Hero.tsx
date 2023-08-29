@@ -34,11 +34,12 @@ const FirstView = () => {
         style={{
           zIndex: 10,
           inset: 0,
-          paddingLeft: "20vw",
+
           display: "flex",
           flexDirection: "column",
           width: "40vw",
           textAlign: "center",
+          margin: "auto",
         }}
       >
         <div
@@ -73,6 +74,7 @@ const FirstView = () => {
               paddingTop: "20px",
               display: "flex",
               flexDirection: "column",
+              gap: "5px",
             }}
           >
             <Link href="/activity">

@@ -32,9 +32,8 @@ const Contact: NextPage = () => {
       </motion.h1>
 
       <div className={styles.contactContainer}>
-        <GetInTouch />
         <div className={styles.subcontainer}>
-          <div className={styles.leftContent}>
+          <div className={styles.left}>
             <Form />
           </div>
           <div className={styles.right}>

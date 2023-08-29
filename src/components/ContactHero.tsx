@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "@/styles/Contact.module.css";
+import { Icon } from "@iconify/react";
 
 const ContactHero = () => {
   return (
@@ -13,6 +14,13 @@ const ContactHero = () => {
           alt="contact"
           className={styles.contactImg}
         />
+        <div className={styles.heroDetail}>
+          <div className={styles.gmail}>
+            <Icon icon="mdi:gmail" />
+            <p>Gmail</p>
+          </div>
+          <p>example@gmail.com</p>
+        </div>
       </div>
     </>
   );

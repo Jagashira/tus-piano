@@ -1,6 +1,7 @@
 import styles from "@/styles/Contact.module.css";
 import { Icon } from "@iconify/react";
 import { useState } from "react";
+import GetInTouch from "./Contact/GetInTouch";
 
 const Form = () => {
   const [form, setForm] = useState({
@@ -36,6 +37,7 @@ const Form = () => {
 
   return (
     <>
+      <GetInTouch />
       <form>
         <div className={styles.inputBox}>
           <input
