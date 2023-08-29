@@ -17,7 +17,6 @@ import BackGround from "@/components/sections/BackGround";
 import NewBlog from "@/components/NewBlog";
 import NewNews from "@/components/NewNews";
 import { clientBlog, clientNews } from "@/modules/lib/client";
-import SNS from "@/components/sections/SNS";
 import NewActivity from "@/components/NewActivity";
 
 export default function Home({ news, blog }: any) {

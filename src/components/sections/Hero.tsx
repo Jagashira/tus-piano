@@ -43,7 +43,7 @@ const FirstView = () => {
       >
         <div
           style={{
-            paddingTop: "30vh",
+            paddingTop: "20vh",
           }}
         >
           {/* <div

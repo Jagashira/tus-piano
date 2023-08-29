@@ -4,13 +4,14 @@ import { useWindowSize } from "./useWindowSize";
 
 export const BigTitle = Styled.h2`
 font-style:normal;
-font-weight:800;
-font-size:190px;
+font-weight:400;
+font-size:100px;
 line-height:120px;
 letter-spacing:0.01em;
 color:#363637;
+opacity:0.4;
 padding:50px;
-margin-top:100px;
+margin-top:50px;
 z-index:-1;
  @media screen and (max-width: 500px) {
     font-size: 140px;

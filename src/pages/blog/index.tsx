@@ -28,12 +28,13 @@ export default function Home({ blog, totalCount }: any) {
           variants={textVariant(1.1)}
           style={{
             textAlign: "center",
-            color: "white",
+            color: "black",
             zIndex: 10,
-            paddingTop: "225px",
+
             margin: "0 20px 0 20px",
           }}
         >
+          <BigTitle>BLOG</BigTitle>
           ピアノの会の部活のブログページでは、
           <br />
           部員たちの練習やイベントの様子など、部活動に関する情報を共有しています。
@@ -50,24 +51,27 @@ export default function Home({ blog, totalCount }: any) {
           gap: 20,
         }}
       >
-        {blog.map((blog: any) => (
-          <div key={blog.id} style={{ zIndex: 10 }}>
-            <Link href={`/blog/id/${blog.id}`}>
-              <BlogContainer>
-                <div
-                  style={{
-                    borderRadius: "5% 5% 0% 0%",
-                    overflow: "hidden",
-                  }}
-                >
-                  <Image
-                    src="/img/piano.jpg"
-                    alt="piano"
-                    width={310}
-                    height={230}
-                  />
-                </div>
-                {/*     <div
+        {blog.map((blog: any) => {
+          return (
+            <div key={blog.id} style={{ zIndex: 10 }}>
+              <Link href={`/blog/id/${blog.id}`}>
+                <BlogContainer>
+                  <div
+                    style={{
+                      borderRadius: "5% 5% 0% 0%",
+                      overflow: "hidden",
+                    }}
+                  >
+                    {blog.image && (
+                      <Image
+                        src={blog.image.url}
+                        alt="piano"
+                        width={310}
+                        height={230}
+                      />
+                    )}
+                  </div>
+                  {/*     <div
           style={{
             margin: "10px",
             backgroundColor: "black",
@@ -77,11 +81,12 @@ export default function Home({ blog, totalCount }: any) {
         >
           2023
         </div> */}
-                {blog.title}
-              </BlogContainer>
-            </Link>
-          </div>
-        ))}
+                  {blog.title}
+                </BlogContainer>
+              </Link>
+            </div>
+          );
+        })}
       </div>
       <Pagination totalCount={totalCount} contentType={"blog"} />
     </div>
@@ -91,7 +96,7 @@ export default function Home({ blog, totalCount }: any) {
 export const getStaticProps = async () => {
   const data = await clientBlog.get({
     endpoint: "blog",
-    queries: { offset: 0, limit: 5 },
+    queries: { offset: 0, limit: 6 },
   });
 
   return {
