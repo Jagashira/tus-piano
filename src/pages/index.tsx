@@ -41,9 +41,9 @@ export default function Home({ news, blog }: any) {
           <div className="h-[100vh] pt-[20vh]">
             <NewBlog blogGroup={blog} />
           </div>
-          <div className="h-[150vh] pt-[20vh]">
+          {/* <div className="h-[150vh] pt-[20vh]">
             <SNS />
-          </div>
+          </div> */}
           <div className="h-[150vh] pt-[20vh]">
             <CalendarContainer />
           </div>

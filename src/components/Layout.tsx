@@ -36,21 +36,27 @@ const Layout = ({ children }: Props) => {
         <>
           <div style={{ position: "fixed", width: "100vw" }}>
             {getLastPathSegment(router.pathname) === "activity" ? (
-              <><div className="z-1 fixed"><BigTitleActivity>
-              {UpperCase(getLastPathSegment(router.pathname))}
-            </BigTitleActivity></div>
-            <div className="fixed top-0 z-0">
-            <BackGround />
-          </div>
-            </>
-              
+              <>
+                <div className="z-1 fixed">
+                  <BigTitleActivity>
+                    {UpperCase(getLastPathSegment(router.pathname))}
+                  </BigTitleActivity>
+                </div>
+                <div className="fixed top-0 z-0">
+                  <BackGround />
+                </div>
+              </>
             ) : (
-              <><div className="fixed z-1 top-0"><BigTitle>
-              {UpperCase(getLastPathSegment(router.pathname))}
-            </BigTitle></div>
-            <div className="fixed top-0 z-0">
-            <BackGround />
-          </div></>
+              <>
+                <div className="fixed z-1 top-0">
+                  <BigTitle>
+                    {UpperCase(getLastPathSegment(router.pathname))}
+                  </BigTitle>
+                </div>
+                <div className="fixed top-0 z-0">
+                  <BackGround />
+                </div>
+              </>
             )}
           </div>
         </>
@@ -61,20 +67,19 @@ const Layout = ({ children }: Props) => {
   return (
     <div style={{}}>
       {background()}
-      <div style={{position:"absolute",height:"10vh"}}>
-        <Header/>
+      <div style={{ position: "absolute", height: "10vh", zIndex: 10 }}>
+        <Header />
       </div>
-      
 
-      <div style={{minHeight:"80vh"}}>{children}</div>
+      <div style={{ minHeight: "80vh" }}>{children}</div>
       <div
         style={{
           zIndex: 10,
           position: "absolute",
-          maxHeight:"20vh"
+          maxHeight: "20vh",
         }}
       >
-       <Footer />
+        <Footer />
       </div>
     </div>
   );

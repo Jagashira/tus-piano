@@ -29,7 +29,9 @@ const Header = () => {
     <div className="navbar bg-base-100 w-[100vw]">
       <div className="navbar-start">
         <div style={{ padding: "0px 20px" }}>
-          <WordLogo />
+          <Link href="/">
+            <WordLogo />
+          </Link>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex"></div>
