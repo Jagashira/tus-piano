@@ -1,10 +1,17 @@
 import React from "react";
-import styles from "@/styles/InitPage.module.css";
+import { useRive } from '@rive-app/react-canvas';
 
 const InitPage = () => {
+  const { RiveComponent } = useRive({
+    src:"/rive/wave_circle_logo.riv",
+    autoplay: true,
+  });
   return (
     <>
-      
+    <div style={{height:"100vh",width:"100vw"}}>
+
+      <RiveComponent />
+    </div>
     </>
   );
 };

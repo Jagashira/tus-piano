@@ -11,19 +11,19 @@ import Head from "next/head";
 export default function App({ Component, pageProps }: AppProps) {
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
-  // useEffect(() => {
-  //   if (sessionStorage.getItem("access")) {
-  //     //初回じゃない
-  //     setIsLoading(false);
-  //   } else {
-  //     //初回
-  //     setIsLoading(true);
-  //     setTimeout(() => {
-  //       sessionStorage.setItem("access", "firstaccess");
-  //       setIsLoading(false);
-  //     }, 3300); // 3.3秒
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (sessionStorage.getItem("access")) {
+      //初回じゃない
+      setIsLoading(false);
+    } else {
+      //初回
+      setIsLoading(true);
+      setTimeout(() => {
+        sessionStorage.setItem("access", "firstaccess");
+        setIsLoading(false);
+      }, 3300); // 3.3秒
+    }
+  }, []);
 
   return (
     <>
