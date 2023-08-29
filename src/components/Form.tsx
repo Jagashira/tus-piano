@@ -10,7 +10,7 @@ const Form = () => {
     msg: "",
   });
 
-  const handleSubmit = (e: React.FormEvent<HTMLInputElement>) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
 
     fetch("/api/contact", {
