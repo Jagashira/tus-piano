@@ -138,6 +138,15 @@ export const NoneScrollBar = Styled.div`
 }
 `;
 
+export const ContactHeadLine = Styled.h2`
+font-weight:600;
+font-size:40px; 
+letter-spacing:0.01em;
+padding-top:40px;
+padding-left:40px;
+color:#363637;
+`;
+
 export const SheetContainer = Styled(motion.div)`
 padding-top:30px ;
 padding-bottom:0px;

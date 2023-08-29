@@ -29,7 +29,7 @@ export default function ArticleListItem({ blog }: any) {
         )}
         <dl className={styles.content}>
           <dt className={styles.title}>{blog.title}</dt>
-          {FormatDate(blog.createdAt)}
+          {FormatDate(blog.publishedAt)}
           <dd className={styles.date}></dd>
         </dl>
       </Link>
