@@ -5,20 +5,20 @@ function Slider() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const slides = [
     {
-      url: "/unsplash/laptop.jpg",
+      url: "/img/slider/1.jpg",
     },
     {
-      url: "/unsplash/laptop1.jpg",
+      url: "/img/slider/2.jpg",
     },
     {
-      url: "/unsplash/laptop2.jpg",
+      url: "/img/slider/3.jpg",
     },
 
     {
-      url: "/unsplash/laptop3.jpg",
+      url: "/img/slider/4.jpg",
     },
     {
-      url: "/unsplash/laptop4.jpg",
+      url: "/img/slider/5.jpg",
     },
   ];
 
@@ -45,7 +45,7 @@ function Slider() {
   };
 
   return (
-    <div className="max-w-[1400px] h-[86vh] w-full m-auto py-2 relative group">
+    <div className="max-w-[1400px] h-[80vh] w-[880px] m-auto py-2 relative group">
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
         className="w-full h-full rounded-2xl bg-center bg-cover duration-500"

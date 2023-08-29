@@ -2,7 +2,13 @@ import MainPage from "@/components/MainPage";
 import Head from "next/head";
 
 import { Footer, Navbar, NewFeatures } from "@/utils/otherExport";
-import { About, CalendarContainer, Explore, Feedback, Insights } from "@/utils/uiExport";
+import {
+  About,
+  CalendarContainer,
+  Explore,
+  Feedback,
+  Insights,
+} from "@/utils/uiExport";
 import Slider from "@/components/sections/SideImg";
 import Hero from "@/components/sections/Hero";
 import { useMediaQuery } from "react-responsive";
@@ -12,6 +18,7 @@ import NewBlog from "@/components/NewBlog";
 import NewNews from "@/components/NewNews";
 import { clientBlog, clientNews } from "@/modules/lib/client";
 import SNS from "@/components/sections/SNS";
+import NewActivity from "@/components/NewActivity";
 
 export default function Home({ news, blog }: any) {
   const isDesktop: boolean = useMediaQuery({ query: "(min-width: 768px)" });
@@ -21,17 +28,24 @@ export default function Home({ news, blog }: any) {
         <div className="relative h-[100vh]">
           <Hero />
         </div>
-        <div className="relative" style={{backgroundColor: "rgba(0,0,0,0.1)"}}>
-          <div className="h-[100vh pt-[20vh]" >
+        <div
+          className="relative"
+          style={{ backgroundColor: "rgba(0,0,0,0.1)" }}
+        >
+          <div className="h-[100vh pt-[20vh]">
+            <NewActivity />
+          </div>
+          <div className="h-[100vh pt-[20vh]">
             <NewNews newsGroup={news} />
           </div>
           <div className="h-[100vh] pt-[20vh]">
             <NewBlog blogGroup={blog} />
-          </div><div className="h-[150vh] pt-[20vh]">
+          </div>
+          <div className="h-[150vh] pt-[20vh]">
             <SNS />
           </div>
           <div className="h-[150vh] pt-[20vh]">
-            <CalendarContainer/>
+            <CalendarContainer />
           </div>
         </div>
       </div>
@@ -42,7 +56,7 @@ export default function Home({ news, blog }: any) {
 export const getStaticProps = async () => {
   const dataNews = await clientNews.get({
     endpoint: "news",
-    queries: { offset: 0, limit: 5   },
+    queries: { offset: 0, limit: 5 },
   });
   const dataBlog = await clientBlog.get({
     endpoint: "blog",
