@@ -31,10 +31,11 @@ export default function Home({ news, totalCount }: any) {
             textAlign: "center",
             color: "black",
             zIndex: 10,
-            paddingTop: "225px",
+
             margin: "0 20px 0 20px",
           }}
         >
+          <BigTitle>NEWS</BigTitle>
           今後の部活動の予定やイベントの情報、部活動の紹介など、
           <br />
           部員たちの活動に関する最新情報を掲載していきます。
