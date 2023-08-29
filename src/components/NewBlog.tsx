@@ -39,12 +39,14 @@ const NewBlog = ({ blogGroup }: any) => {
                           overflow: "hidden",
                         }}
                       >
-                        <Image
-                          src="/img/piano.jpg"
-                          alt="piano"
-                          width={310}
-                          height={230}
-                        />
+                        {blog.image && (
+                          <Image
+                            src={blog.image.url}
+                            alt="piano"
+                            width={310}
+                            height={230}
+                          />
+                        )}
                       </div>
                       {blog.title}
                     </BlogContainer>
@@ -57,7 +59,11 @@ const NewBlog = ({ blogGroup }: any) => {
                         alignItems: "center",
                       }}
                     >
-                      <Link href="/blog"style={{width:"9vw" }}><div ><MoreArrowSvgBlog/></div></Link>
+                      <Link href="/blog" style={{ width: "9vw" }}>
+                        <div>
+                          <MoreArrowSvgBlog />
+                        </div>
+                      </Link>
                     </div>
                   ) : null}
                 </div>

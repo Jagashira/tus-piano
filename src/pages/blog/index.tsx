@@ -7,6 +7,9 @@ import Link from "next/link";
 import { useMediaQuery } from "react-responsive";
 import { motion } from "framer-motion";
 import { staggerContainer, textVariant } from "@/utils/motion";
+import { FormatDate } from "@/modules/lib/formattedData";
+import ArticleListItem from "@/components/ArticleListItem";
+import styles from "@/styles/ArticleListItem.module.css";
 
 interface Props {
   blog: getCMSType;
@@ -39,56 +42,59 @@ export default function Home({ blog, totalCount }: any) {
           <br />
           部員たちの練習やイベントの様子など、部活動に関する情報を共有しています。
         </motion.h1>
-      </motion.div>
 
-      <div
-        style={{
-          padding: "20px 50px 50px 50px",
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: "wrap",
-          justifyContent: "center",
-          gap: 20,
-        }}
-      >
-        {blog.map((blog: any) => {
-          return (
-            <div key={blog.id} style={{ zIndex: 10 }}>
-              <Link href={`/blog/id/${blog.id}`}>
-                <BlogContainer>
-                  <div
-                    style={{
-                      borderRadius: "5% 5% 0% 0%",
-                      overflow: "hidden",
-                    }}
-                  >
-                    {blog.image && (
-                      <Image
-                        src={blog.image.url}
-                        alt="piano"
-                        width={310}
-                        height={230}
-                      />
-                    )}
-                  </div>
-                  {/*     <div
+        <div
           style={{
-            margin: "10px",
-            backgroundColor: "black",
-            width: "100%",
-            // height: "100%",
+            padding: "50px 50px 50px 50px",
+            display: "flex",
+            flexDirection: "column",
+            width: "60vw",
+            margin: "auto",
           }}
         >
-          2023
-        </div> */}
-                  {blog.title}
-                </BlogContainer>
-              </Link>
-            </div>
-          );
-        })}
-      </div>
-      <Pagination totalCount={totalCount} contentType={"blog"} />
+          {blog.map((blog: any) => {
+            return (
+              <ArticleListItem blog={blog} />
+              // <div key={blog.id} style={{ margin: "20px" }}>
+              //   <Link href={`/blog/id/${blog.id}`}>
+              //     <div style={{ display: "flex", flexDirection: "row" }}>
+              //       <div
+              //         style={{
+              //           width: "300px",
+              //           height: "200px",
+              //           overflow: "hidden",
+              //         }}
+              //       >
+              //         {blog.image ? (
+              //           <Image
+              //             src={blog.image.url}
+              //             alt="思い出"
+              //             width={300}
+              //             height={200}
+              //           />
+              //         ) : (
+              //           <div
+              //             style={{
+              //               width: "300px",
+              //               height: "200px",
+              //               backgroundColor: "black",
+              //             }}
+              //           ></div>
+              //         )}
+              //       </div>
+              //     </div>
+              //     <div>
+              //       {blog.title}
+              //       <div>{FormatDate(blog.publishedAt)} </div>
+              //     </div>
+              //   </Link>
+              // </div>
+            );
+          })}
+        </div>
+
+        <Pagination totalCount={totalCount} contentType={"blog"} />
+      </motion.div>
     </div>
   );
 }
@@ -106,3 +112,40 @@ export const getStaticProps = async () => {
     },
   };
 };
+
+// {blog.map((blog: any) => {
+//   return (
+//     <div key={blog.id} style={{ zIndex: 10 }}>
+//       <Link href={`/blog/id/${blog.id}`}>
+//         <BlogContainer>
+//           <div
+//             style={{
+//               borderRadius: "5% 5% 0% 0%",
+//               overflow: "hidden",
+//             }}
+//           >
+//             {blog.image && (
+//               <Image
+//                 src={blog.image.url}
+//                 alt="piano"
+//                 width={310}
+//                 height={230}
+//               />
+//             )}
+//           </div>
+//           {/*     <div
+//   style={{
+//     margin: "10px",
+//     backgroundColor: "black",
+//     width: "100%",
+//     // height: "100%",
+//   }}
+// >
+//   2023
+// </div> */}
+//           {blog.title}
+//         </BlogContainer>
+//       </Link>
+//     </div>
+//   );
+// })}
