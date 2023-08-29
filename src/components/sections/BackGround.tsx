@@ -30,7 +30,7 @@ const BackGround = () => {
           src="/img/background/background_piano_mono.png"
           alt="background"
           layout="fill"
-          objectFit="contain"
+          objectFit="cover"
         />
       </div>
     </div>

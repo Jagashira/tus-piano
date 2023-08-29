@@ -26,7 +26,7 @@ const Header = () => {
     { name: "LINE", icon: LINE, url: "" },
   ];
   return (
-    <div className="navbar bg-base-100 w-[100vw]">
+    <div className="navbar bg-base-100 w-[100vw] border-b">
       <div className="navbar-start">
         <div style={{ padding: "0px 20px" }}>
           <Link href="/">

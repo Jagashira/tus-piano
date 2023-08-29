@@ -1,54 +1,47 @@
-.container{
-    height: auto;
-    background-color: black;
-    padding: 30px 0;
-    width: 100vw;
-    color: white;
+.container {
+  height: auto;
+  background-color: white;
+  padding: 30px 0;
+  width: 100vw;
+  color: black;
 }
-.footerNav{
-    width: 70%;
-    margin: auto    ;
-
-    
+.footerNav {
+  width: 70%;
+  margin: auto;
 }
-.list{
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-.snsIcons{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-around;
-    margin: auto;
-    padding:20px 0;
-    
-
+.snsIcons {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  margin: auto;
+  padding: 20px 0;
 }
-.icon{
-    display: flex;
-    flex-direction: column;
+.icon {
+  display: flex;
+  flex-direction: column;
 }
-.iconSize{
-    font-size: 50px;
+.iconSize {
+  font-size: 50px;
 }
-.iconName{
-    font-size: 10px;
-    text-align: center;    
+.iconName {
+  font-size: 10px;
+  text-align: center;
 }
-.name{
-    text-align: center;
-
+.name {
+  text-align: center;
 }
-.copyright{
-    text-align: center;
-
+.copyright {
+  text-align: center;
 }
-@media screen and (min-width:1000px) {
-    .snsIcons{
-        flex-wrap: wrap;
-    }
-    
+@media screen and (min-width: 1000px) {
+  .snsIcons {
+    flex-wrap: wrap;
+  }
 }

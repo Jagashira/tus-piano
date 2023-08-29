@@ -78,11 +78,11 @@ const FirstView = () => {
             <Link href="/activity">
               <li style={{ padding: "15px 0px" }}>Activity</li>
             </Link>
-            <Link href="/blog">
-              <li style={{ padding: "15px 0px" }}>Blog</li>
-            </Link>
             <Link href="/news">
               <li style={{ padding: "15px 0px" }}>News</li>
+            </Link>
+            <Link href="/blog">
+              <li style={{ padding: "15px 0px" }}>Blog</li>
             </Link>
             <Link href="/sponsor">
               <li style={{ padding: "15px 0px" }}>Sponsor</li>
