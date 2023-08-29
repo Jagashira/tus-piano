@@ -30,7 +30,22 @@ const Layout = ({ children }: Props) => {
           </div>
         </div>
       );
-    } else {
+    }
+    // else if(router.pathname.indexOf("news")){
+    //   <>
+    //               <div className="fixed z-1 top-0">
+    //                 <BigTitle>
+    //                   {UpperCase(getLastPathSegment(router.pathname))}
+    //                 </BigTitle>
+    //               </div>
+    //               {/* <div className="fixed top-0 z-0">
+    //                 <BackGround />
+    //               </div> */}
+    //             </>
+
+    // }
+
+    {
       console.log(UpperCase(getLastPathSegment(router.pathname)));
       return (
         <>
@@ -67,11 +82,11 @@ const Layout = ({ children }: Props) => {
   return (
     <div style={{}}>
       {background()}
-      <div style={{ position: "absolute", height: "10vh", zIndex: 10 }}>
+      <div style={{ position: "absolute", top: 0, zIndex: 10 }}>
         <Header />
       </div>
 
-      <div style={{ minHeight: "80vh" }}>{children}</div>
+      <div style={{ minHeight: "80vh", marginTop: "10vh" }}>{children}</div>
       <div
         style={{
           zIndex: 10,

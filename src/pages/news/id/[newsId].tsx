@@ -9,7 +9,7 @@ export default function newsId({ news }: any) {
   return (
     <div
       style={{
-        color: "white",
+        color: "black",
         zIndex: 10,
         position: "relative",
         textAlign: "center",

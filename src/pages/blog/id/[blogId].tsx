@@ -9,7 +9,7 @@ export default function BlogId({ blog }: any) {
   return (
     <div
       style={{
-        color: "white",
+        color: "black",
         zIndex: 10,
         position: "relative",
         textAlign: "center",

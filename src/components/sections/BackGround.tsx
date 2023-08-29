@@ -3,6 +3,10 @@ import Image from "next/image";
 import styles from "@/styles/Background.module.css";
 
 const BackGround = () => {
+  const pathImg = {
+    main: "/img/background/background_piano_mono.png",
+    news: "/img/background/musicalScore.png",
+  };
   return (
     <div>
       <div
@@ -27,7 +31,7 @@ const BackGround = () => {
           }}
         />
         <Image
-          src="/img/background/background_piano_mono.png"
+          src={pathImg.news}
           alt="background"
           layout="fill"
           objectFit="cover"

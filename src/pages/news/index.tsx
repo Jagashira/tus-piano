@@ -29,7 +29,7 @@ export default function Home({ news, totalCount }: any) {
           variants={textVariant(1.1)}
           style={{
             textAlign: "center",
-            color: "white",
+            color: "black",
             zIndex: 10,
             paddingTop: "225px",
             margin: "0 20px 0 20px",
