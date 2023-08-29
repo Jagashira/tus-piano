@@ -57,7 +57,7 @@ export default function Home({ blog, totalCount }: any) {
           }}
         >
           {blog.map((blog: any) => {
-            return <ArticleListItem blog={blog} />;
+            return <ArticleListItem blog={blog} key={blog.id} />;
           })}
         </div>
 

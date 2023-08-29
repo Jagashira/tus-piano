@@ -1,5 +1,10 @@
 import { useState } from "react";
 import type { NextPage } from "next";
+import { motion } from "framer-motion";
+import { staggerContainer, planetVariants, textVariant } from "@/utils/motion";
+import styles from "@/styles";
+import { BigTitle } from "@/modules/lib/textStyle";
+
 // import Calendara from "@/components/calendartest";
 
 const Contact: NextPage = () => {
@@ -35,55 +40,80 @@ const Contact: NextPage = () => {
   };
 
   return (
-    
-    <form>
-      <input
-        onChange={(e) => {
-          const val = e.currentTarget.value;
-          setForm((props) => ({
-            ...props,
-            name: val !== null ? val : "",
-          }));
+    <motion.div
+      //@ts-ignore
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}
+      className="relative"
+    >
+      <motion.h1
+        variants={textVariant(1.1)}
+        style={{
+          textAlign: "center",
+          color: "black",
+          zIndex: 10,
+
+          margin: "0 20px 0 20px",
         }}
-        value={form.name}
-        name="name"
-        type="text"
-        className="feedback-input"
-        placeholder="Name"
-      />
-      <input
-        onChange={(e) => {
-          const val = e.currentTarget.value;
-          setForm((props) => ({
-            ...props,
-            email: val !== null ? val : "",
-          }));
-        }}
-        name="email"
-        type="text"
-        className="feedback-input"
-        placeholder="Email"
-      />
-      <textarea
-        onChange={(e) => {
-          const val = e.currentTarget.value;
-          setForm((props) => ({
-            ...props,
-            msg: val !== null ? val : "",
-          }));
-        }}
-        name="text"
-        className="feedback-input"
-        placeholder="Comment"
-      ></textarea>
-      <input
-        onClick={async (e) => {
-          await handleSubmit(e);
-        }}
-        type="submit"
-        value="SUBMIT"
-      />
-    </form>
+      >
+        <BigTitle>CONTACT</BigTitle>
+      </motion.h1>
+      <div
+        className="bg-white w-[60vw] h-[100vh]"
+        style={{ borderRadius: "30px", margin: " 0 auto 60px" }}
+      >
+        <form>
+          <input
+            onChange={(e) => {
+              const val = e.currentTarget.value;
+              setForm((props) => ({
+                ...props,
+                name: val !== null ? val : "",
+              }));
+            }}
+            value={form.name}
+            name="name"
+            type="text"
+            className="feedback-input"
+            placeholder="Name"
+          />
+          <input
+            onChange={(e) => {
+              const val = e.currentTarget.value;
+              setForm((props) => ({
+                ...props,
+                email: val !== null ? val : "",
+              }));
+            }}
+            name="email"
+            type="text"
+            className="feedback-input"
+            placeholder="Email"
+          />
+          <textarea
+            onChange={(e) => {
+              const val = e.currentTarget.value;
+              setForm((props) => ({
+                ...props,
+                msg: val !== null ? val : "",
+              }));
+            }}
+            name="text"
+            className="feedback-input"
+            placeholder="Comment"
+          ></textarea>
+          <input
+            onClick={async (e) => {
+              await handleSubmit(e);
+            }}
+            type="submit"
+            value="SUBMIT"
+          />
+        </form>
+      </div>
+    </motion.div>
   );
 };
 
