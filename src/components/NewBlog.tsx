@@ -12,6 +12,8 @@ import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "@/utils/motion";
 import { Icon } from "@iconify/react";
 import { MoreArrowSvgBlog } from "@/modules/lib/tagSvg";
+import BlogImage from "./Main/Blog/BlogImage";
+import BlogTitle from "./Main/Blog/BlogTitle";
 
 const NewBlog = ({ blogGroup }: any) => {
   return (
@@ -33,22 +35,8 @@ const NewBlog = ({ blogGroup }: any) => {
                 <div key={blog.id} style={{ zIndex: 10, paddingRight: "20px" }}>
                   <Link href={`/blog/id/${blog.id}`}>
                     <BlogContainer>
-                      <div
-                        style={{
-                          borderRadius: "5% 5% 0% 0%",
-                          overflow: "hidden",
-                        }}
-                      >
-                        {blog.image && (
-                          <Image
-                            src={blog.image.url}
-                            alt="piano"
-                            width={310}
-                            height={230}
-                          />
-                        )}
-                      </div>
-                      {blog.title}
+                      <BlogImage blog={blog} />
+                      <BlogTitle blog={blog} />
                     </BlogContainer>
                   </Link>
                   {blogGroup.length === index + 1 ? (

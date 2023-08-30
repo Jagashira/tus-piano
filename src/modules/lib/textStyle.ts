@@ -61,6 +61,7 @@ background-color:#F5F5F5;
 border-radius: 5% 5% 5% 5%;
 padding-bottom:0px;
 margin-bottom:0px;
+overflow:hidden;
 `;
 export const NewsContainer = Styled.div`
 display:flex;
