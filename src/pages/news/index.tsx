@@ -1,12 +1,18 @@
 import { Pagination } from "@/components/Pagination/Pagination";
 import { clientNews } from "@/modules/lib/client";
-import { BigTitle, BlogContainer } from "@/modules/lib/textStyle";
+import {
+  BigTitle,
+  BlogContainer,
+  NewsContainer,
+} from "@/modules/lib/textStyle";
 import { Content, getCMSType } from "@/modules/types/microCmsTypes";
 import Image from "next/image";
 import Link from "next/link";
 import { useMediaQuery } from "react-responsive";
 import { motion } from "framer-motion";
 import { staggerContainer, textVariant } from "@/utils/motion";
+import { FormatDate } from "@/modules/lib/formattedData";
+import styles from "@/styles/Main/NewNews.module.css";
 
 interface Props {
   blog: getCMSType;
@@ -44,48 +50,36 @@ export default function Home({ news, totalCount }: any) {
 
       <div
         style={{
-          padding: "20px 50px 50px 50px",
           display: "flex",
-          flexDirection: "row",
-          flexWrap: "wrap",
-          justifyContent: "center",
-          gap: 20,
+          flexDirection: "column",
+          width: "60vw",
+          margin: "30px auto",
+          backgroundColor: "rgba(255,255,255,0.5)",
+          padding: "20px 0",
+          borderRadius: "20px",
         }}
       >
-        {news.map((news: any) => (
-          <div key={news.id} style={{ zIndex: 10 }}>
-            <Link href={`/news/id/${news.id}`}>
-              <BlogContainer>
-                <div
-                  style={{
-                    borderRadius: "5% 5% 0% 0%",
-                    overflow: "hidden",
-                  }}
-                >
-                  <Image
-                    src="/img/piano.jpg"
-                    alt="piano"
-                    width={310}
-                    height={230}
-                  />
-                </div>
-                {/*     <div
-          style={{
-            margin: "10px",
-            backgroundColor: "black",
-            width: "100%",
-            // height: "100%",
-          }}
-        >
-          2023
-        </div> */}
-                {news.title}
-              </BlogContainer>
-            </Link>
-          </div>
-        ))}
+        {news.map((news: any, index: number) => {
+          return (
+            <li key={news.id} style={{ zIndex: 10, listStyle: "none" }}>
+              <Link href={`/news/id/${news.id}`}>
+                <NewsContainer>
+                  <div className={styles.date}>
+                    <p style={{ padding: "0 1vw", fontSize: "16px" }}>
+                      {FormatDate(news.publishedAt)}
+                    </p>
+                  </div>
+                  {/* <TagSvg tag="重要" /> */}
+                  <div className={styles.title}>
+                    <p>{news.title}</p>
+                  </div>
+                </NewsContainer>
+              </Link>
+            </li>
+          );
+        })}
+        <Pagination totalCount={totalCount} contentType={"news"} />
       </div>
-      <Pagination totalCount={totalCount} contentType={"news"} />
     </div>
   );
 }
