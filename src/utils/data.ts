@@ -97,7 +97,7 @@ export const insights = [
   },
   {
     imgUrl:
-      "https://images.microcms-assets.io/assets/5167e5803be84db6b309f28701149122/36c6b4488fbb4a5bb579f060164a19d7/campBBQinteractmany_people_peaceful_lightly_fun_happy_an_694053b9-e971-4a29-a370-3f8d6a308bce.png ",
+      "https://images.microcms-assets.io/assets/5167e5803be84db6b309f28701149122/36c6b4488fbb4a5bb579f060164a19d7/campBBQinteractmany_people_peaceful_lightly_fun_happy_an_694053b9-e971-4a29-a370-3f8d6a308bce.png",
     title: "BBQや合宿などのイベント",
     subtitle:
       "ピアノの会ではBBQや合宿など、様々なイベントを企画しています。メンバー同士の交流を深めることを目的に行っており、参加者からは毎回大きな好評を得ています。",
