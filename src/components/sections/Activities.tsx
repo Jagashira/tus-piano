@@ -1,14 +1,20 @@
 // @ts-nocheck
 import React from "react";
 import { motion } from "framer-motion";
-
-import Image from "next/image";
 import styles from "@/styles";
 import { fadeIn, planetVariants, staggerContainer } from "@/utils/motion";
 import { StartSteps, TitleText, TypingText } from "@/utils/otherExport";
 import { ActivitiesDesc, startingFeatures } from "@/utils/data";
+import ImageContainer from "../ImageContainer";
 
 const Activities = () => {
+  const imageInfo = {
+    imgUrl: "/img/animePiano.png",
+    alt: "get-started",
+    width: 500,
+    height: 500,
+    classname: " object-contain",
+  };
   return (
     <section className={`${styles.paddings} relative z-10`}>
       <motion.div
@@ -32,13 +38,7 @@ const Activities = () => {
                 overflow: "hidden",
               }}
             >
-              <Image
-                src="/img/animePiano.png"
-                alt="get-started"
-                width={500}
-                height={500}
-                className=" object-contain"
-              />
+              <ImageContainer {...imageInfo} />
             </div>
           </motion.div>
           <motion.div

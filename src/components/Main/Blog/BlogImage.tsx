@@ -4,7 +4,7 @@ import React from "react";
 const BlogImage = ({ blog }: any) => {
   return (
     <>
-      {blog.image ? (
+      {blog.image.url ? (
         <div
           style={{
             borderRadius: "5% 5% 0% 0%",

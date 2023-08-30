@@ -17,7 +17,7 @@ const InsightCard = ({ imgUrl, title, subtitle, index }: Props) => {
     >
       <Image
         src={imgUrl}
-        alt="planet-01"
+        alt="piano"
         width={250}
         height={250}
         className="md:w-[270px] w-full h-[250px] rounded-[32px] object-cover "
