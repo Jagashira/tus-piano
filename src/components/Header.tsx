@@ -27,6 +27,14 @@ const Header = () => {
   ];
   return (
     <div className="navbar bg-base-100 w-[100vw] border-b relative">
+      <div
+        style={{
+          position: "absolute",
+          top: "-50vh",
+          width: "100vw",
+          backgroundColor: "white",
+        }}
+      />
       <div className="navbar-start">
         <div style={{ padding: "0px 20px" }}>
           <Link href="/">
