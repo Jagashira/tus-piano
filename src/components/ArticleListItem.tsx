@@ -23,9 +23,16 @@ export default function ArticleListItem({ blog }: any) {
             style={{
               width: "250px",
               height: "250px",
-              backgroundColor: "black",
+              overflowY: "hidden",
             }}
-          ></div>
+          >
+            <Image
+              src="/img/no_image/noimage.png"
+              alt="思い出"
+              width={250}
+              height={250}
+            />
+          </div>
         )}
         <dl className={styles.content}>
           <dt className={styles.title}>{blog.title}</dt>
