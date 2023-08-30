@@ -28,17 +28,6 @@ const Footer1 = () => {
   ];
   return (
     <div className={styles.container}>
-      {/* <div className={styles.footerNav}>
-        <ul className={styles.list}>
-          {footerNav.map((nav, index) => {
-            return (
-              <li key={index}>
-                <a href="">{nav}</Link>
-              </li>
-            );
-          })}
-        </ul>
-      </div> */}
       <div className={styles.snsIcons}>
         {SNSItems.map((SNSItem, index) => {
           return (
@@ -71,6 +60,7 @@ const Footer = () => {
   const date = new Date();
   return (
     <footer className="footer p-8 bg-base-200 text-base-content w-[100vw] justify-center gap-40 border-t">
+      <div className="bg-base-100 absolute bottom-[-50vh] width-[100vw] height-[50vh] z-10" />
       <div>
         <LOGO />
         <p>
