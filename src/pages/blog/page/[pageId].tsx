@@ -60,8 +60,6 @@ export default function BlogPageId({ blog, totalCount }: any) {
           })}
           <Pagination totalCount={totalCount} contentType={"blog"} />
         </div>
-
-        <Pagination totalCount={totalCount} contentType={"blog"} />
       </motion.div>
     </div>
   );
