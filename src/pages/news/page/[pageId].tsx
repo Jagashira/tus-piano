@@ -12,7 +12,7 @@ interface Props {
 // pages/news/[id].js
 export default function newsPageId({ news, totalCount }: any) {
   return (
-    <div>
+    <div className="overflow-hidden">
       <ul>
         {news.map((news: any) => (
           <li key={news.id}>

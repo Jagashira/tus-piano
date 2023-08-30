@@ -12,7 +12,7 @@ interface Props {
 }
 export default function BlogPageId({ blog, totalCount }: any) {
   return (
-    <div>
+    <div className="overflow-hidden">
       <ul>
         {blog.map((blog: any) => (
           <li key={blog.id}>

@@ -5,11 +5,11 @@ import React from "react";
 
 const Activity = () => {
   return (
-    <>
+    <div className="overflow-hidden">
       <Activities />
       <Insights />
       <Feedback />
-    </>
+    </div>
   );
 };
 

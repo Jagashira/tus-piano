@@ -18,7 +18,7 @@ interface Props {
 export default function Home({ blog, totalCount }: any) {
   const isDesktop: boolean = useMediaQuery({ query: "(min-width: 500px)" });
   return (
-    <div>
+    <div className="overflow-hidden">
       <motion.div
         //@ts-ignore
         variants={staggerContainer}
