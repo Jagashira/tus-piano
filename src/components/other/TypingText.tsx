@@ -4,22 +4,15 @@ import { motion } from "framer-motion";
 interface TypingTextProps {
   title: any;
   textStyles: string;
- 
 }
 interface TitleTextProps {
   title: React.ReactNode;
   textStyles?: any;
 }
 
-export const TypingText = ({
-  title,
-  textStyles,
-}: TypingTextProps) => {
+export const TypingText = ({ title, textStyles }: TypingTextProps) => {
   return (
-    <motion.p
-      variants={textContainer}
-      className={`${textStyles} font-normal `}
-    >
+    <motion.p variants={textContainer} className={`${textStyles} font-normal `}>
       {Array.from(title).map((letter, index) => (
         <motion.span variants={textVariant2} key={index}>
           {/* @ts-ignore */}

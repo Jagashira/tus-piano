@@ -68,6 +68,8 @@ flex-direction:row;
 width:100%;
 padding:10px 0px;
 font-size:20px;
+border-bottom:1px solid #E5E5E5;
+border-top:1px solid #E5E5E5;
 
 `;
 export const MoreArrowNews = Styled.div`

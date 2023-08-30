@@ -15,6 +15,8 @@ import { useWindowSize } from "@/modules/lib/useWindowSize";
 import { Icon } from "@iconify/react";
 import { FormatDate } from "@/modules/lib/formattedData";
 import { MoreArrowSvgNews, TagSvg } from "@/modules/lib/tagSvg";
+
+import styles from "@/styles/Main/NewNews.module.css";
 const NewNews = ({ newsGroup }: any) => {
   const [width] = useWindowSize();
   return (
@@ -27,7 +29,7 @@ const NewNews = ({ newsGroup }: any) => {
       className={` mx-auto `}
     >
       <TypingText title={"News"} textStyles="text-center text-[36px]" />
-      <TypingText title={"お知らせ"} textStyles="text-center text-[13px]" />
+      <TypingText title={"お知らせ"} textStyles="text-center text-[13px] " />
       <div style={{ paddingTop: "10vh" }}>
         <NoneScrollBar>
           <SheetContainer variants={fadeIn("up", "tween", 0.2, 1)}>
@@ -37,7 +39,7 @@ const NewNews = ({ newsGroup }: any) => {
                 flexDirection: "column",
                 width: "60vw",
                 margin: "auto",
-                backgroundColor: "white",
+                backgroundColor: "rgba(255,255,255,0.5)",
                 padding: "20px 0",
                 borderRadius: "20px",
               }}
@@ -48,11 +50,15 @@ const NewNews = ({ newsGroup }: any) => {
                   <li key={news.id} style={{ zIndex: 10, listStyle: "none" }}>
                     <Link href={`/news/id/${news.id}`}>
                       <NewsContainer>
-                        <p style={{ padding: "0 1vw" }}>
-                          {FormatDate(news.publishedAt)}
-                        </p>
-                        <TagSvg tag="重要" />
-                        <p>{news.title}</p>
+                        <div className={styles.date}>
+                          <p style={{ padding: "0 1vw", fontSize: "16px" }}>
+                            {FormatDate(news.publishedAt)}
+                          </p>
+                        </div>
+                        {/* <TagSvg tag="重要" /> */}
+                        <div className={styles.title}>
+                          <p>{news.title}</p>
+                        </div>
                       </NewsContainer>
                     </Link>
                   </li>
