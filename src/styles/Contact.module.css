@@ -35,6 +35,10 @@
 }
 .heroDetail {
   padding: 80px;
+  padding-left: 110px;
+}
+.gmailContainer {
+  margin: 0 0 20px 0;
 }
 .gmail {
   display: flex;
