@@ -86,7 +86,6 @@ const Footer = () => {
       </div>
       <div>
         <span className="footer-title">OTHER</span>
-        <Link href="/">Privacy Policy</Link>
         <Link href="/">Producer</Link>
       </div>
     </footer>
