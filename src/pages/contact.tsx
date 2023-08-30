@@ -5,9 +5,6 @@ import { BigTitle, ContactHeadLine } from "@/modules/lib/textStyle";
 import styles from "@/styles/Contact.module.css";
 import Form from "@/components/Form";
 import ContactHero from "@/components/ContactHero";
-import GetInTouch from "@/components/Contact/GetInTouch";
-
-// import Calendara from "@/components/calendartest";
 
 const Contact: NextPage = () => {
   return (
@@ -17,7 +14,7 @@ const Contact: NextPage = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className="relative"
+      className="relative overflow-hidden"
     >
       <motion.h1
         variants={textVariant(1.1)}

@@ -1,26 +1,11 @@
-import MainPage from "@/components/MainPage";
-import Head from "next/head";
-
-import { Footer, Navbar, NewFeatures } from "@/utils/otherExport";
-import {
-  About,
-  CalendarContainer,
-  Explore,
-  Feedback,
-  Insights,
-} from "@/utils/uiExport";
-import Slider from "@/components/sections/SideImg";
+import { CalendarContainer } from "@/utils/uiExport";
 import Hero from "@/components/sections/Hero";
-import { useMediaQuery } from "react-responsive";
-import { useState } from "react";
-import BackGround from "@/components/sections/BackGround";
 import NewBlog from "@/components/NewBlog";
 import NewNews from "@/components/NewNews";
 import { clientBlog, clientNews } from "@/modules/lib/client";
 import NewActivity from "@/components/NewActivity";
 
 export default function Home({ news, blog }: any) {
-  const isDesktop: boolean = useMediaQuery({ query: "(min-width: 768px)" });
   return (
     <>
       <div className="overflow-hidden">
@@ -40,9 +25,6 @@ export default function Home({ news, blog }: any) {
           <div className="h-[100vh] pt-[20vh]">
             <NewBlog blogGroup={blog} />
           </div>
-          {/* <div className="h-[150vh] pt-[20vh]">
-            <SNS />
-          </div> */}
           <div className="h-[150vh] pt-[20vh]">
             <CalendarContainer />
           </div>

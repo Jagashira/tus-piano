@@ -24,17 +24,9 @@ const BackGround = () => {
       >
         <div
           style={{
-            width: "auto",
-            height: "100%",
-            transform: "translateX(-50%)",
-            left: "50%",
+            backgroundImage: `url(${pathImg.news})`,
+            objectFit: "cover",
           }}
-        />
-        <Image
-          src={pathImg.news}
-          alt="background"
-          layout="fill"
-          objectFit="cover"
         />
       </div>
     </div>

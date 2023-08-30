@@ -2,15 +2,12 @@ import Feedback from "@/components/sections/Feedback";
 import Activities from "@/components/sections/Activities";
 import Insights from "@/components/sections/Insights";
 import React from "react";
-import CalendarContainer from "@/components/sections/CalendarContainer";
 
 const Activity = () => {
   return (
     <>
       <Activities />
-
       <Insights />
-
       <Feedback />
     </>
   );

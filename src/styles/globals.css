@@ -10,6 +10,7 @@ body {
   box-sizing: border-box;
   font-family: "Zen Old Mincho", serif;
   overflow-x: hidden;
+
   /* background-color: #242423; */
   /* background-color: #121212; */
   /* background-image: radial-gradient(at 30% 13%, hsla(182,26%,72%,1) 0px, transparent 50%), radial-gradient(at 96% 4%, hsla(166,40%,78%,1) 0px, transparent 50%), radial-gradient(at 10% 80%, hsla(198,45%,78%,1) 0px, transparent 50%), radial-gradient(at 87% 90%, hsla(213,37%,74%,1) 0px, transparent 50%);*/
