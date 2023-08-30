@@ -60,9 +60,8 @@ export default function Home({ blog, totalCount }: any) {
           {blog.map((blog: any) => {
             return <ArticleListItem blog={blog} key={blog.id} />;
           })}
+          <Pagination totalCount={totalCount} contentType={"blog"} />
         </div>
-
-        <Pagination totalCount={totalCount} contentType={"blog"} />
       </motion.div>
     </div>
   );

@@ -2,6 +2,11 @@ import { Pagination } from "@/components/Pagination/Pagination";
 import { clientNews } from "@/modules/lib/client";
 import { Content, getCMSType } from "@/modules/types/microCmsTypes";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { BigTitle, NewsContainer } from "@/modules/lib/textStyle";
+import { staggerContainer, textVariant } from "@/utils/motion";
+import { FormatDate } from "@/modules/lib/formattedData";
+import styles from "@/styles/Main/NewNews.module.css";
 
 const PER_PAGE = 5;
 interface Props {
@@ -13,14 +18,63 @@ interface Props {
 export default function newsPageId({ news, totalCount }: any) {
   return (
     <div className="overflow-hidden">
-      <ul>
-        {news.map((news: any) => (
-          <li key={news.id}>
-            <Link href={`/news/id/${news.id}`}>{news.title}</Link>
-          </li>
-        ))}
-      </ul>
-      <Pagination totalCount={totalCount} contentType="news" />
+      <motion.div
+        //@ts-ignore
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+        className="relative"
+      >
+        <motion.h1
+          variants={textVariant(1.1)}
+          style={{
+            textAlign: "center",
+            color: "black",
+            zIndex: 10,
+
+            margin: "0 20px 0 20px",
+          }}
+        >
+          <BigTitle>NEWS</BigTitle>
+          今後の部活動の予定やイベントの情報、部活動の紹介など、
+          <br />
+          部員たちの活動に関する最新情報を掲載していきます。
+        </motion.h1>
+      </motion.div>
+
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          width: "60vw",
+          margin: "30px auto",
+          backgroundColor: "rgba(255,255,255,0.5)",
+          padding: "20px 0",
+          borderRadius: "20px",
+        }}
+      >
+        {news.map((news: any, index: number) => {
+          return (
+            <li key={news.id} style={{ zIndex: 10, listStyle: "none" }}>
+              <Link href={`/news/id/${news.id}`}>
+                <NewsContainer>
+                  <div className={styles.date}>
+                    <p style={{ padding: "0 1vw", fontSize: "16px" }}>
+                      {FormatDate(news.publishedAt)}
+                    </p>
+                  </div>
+                  {/* <TagSvg tag="重要" /> */}
+                  <div className={styles.title}>
+                    <p>{news.title}</p>
+                  </div>
+                </NewsContainer>
+              </Link>
+            </li>
+          );
+        })}
+        <Pagination totalCount={totalCount} contentType={"news"} />
+      </div>
     </div>
   );
 }
