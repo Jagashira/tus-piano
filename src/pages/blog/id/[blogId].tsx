@@ -6,6 +6,7 @@ import { Content } from "@/modules/types/microCmsTypes";
 
 export default function BlogId({ blog }: any) {
   //const date = FormatDate(blog.publishedAt, "YYYY-MM-DD-HH-mm");
+
   return (
     <div
       style={{

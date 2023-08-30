@@ -17,43 +17,46 @@ const Activities = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className={`${styles.innerWidth} mx-auto flex lg:flex-row flex-col gap-8`}
+        className={`${styles.innerWidth} `}
       >
-        <motion.div
-          variants={planetVariants("left")}
-          className={`flex-1 ${styles.flexCenter}`}
-        >
-          <div
-            style={{
-              borderRadius: "10%",
-              overflow: "hidden",
-            }}
+        <TypingText title="| 活動内容" textStyles="text-center" />
+
+        <div className="mx-auto flex lg:flex-row flex-col gap-8 ">
+          <motion.div
+            variants={planetVariants("left")}
+            className={`flex-1 ${styles.flexCenter}`}
           >
-            <Image
-              src="/img/animePiano.png"
-              alt="get-started"
-              width={500}
-              height={500}
-              className=" object-contain"
-            />
-          </div>
-        </motion.div>
-        <motion.div
-          variants={fadeIn("left", "tween", 0.2, 1)}
-          className="flex-[0.75] flex justify-center flex-col"
-        >
-          <TypingText title="| 活動内容" />
-          <TitleText title={<>ピアノの会の主な活動内容</>} />
-          <div className="mt-[31px] flex flex-col max-w-[400px] gap-[24px]">
-            {ActivitiesDesc.map((feature, index) => (
-              <StartSteps
-                key={feature}
-                number={`${index < 10 ? "0" : ""}${index + 1}`}
-                text={feature}
+            <div
+              style={{
+                borderRadius: "10%",
+                overflow: "hidden",
+              }}
+            >
+              <Image
+                src="/img/animePiano.png"
+                alt="get-started"
+                width={500}
+                height={500}
+                className=" object-contain"
               />
-            ))}
-          </div>
-        </motion.div>
+            </div>
+          </motion.div>
+          <motion.div
+            variants={fadeIn("left", "tween", 0.2, 1)}
+            className="flex-[0.75] flex justify-center flex-col"
+          >
+            <TitleText title={<>ピアノの会の主な活動内容</>} />
+            <div className="mt-[31px] flex flex-col max-w-[400px] gap-[24px]">
+              {ActivitiesDesc.map((feature, index) => (
+                <StartSteps
+                  key={feature}
+                  number={`${index < 10 ? "0" : ""}${index + 1}`}
+                  text={feature}
+                />
+              ))}
+            </div>
+          </motion.div>
+        </div>
       </motion.div>
     </section>
   );

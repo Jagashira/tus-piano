@@ -26,16 +26,36 @@ export const exploreWorlds = [
   },
 ];
 export const SNSDescription = [
-  { id: "Twitter", imgUrl: "/img/SNSlogo/twitterBird.png", title: "Twitter" ,url:"https://twitter.com/"},
-  { id: "Instagram", imgUrl: "/img/SNSlogo/instagram.png", title: "Instagram" ,url:"https://www.instagram.com/"},
-  { id: "YouTube", imgUrl: "/img/SNSlogo/youtube.png", title: "YouTube",url:"https://www.youtube.com/" },
-  { id: "TikTok", imgUrl: "/img/SNSlogo/tiktok.png", title: "TikTok" ,url:"https://www.tiktok.com/"},
+  {
+    id: "Twitter",
+    imgUrl: "/img/SNSlogo/twitterBird.png",
+    title: "Twitter",
+    url: "https://twitter.com/",
+  },
+  {
+    id: "Instagram",
+    imgUrl: "/img/SNSlogo/instagram.png",
+    title: "Instagram",
+    url: "https://www.instagram.com/",
+  },
+  {
+    id: "YouTube",
+    imgUrl: "/img/SNSlogo/youtube.png",
+    title: "YouTube",
+    url: "https://www.youtube.com/",
+  },
+  {
+    id: "TikTok",
+    imgUrl: "/img/SNSlogo/tiktok.png",
+    title: "TikTok",
+    url: "https://www.tiktok.com/",
+  },
 ];
 export const ActivitiesDesc = [
-  "ピアノ部屋でピアノの練習（任意）",
-  "１か月に１回の部会",
-  "２か月に１回の音楽発表会",
-  "BBQや合宿などのイベント"
+  "ピアノの練習（任意）",
+  "１週間に１回の部会",
+  "３か月に１回の音楽発表会",
+  "BBQや合宿などのイベント",
 ];
 
 export const newFeatures = [
@@ -55,25 +75,29 @@ export const newFeatures = [
 
 export const insights = [
   {
-    imgUrl: "/img/animePiano.png  ",
-    title: "ピアノ部屋でピアノの練習",
+    imgUrl:
+      "https://images.microcms-assets.io/assets/5167e5803be84db6b309f28701149122/649e15ca80bf4e95b75553b966f3a439/piano_practice__music_note_musicial_score_many_people_pe_d9ef4f5a-abab-4b7f-8d77-7d7e2a24265c.png",
+    title: "ピアノの練習",
     subtitle:
       "東京理科大学野田キャンパスにはピアノが4台あり、自由に使用できます。音楽発表会に向けて活用しましょう",
   },
   {
-    imgUrl: "/img/animePiano.png  ",
-    title: "１か月に１回の部会",
+    imgUrl:
+      "https://images.microcms-assets.io/assets/5167e5803be84db6b309f28701149122/a24dcd89f9a1433e9cd2776138406551/meetinginteractmany_people_peaceful_lightly_fun_happy_an_230084fa-6bb1-483c-a2e9-bedd37c6b684.png",
+    title: "１週間に１回の部会",
     subtitle:
       "月に一回部会を行い、どのように部活を進めていくか話し合います。去年まではコロナのため、オンラインで行っていましたが、今後は対面でも行っていく予定なのでぜひ参加して交流を深めましょう",
   },
   {
-    imgUrl: "/img/animePiano.png  ",
-    title: "２か月に１回の音楽発表会",
+    imgUrl:
+      "https://images.microcms-assets.io/assets/5167e5803be84db6b309f28701149122/858ba4f4f32a47ed80a4c01da1e3b9a1/There_is_one_person_playing_the_piano_at_a_music_recital_2804606f-8991-4310-be0b-31b246858092.png",
+    title: "３か月に１回の音楽発表会",
     subtitle:
       "ピアノの会の一番大きな活動である音楽発表会。部員たちはピアノ演奏で才能を披露し、誰でも自由に聴くことができます。準備に力を注いでいるので、美しい音楽を楽しんでもらえることを願っています。",
   },
   {
-    imgUrl: "/img/animePiano.png  ",
+    imgUrl:
+      "https://images.microcms-assets.io/assets/5167e5803be84db6b309f28701149122/36c6b4488fbb4a5bb579f060164a19d7/campBBQinteractmany_people_peaceful_lightly_fun_happy_an_694053b9-e971-4a29-a370-3f8d6a308bce.png ",
     title: "BBQや合宿などのイベント",
     subtitle:
       "ピアノの会ではBBQや合宿など、様々なイベントを企画しています。メンバー同士の交流を深めることを目的に行っており、参加者からは毎回大きな好評を得ています。",

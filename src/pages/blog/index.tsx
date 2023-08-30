@@ -17,6 +17,7 @@ interface Props {
 }
 export default function Home({ blog, totalCount }: any) {
   const isDesktop: boolean = useMediaQuery({ query: "(min-width: 500px)" });
+
   return (
     <div className="overflow-hidden">
       <motion.div
@@ -80,40 +81,3 @@ export const getStaticProps = async () => {
     },
   };
 };
-
-// {blog.map((blog: any) => {
-//   return (
-//     <div key={blog.id} style={{ zIndex: 10 }}>
-//       <Link href={`/blog/id/${blog.id}`}>
-//         <BlogContainer>
-//           <div
-//             style={{
-//               borderRadius: "5% 5% 0% 0%",
-//               overflow: "hidden",
-//             }}
-//           >
-//             {blog.image && (
-//               <Image
-//                 src={blog.image.url}
-//                 alt="piano"
-//                 width={310}
-//                 height={230}
-//               />
-//             )}
-//           </div>
-//           {/*     <div
-//   style={{
-//     margin: "10px",
-//     backgroundColor: "black",
-//     width: "100%",
-//     // height: "100%",
-//   }}
-// >
-//   2023
-// </div> */}
-//           {blog.title}
-//         </BlogContainer>
-//       </Link>
-//     </div>
-//   );
-// })}

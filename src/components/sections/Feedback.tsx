@@ -22,29 +22,30 @@ const Feedback = () => {
           variants={fadeIn("right", "tween", 0.2, 1)}
           className=" lg:max-[370px] sm:p-8 p-4 rounded-[32px] gradient-05 border-[1#6a6a6a] relative"
         >
-          <div className="" />
-          <div>
-            <h4 className="font-bold sm:text-[32px] text-[26px] sm:leading-[40px] leading-[36px] text-white">
-              まだ入部されてない方へ
-            </h4>
-            {/* <p className="mt-[8px] font-normal sm:text-[18px] text-[12px] sm:leading-[22px] leading-[16px] text-white">
-              Founder | Metaversus
-            </p> */}
+          <div
+            style={{
+              backgroundColor: "rgba(255,255,255,0.5)",
+              borderRadius: "20px",
+              padding: "30px",
+            }}
+          >
+            <div>
+              <h4 className="font-bold sm:text-[32px] text-[26px] sm:leading-[40px] leading-[36px] text-black text-center">
+                入部を考えている方へ
+              </h4>
+            </div>
+            <p className="mt-[24px] font-normal sm:text-[24px] text-[18px] sm:leading-[45px] leading-[39px] text-black">
+              東京理科大学ピアノの会に入部を考えている方は
+              <Link
+                href="/blog/id/hd-_07l4gq"
+                style={{ borderBottom: "2px solid #000" }}
+              >
+                こちら（入部手続きの手順）
+              </Link>
+              にて説明しています。
+            </p>
           </div>
-          <p className="mt-[24px] font-normal sm:text-[24px] text-[18px] sm:leading-[45px] leading-[39px] text-white">
-            東京理科大学ピアノの会に入部を考えている方は
-            <Link href="/blog/as">こちら（入部手続きの手順）</Link>
-            にて説明しています。
-          </p>
         </motion.div>
-        {/* <motion.div
-          variants={fadeIn("left", "tween", 0.2, 1)}
-          className="relative flex-1 flex justify-center items-center"
-        ></motion.div>
-        <motion.div
-          variants={zoomIn(0.4, 1)}
-          className="lg:block hidden absolute left-[10%] top-[3%]"
-        ></motion.div> */}
       </motion.div>
     </section>
   );

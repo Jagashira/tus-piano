@@ -11,6 +11,7 @@ interface Props {
   totalCount: number;
 }
 export default function BlogPageId({ blog, totalCount }: any) {
+  console.log(JSON.stringify(blog, null, 2));
   return (
     <div className="overflow-hidden">
       <ul>
