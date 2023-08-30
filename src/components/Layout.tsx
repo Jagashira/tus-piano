@@ -2,6 +2,7 @@ import React, { ReactNode } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import Image from "next/image";
+import styles from "@/styles/Layout/Layout.module.css";
 
 interface Props {
   children?: ReactNode;
@@ -23,12 +24,12 @@ const Background = () => {
 
 const Layout = ({ children }: Props) => {
   return (
-    <>
+    <div className={styles.wrapper}>
       <Background />
       <Header />
       {children}
       <Footer />
-    </>
+    </div>
   );
 };
 
