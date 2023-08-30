@@ -12,7 +12,7 @@ const Background = () => {
     <>
       <div className={`fixed top-0 left-0 w-full h-screen z-[-1]`}>
         <Image
-          src={`/img/background/musicalScore.png`}
+          src={`/img/background/musicalScore_enhance.png`}
           layout={`fill`}
           objectFit={`cover`}
           alt="background image"
