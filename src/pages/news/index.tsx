@@ -1,18 +1,13 @@
 import { Pagination } from "@/components/Pagination/Pagination";
 import { clientNews } from "@/modules/lib/client";
-import {
-  BigTitle,
-  BlogContainer,
-  NewsContainer,
-} from "@/modules/lib/textStyle";
-import { Content, getCMSType } from "@/modules/types/microCmsTypes";
-import Image from "next/image";
+import { BigTitle, NewsContainer } from "@/modules/lib/textStyle";
+import { getCMSType } from "@/modules/types/microCmsTypes";
 import Link from "next/link";
 import { useMediaQuery } from "react-responsive";
 import { motion } from "framer-motion";
 import { staggerContainer, textVariant } from "@/utils/motion";
 import { FormatDate } from "@/modules/lib/formattedData";
-import styles from "@/styles/Main/NewNews.module.css";
+import styles from "@/styles/News/News.module.css";
 
 interface Props {
   blog: getCMSType;

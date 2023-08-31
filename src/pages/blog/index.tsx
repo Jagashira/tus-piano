@@ -1,15 +1,11 @@
 import { Pagination } from "@/components/Pagination/Pagination";
 import { clientBlog } from "@/modules/lib/client";
 import { BigTitle, BlogContainer } from "@/modules/lib/textStyle";
-import { Content, getCMSType } from "@/modules/types/microCmsTypes";
-import Image from "next/image";
-import Link from "next/link";
+import { getCMSType } from "@/modules/types/microCmsTypes";
 import { useMediaQuery } from "react-responsive";
 import { motion } from "framer-motion";
 import { staggerContainer, textVariant } from "@/utils/motion";
-import { FormatDate } from "@/modules/lib/formattedData";
-import ArticleListItem from "@/components/ArticleListItem";
-import styles from "@/styles/ArticleListItem.module.css";
+import ArticleListItem from "@/components/Blog/BlogListItem";
 
 interface Props {
   blog: getCMSType;

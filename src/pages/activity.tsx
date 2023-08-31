@@ -1,10 +1,11 @@
-import Feedback from "@/components/sections/Feedback";
-import Activities from "@/components/sections/Activities";
-import Insights from "@/components/sections/Insights";
+import NewMember from "@/components/Activity/NewMember";
+import Activities from "@/components/Activity/Activities";
+import ActivityDetail from "@/components/Activity/ActivityDetail";
 import React from "react";
 import { motion } from "framer-motion";
 import { BigTitle } from "@/modules/lib/textStyle";
 import { staggerContainer, textVariant } from "@/utils/motion";
+
 const Activity = () => {
   return (
     <div className="overflow-hidden">
@@ -33,8 +34,8 @@ const Activity = () => {
         </motion.h1>
       </motion.div>
       <Activities />
-      <Insights />
-      <Feedback />
+      <ActivityDetail />
+      <NewMember />
     </div>
   );
 };

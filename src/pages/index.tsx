@@ -1,9 +1,9 @@
-import { CalendarContainer } from "@/utils/uiExport";
-import Hero from "@/components/sections/Hero";
-import NewBlog from "@/components/NewBlog";
-import NewNews from "@/components/NewNews";
 import { clientBlog, clientNews } from "@/modules/lib/client";
-import NewActivity from "@/components/NewActivity";
+import HomeActivity from "@/components/Home/Activity/HomeActivity";
+import HomeNews from "@/components/Home/HomeNews";
+import HomeBlog from "@/components/Home/HomeBlog";
+import Hero from "@/components/Home/Hero";
+import HomeCalendar from "@/components/sections/HomeCalendar";
 
 export default function Home({ news, blog }: any) {
   return (
@@ -17,16 +17,16 @@ export default function Home({ news, blog }: any) {
           style={{ backgroundColor: "rgba(0,0,0,0.1)" }}
         >
           <div className="h-[100vh pt-[20vh]">
-            <NewActivity />
+            <HomeActivity />
           </div>
           <div className="h-[100vh pt-[20vh]">
-            <NewNews newsGroup={news} />
+            <HomeNews newsGroup={news} />
           </div>
           <div className="h-[100vh] pt-[20vh]">
-            <NewBlog blogGroup={blog} />
+            <HomeBlog blogGroup={blog} />
           </div>
           <div className="h-[150vh] pt-[20vh]">
-            <CalendarContainer />
+            <HomeCalendar />
           </div>
         </div>
       </div>

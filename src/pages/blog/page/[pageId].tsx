@@ -1,4 +1,4 @@
-import ArticleListItem from "@/components/ArticleListItem";
+import ArticleListItem from "@/components/Blog/BlogListItem";
 import { Pagination } from "@/components/Pagination/Pagination";
 import { clientBlog } from "@/modules/lib/client";
 import { BigTitle } from "@/modules/lib/textStyle";

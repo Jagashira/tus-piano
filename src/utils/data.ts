@@ -73,7 +73,7 @@ export const newFeatures = [
   },
 ];
 
-export const insights = [
+export const activityDetailDate = [
   {
     imgUrl:
       "https://images.microcms-assets.io/assets/5167e5803be84db6b309f28701149122/649e15ca80bf4e95b75553b966f3a439/piano_practice__music_note_musicial_score_many_people_pe_d9ef4f5a-abab-4b7f-8d77-7d7e2a24265c.png",

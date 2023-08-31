@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
 import { motion } from "framer-motion";
 import { staggerContainer, planetVariants, textVariant } from "@/utils/motion";
-import { BigTitle, ContactHeadLine } from "@/modules/lib/textStyle";
-import styles from "@/styles/Contact.module.css";
-import Form from "@/components/Form";
-import ContactHero from "@/components/ContactHero";
+import { BigTitle } from "@/modules/lib/textStyle";
+import styles from "@/styles/Contact/Contact.module.css";
+import Form from "@/components/Contact/Form";
+import ContactHero from "@/components/Contact/ContactHero";
 
 const Contact: NextPage = () => {
   return (
