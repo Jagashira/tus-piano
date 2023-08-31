@@ -8,15 +8,12 @@
   background-color: rgba(0, 0, 0, 0.1);
 }
 .homeActivity {
-  height: 100vh;
   padding-top: 20vh;
 }
 .homeNews {
-  height: 100vh;
   padding-top: 20vh;
 }
 .homeBlog {
-  height: 100vh;
   padding-top: 20vh;
 }
 .homeCalendar {
