@@ -13,11 +13,9 @@ opacity:0.4;
 padding:50px;
 margin-top:50px;
 z-index:-1;
- @media screen and (max-width: 500px) {
-    font-size: 140px;
-    line-height: 100px;
-    font-weight: 600;
-  }
+@media screen and (max-width: 500px) {
+  font-size: 70px;
+ 
 `;
 export const BigTitleActivity = Styled.h2`
 font-style:normal;
