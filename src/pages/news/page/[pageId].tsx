@@ -17,59 +17,39 @@ interface Props {
 // pages/news/[id].js
 export default function newsPageId({ news, totalCount }: any) {
   return (
-    <div className="overflow-hidden">
+    <div className={styles.wrapper}>
       <motion.div
         //@ts-ignore
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className="relative"
+        className={styles.headlineContainer}
       >
-        <motion.h1
-          variants={textVariant(1.1)}
-          style={{
-            textAlign: "center",
-            color: "black",
-            zIndex: 10,
-
-            margin: "0 20px 0 20px",
-          }}
-        >
+        <motion.h1 variants={textVariant(1.1)} className={styles.headlineH1}>
           <BigTitle>NEWS</BigTitle>
-          今後の部活動の予定やイベントの情報、部活動の紹介など、
-          <br />
-          部員たちの活動に関する最新情報を掲載していきます。
+          <p className={styles.headlineContent}>
+            今後の部活動の予定やイベントの情報、部活動の紹介など、
+            <br />
+            部員たちの活動に関する最新情報を掲載していきます。
+          </p>
         </motion.h1>
       </motion.div>
 
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          width: "60vw",
-          margin: "30px auto",
-          backgroundColor: "rgba(255,255,255,0.5)",
-          padding: "20px 0",
-          borderRadius: "20px",
-        }}
-      >
+      <div className={styles.newsContainer}>
         {news.map((news: any, index: number) => {
           return (
-            <li key={news.id} style={{ zIndex: 10, listStyle: "none" }}>
+            <li key={news.id} className={styles.listStyle}>
               <Link href={`/news/id/${news.id}`}>
-                <NewsContainer>
-                  <div className={styles.date}>
-                    <p style={{ padding: "0 1vw", fontSize: "16px" }}>
-                      {FormatDate(news.publishedAt)}
-                    </p>
-                  </div>
+                <div className="">
+                  <p className={styles.date}>{FormatDate(news.publishedAt)}</p>
+
                   {/* <TagSvg tag="重要" /> */}
-                  <div className={styles.title}>
-                    <p>{news.title}</p>
-                  </div>
-                </NewsContainer>
+
+                  <p className={styles.title}>{news.title}</p>
+                </div>
               </Link>
+              <hr className={styles.hrStyle} />
             </li>
           );
         })}
