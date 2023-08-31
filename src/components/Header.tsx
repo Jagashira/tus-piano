@@ -1,6 +1,5 @@
 import React from "react";
 import WordLogo from "public/svg/wordLogo.svg";
-import CircleLogo from "public/svg/circleLogo.svg";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import LINE from "public/svg/LINEIcon.svg";
