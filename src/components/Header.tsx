@@ -26,20 +26,18 @@ const Header = () => {
     { name: "LINE", icon: LINE, url: "" },
   ];
   return (
-    <div className="navbar bg-base-100 w-[100vw] border-b relative">
-      <div className="bg-base-100 absolute top-[-50vh] width-[100vw] height-[50vh] z-10" />
-      <div className="navbar-start">
-        <div style={{ padding: "0px 20px" }}>
-          <Link href="/">
-            <WordLogo />
-          </Link>
+    <div className={styles.wrapper}>
+      <div className={styles.logoContainer}>
+        <div className={styles.wordlogo}>
+          <div>
+            <Link href="/">
+              <WordLogo />
+            </Link>
+          </div>
         </div>
       </div>
-      <div className="navbar-center hidden lg:flex"></div>
-      <div className="navbar-end">
-        <div
-          style={{ display: "flex", flexDirection: "row", marginRight: "20px" }}
-        >
+      <div className={styles.snsContainer}>
+        <div className={styles.snsItemContainer}>
           {SNSItems.map((SNSItem, index) => {
             return (
               <div className={styles.icon} key={index}>
