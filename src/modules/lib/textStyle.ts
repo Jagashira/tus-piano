@@ -6,7 +6,7 @@ export const BigTitle = Styled.h2`
 font-style:normal;
 font-weight:400;
 font-size:100px;
-line-height:120px;
+line-height:80px;
 letter-spacing:0.01em;
 color:#363637;
 opacity:0.4;
@@ -16,6 +16,33 @@ z-index:-1;
 @media screen and (max-width: 500px) {
   font-size: 70px;
  
+`;
+export const BigTitleContact = Styled.h2`
+font-style:normal;
+font-weight:400;
+font-size:100px;
+line-height:80px;
+letter-spacing:0.01em;
+color:#363637;
+opacity:0.4;
+padding:50px;
+margin-top:50px;
+z-index:-1;
+@media screen and (max-width: 700px) {
+  font-size: 90px;
+}
+@media screen and (max-width: 600px) {
+  font-size: 70px;
+}
+@media screen and (max-width: 500px) {
+  font-size: 60px;
+}
+@media screen and (max-width: 450px) {
+  font-size: 50px;
+}
+@media screen and (max-width: 400px) {
+  font-size: 40px;
+}
 `;
 export const BigTitleActivity = Styled.h2`
 font-style:normal;

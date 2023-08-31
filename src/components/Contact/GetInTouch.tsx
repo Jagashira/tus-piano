@@ -6,9 +6,7 @@ const GetInTouch = () => {
     <>
       <div className={styles.getInTouch}>
         <h1>Get In Touch</h1>
-        <p className="text-sm  text-gray-500 pl-10">
-          お問い合わせはこちらからお願いします。
-        </p>
+        <p>お問い合わせはこちらからお願いします。</p>
       </div>
     </>
   );
