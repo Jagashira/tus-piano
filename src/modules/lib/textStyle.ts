@@ -77,7 +77,6 @@ export const MoreArrowNews = Styled.div`
 display:flex;
 flex-direction:row;
 align-items:center;
-width:9vw;
 
 `;
 export const MoreArrowBlog = Styled.div`
@@ -155,14 +154,14 @@ padding-top:30px ;
 padding-bottom:0px;
 display:flex;
 /* gap:20px; */
-@media screen and  (min-width: 1000px){
-  justify-content: center;
-}
-@media screen and  (min-width: 400px) and (max-width: 1000px){
-  padding-left: 30px
+// @media screen and  (min-width: 1000px){
+//   justify-content: center;
+// }
+// @media screen and  (min-width: 400px) and (max-width: 1000px){
+//   padding-left: 30px
 
-}
-@media screen and  (max-width: 400px){
-  padding-left: calc( (100vw - 310px)/2 );
-}
+// }
+// @media screen and  (max-width: 400px){
+//   padding-left: calc( (100vw - 310px)/2 );
+// }
 `;

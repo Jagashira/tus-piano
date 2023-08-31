@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { BigTitle, NewsContainer } from "@/modules/lib/textStyle";
 import { staggerContainer, textVariant } from "@/utils/motion";
 import { FormatDate } from "@/modules/lib/formattedData";
-import styles from "@/styles/Main/NewNews.module.css";
+import styles from "@/styles/News/News.module.css";
 
 const PER_PAGE = 5;
 interface Props {
