@@ -3,29 +3,27 @@ import HomeActivity from "@/components/Home/Activity/HomeActivity";
 import HomeNews from "@/components/Home/HomeNews";
 import HomeBlog from "@/components/Home/HomeBlog";
 import Hero from "@/components/Home/Hero";
-import HomeCalendar from "@/components/sections/HomeCalendar";
+import HomeCalendar from "@/components/Calendar/HomeCalendar";
+import styles from "@/styles/Home/Home.module.css";
 
 export default function Home({ news, blog }: any) {
   return (
     <>
-      <div className="overflow-hidden">
-        <div className="relative h-[100vh]">
+      <div className={styles.wrapper}>
+        <div className={styles.homeHero}>
           <Hero />
         </div>
-        <div
-          className="relative"
-          style={{ backgroundColor: "rgba(0,0,0,0.1)" }}
-        >
-          <div className="h-[100vh pt-[20vh]">
+        <div className={styles.backgroundOpacity}>
+          <div className={styles.homeActivity}>
             <HomeActivity />
           </div>
-          <div className="h-[100vh pt-[20vh]">
+          <div className={styles.homeNews}>
             <HomeNews newsGroup={news} />
           </div>
-          <div className="h-[100vh] pt-[20vh]">
+          <div className={styles.homeBlog}>
             <HomeBlog blogGroup={blog} />
           </div>
-          <div className="h-[150vh] pt-[20vh]">
+          <div className={styles.homeCalendar}>
             <HomeCalendar />
           </div>
         </div>

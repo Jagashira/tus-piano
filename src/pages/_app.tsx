@@ -2,7 +2,7 @@ import Layout from "@/components/Layout/Layout";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { useEffect, useState } from "react";
-import InitPage from "@/components/SplashScreen/SplashScreen";
+import SplashScreen from "@/components/SplashScreen/SplashScreen";
 import styles from "@/styles/Home/Home.module.css";
 import Head from "next/head";
 
@@ -39,7 +39,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
 
       {isLoading ? (
-        <InitPage />
+        <SplashScreen />
       ) : (
         <div className={styles.feedIn}>
           <Layout>

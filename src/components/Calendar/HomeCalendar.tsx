@@ -2,14 +2,15 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "@/utils/motion";
-import CalendarComponent from "../Calendar/CalendarComponent";
+import CalendarComponent from "./CalendarComponent";
 import { TypingText } from "../other/TypingText";
+import styles from "@/styles/Home/HomeCalendar.module.css";
 
 const HomeCalendar = () => {
   const [date, setDate] = useState<Date>(new Date());
 
   return (
-    <section className={`relative z-10 text-center`}>
+    <section className={styles.wrapper}>
       <motion.div
         variants={staggerContainer}
         initial="hidden"
