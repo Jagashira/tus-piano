@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
 import { motion } from "framer-motion";
 import { staggerContainer, planetVariants, textVariant } from "@/utils/motion";
-import { BigTitle, ContactHeadLine } from "@/modules/lib/textStyle";
-import styles from "@/styles/Contact.module.css";
-import Form from "@/components/Form";
-import ContactHero from "@/components/ContactHero";
+import { BigTitleContact } from "@/modules/lib/textStyle";
+import styles from "@/styles/Contact/Contact.module.css";
+import Form from "@/components/Contact/Form";
+import ContactHero from "@/components/Contact/ContactHero";
 
 const Contact: NextPage = () => {
   return (
@@ -14,18 +14,10 @@ const Contact: NextPage = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className="relative overflow-hidden"
+      className={styles.wrapper}
     >
-      <motion.h1
-        variants={textVariant(1.1)}
-        style={{
-          textAlign: "center",
-          color: "black",
-          zIndex: 10,
-          margin: "0 20px 0 20px",
-        }}
-      >
-        <BigTitle>CONTACT</BigTitle>
+      <motion.h1 variants={textVariant(1.1)} className={styles.headline}>
+        <BigTitleContact>CONTACT</BigTitleContact>
       </motion.h1>
 
       <div className={styles.contactContainer}>

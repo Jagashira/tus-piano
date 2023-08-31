@@ -1,0 +1,43 @@
+.wrapper {
+  overflow: hidden;
+}
+.homeHero {
+  height: 100vh;
+}
+.backgroundOpacity {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.homeActivity {
+  padding-top: 20vh;
+}
+.homeNews {
+  padding-top: 20vh;
+}
+.homeBlog {
+  padding-top: 20vh;
+}
+.homeCalendar {
+  height: 150vh;
+  padding-top: 20vh;
+}
+
+.feedIn {
+  animation-name: init-feed-in;
+  animation-duration: 2s;
+}
+@keyframes init-feed-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 900px) {
+  .homeBlog {
+    padding-bottom: 20vh;
+  }
+  .homeCalendar {
+    display: none;
+  }
+}

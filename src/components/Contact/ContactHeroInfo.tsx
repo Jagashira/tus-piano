@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "@/styles/Contact.module.css";
+import styles from "@/styles/Contact/Contact.module.css";
 import { Icon } from "@iconify/react";
 
 interface Props {

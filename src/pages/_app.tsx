@@ -1,11 +1,9 @@
-import Layout from "@/components/Layout";
+import Layout from "@/components/Layout/Layout";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import Three from "@/components/Three";
 import { useEffect, useState } from "react";
-import InitPage from "@/components/InitPage";
-import RainyBackground from "@/components/water";
-import styles from "@/styles/Home.module.css";
+import SplashScreen from "@/components/SplashScreen/SplashScreen";
+import styles from "@/styles/Home/Home.module.css";
 import Head from "next/head";
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -38,10 +36,10 @@ export default function App({ Component, pageProps }: AppProps) {
           content="width=device-width, initial-scale=1, user-scalable=0"
         />
         <link rel="shutcut/icon" href="public/icon/piano_circle.ico" />
-      </Head>  
-     
+      </Head>
+
       {isLoading ? (
-        <InitPage />
+        <SplashScreen />
       ) : (
         <div className={styles.feedIn}>
           <Layout>

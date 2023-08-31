@@ -11,14 +11,11 @@ const CalendarComponent = () => {
     border-radius: 40px;
     display: flex;
     flex-direction: column;
-    width: 60vw;
+    width: 70vw;
+    height: 65vw;
     padding: 3vh;
     margin: auto;
     overflow: hidden;
-
-    @media screen and (max-width: 768px) {
-      transform: scale(90%);
-    }
   `;
   return (
     <CalendarStyled>

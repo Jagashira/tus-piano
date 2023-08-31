@@ -1,40 +1,32 @@
-import Feedback from "@/components/sections/Feedback";
-import Activities from "@/components/sections/Activities";
-import Insights from "@/components/sections/Insights";
+import NewMember from "@/components/Activity/NewMember";
+import Activities from "@/components/Activity/Activities";
+import ActivityDetail from "@/components/Activity/ActivityDetail";
 import React from "react";
 import { motion } from "framer-motion";
-import { BigTitle } from "@/modules/lib/textStyle";
+import { BigTitleActivity } from "@/modules/lib/textStyle";
 import { staggerContainer, textVariant } from "@/utils/motion";
+import styles from "@/styles/Activity/Activity.module.css";
 const Activity = () => {
   return (
-    <div className="overflow-hidden">
+    <div className={styles.wrapper}>
       <motion.div
         //@ts-ignore
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className="relative"
+        className={styles.headerContainer}
       >
-        <motion.h1
-          variants={textVariant(1.1)}
-          style={{
-            textAlign: "center",
-            color: "black",
-            zIndex: 10,
-
-            margin: "0 20px 0 20px",
-          }}
-        >
-          <BigTitle>Activity</BigTitle>
+        <motion.h1 variants={textVariant(1.1)}>
+          <BigTitleActivity>Activity</BigTitleActivity>
           今後の部活動の予定やイベントの情報、部活動の紹介など、
           <br />
           部員たちの活動に関する最新情報を掲載していきます。
         </motion.h1>
       </motion.div>
       <Activities />
-      <Insights />
-      <Feedback />
+      <ActivityDetail />
+      <NewMember />
     </div>
   );
 };

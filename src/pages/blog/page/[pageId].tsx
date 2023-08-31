@@ -1,4 +1,4 @@
-import ArticleListItem from "@/components/ArticleListItem";
+import ArticleListItem from "@/components/Blog/BlogListItem";
 import { Pagination } from "@/components/Pagination/Pagination";
 import { clientBlog } from "@/modules/lib/client";
 import { BigTitle } from "@/modules/lib/textStyle";
@@ -6,6 +6,7 @@ import { Content, getCMSType } from "@/modules/types/microCmsTypes";
 import { staggerContainer, textVariant } from "@/utils/motion";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import styles from "@/styles/Blog/Blog.module.css";
 
 const PER_PAGE = 5;
 
@@ -24,37 +25,21 @@ export default function BlogPageId({ blog, totalCount }: any) {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className="relative"
+        className={styles.motionContainer}
       >
         <motion.h1
           variants={textVariant(1.1)}
-          style={{
-            textAlign: "center",
-            color: "black",
-            zIndex: 10,
-
-            margin: "0 20px 0 20px",
-          }}
+          className={styles.headlineContainer}
         >
           <BigTitle>BLOG</BigTitle>
-          ピアノの会の部活のブログページでは、
-          <br />
-          部員たちの練習やイベントの様子など、部活動に関する情報を共有しています。
+          <p>
+            ピアノの会の部活のブログページでは、
+            <br />
+            部員たちの練習やイベントの様子など、部活動に関する情報を共有しています。
+          </p>
         </motion.h1>
 
-        <div
-          style={{
-            padding: "50px 50px 50px 50px",
-            margin: "64px auto",
-            display: "flex",
-            flexDirection: "column",
-            width: "60vw",
-
-            backgroundColor: "white",
-            borderRadius: "20px",
-            gap: "40px",
-          }}
-        >
+        <div className={styles.blogContainer}>
           {blog.map((blog: any) => {
             return <ArticleListItem blog={blog} key={blog.id} />;
           })}

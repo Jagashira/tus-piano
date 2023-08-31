@@ -6,52 +6,67 @@ export const BigTitle = Styled.h2`
 font-style:normal;
 font-weight:400;
 font-size:100px;
-line-height:120px;
+line-height:80px;
 letter-spacing:0.01em;
 color:#363637;
 opacity:0.4;
 padding:50px;
 margin-top:50px;
 z-index:-1;
- @media screen and (max-width: 500px) {
-    font-size: 140px;
-    line-height: 100px;
-    font-weight: 600;
-  }
+@media screen and (max-width: 500px) {
+  font-size: 70px;
+ 
+`;
+export const BigTitleContact = Styled.h2`
+font-style:normal;
+font-weight:400;
+font-size:100px;
+line-height:80px;
+letter-spacing:0.01em;
+color:#363637;
+opacity:0.4;
+padding:50px;
+margin-top:50px;
+z-index:-1;
+@media screen and (max-width: 700px) {
+  font-size: 90px;
+}
+@media screen and (max-width: 600px) {
+  font-size: 70px;
+}
+@media screen and (max-width: 500px) {
+  font-size: 60px;
+}
+@media screen and (max-width: 450px) {
+  font-size: 50px;
+}
+@media screen and (max-width: 400px) {
+  font-size: 40px;
+}
 `;
 export const BigTitleActivity = Styled.h2`
 font-style:normal;
-font-weight:800;
-font-size:190px;
-line-height:150px;
+font-weight:400;
+font-size:100px;
+line-height:80px;
 letter-spacing:0.01em;
 color:#363637;
+opacity:0.4;
 padding:50px;
-margin-top:100px;
+margin-top:50px;
 z-index:-1;
- @media screen and (max-width: 750px) {
-    font-size: 140px;
-    line-height: 100px;
-    font-weight: 600;
-    padding:40px;
-  }
-  @media screen and (max-width: 560px) {
-    font-size: 120px;
-    line-height: 95px;
-    font-weight: 550;
-    padding:35px;
-  }
-  @media screen and (max-width: 500px) {
-    font-size: 100px;
-    line-height: 50px;
-    font-weight: 550;
-    padding:30px;
-  }
-  @media screen and (max-width: 430px) {
-    font-size: 80px;
-    line-height: 40px;
-    font-weight: 550;
-  }
+
+
+@media screen and (max-width: 500px) {
+  font-size: 90px;
+}
+@media screen and (max-width: 450px) {
+  font-size: 70px;
+}
+@media screen and (max-width: 350px) {
+  font-size: 60px;
+}
+
 `;
 
 export const BlogContainer = Styled.div`
@@ -77,14 +92,12 @@ export const MoreArrowNews = Styled.div`
 display:flex;
 flex-direction:row;
 align-items:center;
-width:9vw;
 
 `;
 export const MoreArrowBlog = Styled.div`
 display:flex;
 flex-direction:row;
 align-items:center;
-width:9vw;
 justify-content:right;
 `;
 
@@ -155,14 +168,14 @@ padding-top:30px ;
 padding-bottom:0px;
 display:flex;
 /* gap:20px; */
-@media screen and  (min-width: 1000px){
-  justify-content: center;
-}
-@media screen and  (min-width: 400px) and (max-width: 1000px){
-  padding-left: 30px
+// @media screen and  (min-width: 1000px){
+//   justify-content: center;
+// }
+// @media screen and  (min-width: 400px) and (max-width: 1000px){
+//   padding-left: 30px
 
-}
-@media screen and  (max-width: 400px){
-  padding-left: calc( (100vw - 310px)/2 );
-}
+// }
+// @media screen and  (max-width: 400px){
+//   padding-left: calc( (100vw - 310px)/2 );
+// }
 `;
