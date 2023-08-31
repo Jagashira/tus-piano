@@ -1,0 +1,30 @@
+.wrapper {
+  margin: auto;
+  flex-direction: column;
+}
+
+.blogContainer {
+  padding-top: 10vh;
+}
+.sheetContainer {
+  margin: auto;
+}
+
+.blogGroup {
+  padding: 0 20px;
+  z-index: 10;
+}
+.arrowGroup {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.arrow {
+  font-size: 10px;
+}
+
+@media screen and (min-width: 1050px) {
+  .sheetContainer {
+    justify-content: center;
+  }
+}

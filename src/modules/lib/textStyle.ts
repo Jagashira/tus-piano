@@ -83,7 +83,6 @@ export const MoreArrowBlog = Styled.div`
 display:flex;
 flex-direction:row;
 align-items:center;
-width:9vw;
 justify-content:right;
 `;
 

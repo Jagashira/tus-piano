@@ -44,7 +44,7 @@ const HomeNews = ({ newsGroup }: any) => {
                   </li>
                 );
               })}
-              <Link href="/news" style={{ marginLeft: "1vw" }}>
+              <Link href="/news" style={{ marginLeft: "20px" }}>
                 <MoreArrowSvgNews />
               </Link>
             </div>

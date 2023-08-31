@@ -1,6 +1,7 @@
 import { MoreArrowBlog, MoreArrowNews } from "./textStyle";
 import { Icon } from "@iconify/react";
 import styleNews from "@/styles/Home/HomeNews.module.css";
+import styleBlog from "@/styles/Home/HomeBlog.module.css";
 
 export const TagSvg = ({ tag }: any): JSX.Element => {
   if (tag === "イベント") {
@@ -47,7 +48,7 @@ export const MoreArrowSvgBlog = (): JSX.Element => {
   return (
     <MoreArrowBlog>
       <p>もっと見る</p>
-      <Icon icon="ion:arrow-redo" />
+      <Icon icon="ion:arrow-redo" className={styleBlog.arrow} />
     </MoreArrowBlog>
   );
 };
