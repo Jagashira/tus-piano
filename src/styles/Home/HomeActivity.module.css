@@ -1,0 +1,90 @@
+.sliderContainer {
+  height: 80vh;
+  width: 60vw;
+  margin: 0 auto;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  position: relative;
+}
+.imgContainer {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem /* 16px */;
+  background-position: center;
+  background-size: cover;
+  transition-duration: 500ms;
+}
+.leftArrow {
+  display: none;
+  position: absolute;
+  top: 50%;
+  --tw-translate-x: -0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  left: 1.25rem;
+  font-size: 1.5rem /* 24px */;
+  line-height: 2rem /* 32px */;
+  border-radius: 9999px;
+  padding: 0.5rem;
+  background-color: rgb(0 0 0 / 0.2);
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  cursor: pointer;
+  width: 40px;
+}
+.sliderContainer:hover .leftArrow {
+  display: block;
+}
+
+.rightArrow {
+  display: none;
+  position: absolute;
+  top: 50%;
+  --tw-translate-x: -0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  right: 1.25rem;
+  font-size: 1.5rem /* 24px */;
+  line-height: 2rem /* 32px */;
+  border-radius: 9999px;
+  padding: 0.5rem;
+  background-color: rgb(0 0 0 / 0.2);
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  cursor: pointer;
+  width: 40px;
+}
+.sliderContainer:hover .rightArrow {
+  display: block;
+}
+.icon {
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 1024px) {
+  .sliderContainer {
+    width: 80vw;
+    height: 70vw;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .sliderContainer {
+    width: 60vw;
+    height: 50vw;
+  }
+}
