@@ -1,12 +1,12 @@
 // @ts-nocheck
 import React from "react";
 import { motion } from "framer-motion";
-import styles from "@/styles";
 import { fadeIn, planetVariants, staggerContainer } from "@/utils/motion";
 import { ActivitiesDesc, startingFeatures } from "@/utils/data";
 import ImageContainer from "../other/ImageContainer";
 import ActivityContent from "./ActivityContent";
 import { TitleText, TypingText } from "../other/TypingText";
+import styles from "@/styles/Activity/Activity.module.css";
 
 const Activities = () => {
   const imageInfo = {
@@ -17,7 +17,7 @@ const Activities = () => {
     classname: " object-contain",
   };
   return (
-    <section className={`${styles.paddings} relative z-10`}>
+    <section className={styles.activitiesWrapper}>
       <motion.div
         //@ts-ignore
         variants={staggerContainer}
@@ -28,17 +28,12 @@ const Activities = () => {
       >
         <TypingText title="| 活動内容" textStyles="text-center" />
 
-        <div className="mx-auto flex lg:flex-row flex-col gap-8 ">
+        <div className={styles.activitiesGroup}>
           <motion.div
             variants={planetVariants("left")}
-            className={`flex-1 ${styles.flexCenter}`}
+            className={styles.activitiesImageContainer}
           >
-            <div
-              style={{
-                borderRadius: "10%",
-                overflow: "hidden",
-              }}
-            >
+            <div className={styles.activitiesImage}>
               <ImageContainer {...imageInfo} />
             </div>
           </motion.div>
@@ -46,8 +41,11 @@ const Activities = () => {
             variants={fadeIn("left", "tween", 0.2, 1)}
             className="flex-[0.75] flex justify-center flex-col"
           >
-            <TitleText title={<>ピアノの会の主な活動内容</>} />
-            <div className="mt-[31px] flex flex-col max-w-[400px] gap-[24px]">
+            <TitleText
+              title={<>ピアノの会の主な活動内容</>}
+              textStyles="text-center"
+            />
+            <div className={styles.activitiesDesc}>
               {ActivitiesDesc.map((feature, index) => (
                 <ActivityContent
                   key={feature}
