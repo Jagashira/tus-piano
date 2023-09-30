@@ -112,7 +112,7 @@
 }
 @media screen and (max-width: 400px) {
   .blogContainer {
-    width: 70vw;
+    width: 85vw;
   }
   .headlineContainer p {
     font-size: 10px;
@@ -122,6 +122,9 @@
     flex-direction: column;
   }
   .imageContainer {
+    width: 90%;
+    max-width: 250px;
+    height: 200px;
     margin: auto;
   }
   .content {
@@ -152,11 +155,6 @@
   }
 }
 @media screen and (max-width: 400px) {
-  .imageContainer {
-    width: 100%;
-    max-width: 200px;
-    height: 150px;
-  }
 }
 
 /* 
