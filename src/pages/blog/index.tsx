@@ -5,7 +5,7 @@ import { getCMSType } from "@/modules/types/microCmsTypes";
 import { useMediaQuery } from "react-responsive";
 import { motion } from "framer-motion";
 import { staggerContainer, textVariant } from "@/utils/motion";
-import ArticleListItem from "@/components/Blog/BlogListItem";
+import BlogListItem from "@/components/Blog/BlogListItem";
 import styles from "@/styles/Blog/Blog.module.css";
 
 interface Props {
@@ -39,7 +39,7 @@ export default function Home({ blog, totalCount }: any) {
 
         <div className={styles.blogContainer}>
           {blog.map((blog: any) => {
-            return <ArticleListItem blog={blog} key={blog.id} />;
+            return <BlogListItem blog={blog} key={blog.id} />;
           })}
           <Pagination totalCount={totalCount} contentType={"blog"} />
         </div>

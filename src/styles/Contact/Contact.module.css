@@ -183,6 +183,9 @@
     margin: auto;
     padding-left: 0;
   }
+  .contactContainer {
+    padding: 5px;
+  }
 }
 @media screen and (max-width: 360px) {
   .subcontainer {

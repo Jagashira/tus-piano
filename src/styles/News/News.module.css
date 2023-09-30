@@ -58,6 +58,11 @@
   );
   margin: 1vw 1vw 2vw 1vw;
 }
+@media screen and (max-width: 1025px) {
+  .newsContainer {
+    width: 90vw;
+  }
+}
 
 @media screen and (max-width: 600px) {
   .newsContainer {

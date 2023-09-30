@@ -8,7 +8,9 @@ const Footer = () => {
   return (
     <footer className={styles.wrapper}>
       <div className={styles.logo}>
-        <LOGO />
+        <Link href="/">
+          <LOGO />
+        </Link>
         <p>
           東京理科大学 ピアノの会
           <br />

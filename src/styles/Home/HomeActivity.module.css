@@ -76,15 +76,22 @@
   transform: translate(-50%, -50%);
 }
 
+@media screen and (min-width: 1025px) {
+  .sliderContainer {
+    width: 60vw;
+    height: 40vw;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .sliderContainer {
     width: 80vw;
     height: 70vw;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (max-width: 768px) {
   .sliderContainer {
-    width: 60vw;
-    height: 50vw;
+    width: 90vw;
+    height: 80vw;
   }
 }

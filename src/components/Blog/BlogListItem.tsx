@@ -27,11 +27,11 @@ export default function BlogListItem({ blog }: any) {
             />
           </div>
         )}
-        <dl className={styles.content}>
+        <div className={styles.content}>
           <dt className={styles.title}>{blog.title}</dt>
 
           <dd className={styles.date}>{FormatDate(blog.publishedAt)}</dd>
-        </dl>
+        </div>
       </Link>
       <hr className={styles.hrStyle} />
     </li>
