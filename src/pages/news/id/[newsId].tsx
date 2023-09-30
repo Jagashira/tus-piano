@@ -3,29 +3,17 @@
 import { clientNews } from "@/modules/lib/client";
 import { FormatDate } from "@/modules/lib/formattedData";
 import { Content } from "@/modules/types/microCmsTypes";
+import styles from "@/styles/common/Article.module.css";
 
 export default function newsId({ news }: any) {
   //const date = FormatDate(news.publishedAt, "YYYY-MM-DD-HH-mm");
   return (
-    <div
-      style={{
-        color: "black",
-        zIndex: 10,
-        position: "relative",
-        textAlign: "center",
-        width: "70%",
-        margin: "50px auto",
-      }}
-    >
-      <p style={{ fontWeight: "800", fontSize: "26px", marginBottom: "5px" }}>
-        {news.title}
-      </p>
-      <hr style={{ margin: "10px" }} />
-      <p style={{ textAlign: "start", fontSize: "13px" }}>
-        {FormatDate(news.publishedAt)}
-      </p>
+    <div className={styles.blogContainer}>
+      <p className={styles.title}>{news.title}</p>
+      <hr className={styles.line} />
+      <p className={styles.date}>{FormatDate(news.publishedAt)}</p>
       <div
-        style={{ lineHeight: "3", marginTop: "20px" }}
+        className={styles.content}
         dangerouslySetInnerHTML={{
           __html: `${news.content}`,
         }}

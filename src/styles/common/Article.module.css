@@ -1,0 +1,72 @@
+.blogContainer {
+  color: black;
+  z-index: 10;
+  position: relative;
+  text-align: center;
+  width: 60%;
+  margin: 50px auto;
+}
+.title {
+  font-size: 800;
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+.line {
+  margin: 10px;
+}
+.date {
+  text-align: start;
+  font-size: 13px;
+}
+.content {
+  line-height: 3;
+  margin-top: 20px;
+}
+@media screen and (max-width: 1080px) {
+  .blogContainer {
+    width: 80%;
+  }
+  .title {
+    font-size: 22px;
+  }
+  .date {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .blogContainer {
+    width: 80%;
+  }
+  .title {
+    font-size: 22px;
+  }
+  .date {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .blogContainer {
+    width: 80%;
+  }
+  .title {
+    font-size: 21px;
+  }
+  .date {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .blogContainer {
+    width: 80%;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .date {
+    font-size: 11px;
+  }
+  .content {
+    line-height: 2.6;
+    font-size: 14px;
+  }
+}

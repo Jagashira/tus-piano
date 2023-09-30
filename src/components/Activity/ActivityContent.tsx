@@ -9,7 +9,7 @@ const ActivityContent = ({ number, text }: Props) => {
   return (
     <div className={`${styles.flexCenter} flex-row`}>
       <div
-        className={`${styles.flexCenter} w-[70px] h-[70px] rounded-[24px] bg-[#323f5d]`}
+        className={`${styles.flexCenter} w-[70px] h-[70px] rounded-[24px] bg-[#45465975]`}
       >
         <p className="font-bold text-[20px] text-white">{number}</p>
       </div>

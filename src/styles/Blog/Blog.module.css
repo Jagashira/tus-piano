@@ -112,7 +112,7 @@
 }
 @media screen and (max-width: 400px) {
   .blogContainer {
-    width: 90vw;
+    width: 70vw;
   }
   .headlineContainer p {
     font-size: 10px;
@@ -123,12 +123,9 @@
   }
   .imageContainer {
     margin: auto;
-    width: 250px;
-    height: 200px;
   }
   .content {
     margin: auto;
-    width: 250px;
   }
   .image {
     width: 100%;
@@ -142,50 +139,6 @@
     font-size: 12px;
     margin-bottom: 0;
     text-align: center;
-    width: 100%;
-  }
-  .date {
-    font-size: 10px;
-    margin-top: 0;
-    text-align: center;
-  }
-  .hrStyle {
-    display: block;
-  }
-}
-@media screen and (max-width: 320px) {
-  .blogContainer {
-    width: 90vw;
-  }
-  .headlineContainer p {
-    font-size: 10px;
-  }
-  .link {
-    display: flex;
-    flex-direction: column;
-  }
-  .imageContainer {
-    margin: auto;
-    width: 200px;
-    height: 160px;
-  }
-  .content {
-    margin: auto;
-    width: 200px;
-  }
-  .image {
-    width: 100%;
-    height: auto;
-
-    margin: 1rem auto 0 auto;
-    gap: 0;
-  }
-
-  .title {
-    font-size: 12px;
-    margin-bottom: 0;
-    text-align: center;
-    width: 100%;
   }
   .date {
     font-size: 10px;

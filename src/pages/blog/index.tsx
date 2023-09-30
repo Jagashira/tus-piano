@@ -51,7 +51,7 @@ export default function Home({ blog, totalCount }: any) {
 export const getStaticProps = async () => {
   const data = await clientBlog.get({
     endpoint: "blog",
-    queries: { offset: 0, limit: 6 },
+    queries: { offset: 0, limit: 5 },
   });
 
   return {

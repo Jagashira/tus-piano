@@ -3,7 +3,7 @@ import React from "react";
 
 const sponsor = () => {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden h-[92vh]">
       <BigTitle>Comming soon...</BigTitle>
     </div>
   );
