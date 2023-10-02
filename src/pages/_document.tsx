@@ -8,6 +8,10 @@ export default function Document() {
           name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=0"
         />
+        <meta
+          name="google-site-verification"
+          content="x2pKj8qDRdtYmA5tN9IBtPnIV3GoRzcjWV9qV_M7do4"
+        />
         <link rel="icon" href="public/icon/piano_circle.ico" />
       </Head>
       <body>
