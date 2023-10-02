@@ -8,6 +8,8 @@ import styles from "@/styles/Home/Home.module.css";
 import Head from "next/head";
 import GoogleAnalytics from "@/components/GoogleAnalytics/GoogleAnalytics";
 import { pageview } from "@/modules/lib/gtag";
+import SEO from "@/../config/next-seo.config";
+import { DefaultSeo } from "next-seo";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -36,30 +38,19 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <Head>
-        <title>東京理科大学ピアノの会</title>
-        <meta
-          name="description"
-          content="こちらは東京理科大学ピアノの会のホームページです。"
-        />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, user-scalable=0"
-        />
-        <link rel="shutcut/icon" href="public/icon/piano_circle.ico" />
-      </Head>
+      <DefaultSeo {...SEO} />
       <GoogleAnalytics />
 
       {isLoading ? (
-        <SplashScreen />
+        <div style={{ overflow: "hidden" }}>
+          <SplashScreen />
+        </div>
       ) : (
         <div className={styles.feedIn}>
           <Layout>
             <Component {...pageProps} />
           </Layout>
         </div>
-
-        // <RainyBackground />
       )}
     </>
   );
