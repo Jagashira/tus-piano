@@ -52,9 +52,9 @@ export const SNSDescription = [
   },
 ];
 export const ActivitiesDesc = [
-  "ピアノの練習（任意）",
-  "１週間に１回の部会",
-  "３か月に１回の音楽発表会",
+  "部会",
+  "部内演奏会",
+  "年5回の演奏会",
   "BBQや合宿などのイベント",
 ];
 
@@ -77,21 +77,21 @@ export const activityDetailDate = [
   {
     imgUrl:
       "https://images.microcms-assets.io/assets/5167e5803be84db6b309f28701149122/649e15ca80bf4e95b75553b966f3a439/piano_practice__music_note_musicial_score_many_people_pe_d9ef4f5a-abab-4b7f-8d77-7d7e2a24265c.png",
-    title: "ピアノの練習",
+    title: "部会",
     subtitle:
-      "東京理科大学野田キャンパスにはピアノが4台あり、自由に使用できます。音楽発表会に向けて活用しましょう",
+      "定期的に部会を開催していてどのように部活を進めていくか話し合います。一昨年まではコロナのため、オンラインで行っていましたが、今は対面で行っているのでぜひ参加して交流を深めましょう",
   },
   {
     imgUrl:
       "https://images.microcms-assets.io/assets/5167e5803be84db6b309f28701149122/a24dcd89f9a1433e9cd2776138406551/meetinginteractmany_people_peaceful_lightly_fun_happy_an_230084fa-6bb1-483c-a2e9-bedd37c6b684.png",
-    title: "１週間に１回の部会",
+    title: "部内演奏会",
     subtitle:
-      "月に一回部会を行い、どのように部活を進めていくか話し合います。去年まではコロナのため、オンラインで行っていましたが、今後は対面でも行っていく予定なのでぜひ参加して交流を深めましょう",
+      "ピアノの会では部会で部員の前で演奏する慣習があります。",
   },
   {
     imgUrl:
       "https://images.microcms-assets.io/assets/5167e5803be84db6b309f28701149122/858ba4f4f32a47ed80a4c01da1e3b9a1/There_is_one_person_playing_the_piano_at_a_music_recital_2804606f-8991-4310-be0b-31b246858092.png",
-    title: "３か月に１回の音楽発表会",
+    title: "年５回の演奏会",
     subtitle:
       "ピアノの会の一番大きな活動である音楽発表会。部員たちはピアノ演奏で才能を披露し、誰でも自由に聴くことができます。準備に力を注いでいるので、美しい音楽を楽しんでもらえることを願っています。",
   },

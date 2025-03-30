@@ -1,6 +1,7 @@
 import NewMember from "@/components/Activity/NewMember";
 import Activities from "@/components/Activity/Activities";
 import ActivityDetail from "@/components/Activity/ActivityDetail";
+import Facilities from "@/components/Activity/Facilities"
 import React from "react";
 import { motion } from "framer-motion";
 import { BigTitleActivity } from "@/modules/lib/textStyle";
@@ -19,13 +20,12 @@ const Activity = () => {
       >
         <motion.h1 variants={textVariant(1.1)}>
           <BigTitleActivity>Activity</BigTitleActivity>
-          今後の部活動の予定やイベントの情報、部活動の紹介など、
-          <br />
-          部員たちの活動に関する最新情報を掲載していきます。
+          ピアノの会の活動内容について掲載します。
         </motion.h1>
       </motion.div>
       <Activities />
       <ActivityDetail />
+      <Facilities/>
       <NewMember />
     </div>
   );
