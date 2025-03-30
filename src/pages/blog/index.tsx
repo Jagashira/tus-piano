@@ -31,9 +31,7 @@ export default function Home({ blog, totalCount }: any) {
         >
           <BigTitle>BLOG</BigTitle>
           <p>
-            ピアノの会の部活のブログページでは、
-            <br />
-            部員たちの練習やイベントの様子など、部活動に関する情報を共有しています。
+          サークルの活動記録をお届けします。
           </p>
         </motion.h1>
 

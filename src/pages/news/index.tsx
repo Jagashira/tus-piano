@@ -29,9 +29,7 @@ export default function Home({ news, totalCount }: any) {
         <motion.h1 variants={textVariant(1.1)} className={styles.headlineH1}>
           <BigTitle>NEWS</BigTitle>
           <p className={styles.headlineContent}>
-            今後の部活動の予定やイベントの情報、部活動の紹介など、
-            <br />
-            部員たちの活動に関する最新情報を掲載していきます。
+          演奏会やバーベキューなど、サークルの活動に関する最新情報を掲載していきます。
           </p>
         </motion.h1>
       </motion.div>
