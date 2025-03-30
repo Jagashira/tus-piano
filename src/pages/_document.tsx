@@ -12,7 +12,7 @@ export default function Document() {
           name="google-site-verification"
           content="x2pKj8qDRdtYmA5tN9IBtPnIV3GoRzcjWV9qV_M7do4"
         />
-        <link rel="icon" href="public/icon/piano_circle.ico" />
+        <link rel="icon" href="ico/favicon.ico" />
       </Head>
       <body>
         <Main />

@@ -1,15 +1,15 @@
 import { DefaultSeoProps } from "next-seo";
 
 const config: DefaultSeoProps = {
-  title: "Tokyo University of Science Piano Club HP",
-  titleTemplate: "%s | 東京理科大学ピアノの会のホームページ",
-  description: "東京理科大学ピアノの会のホームページです",
+  title: "東京理科大学ピアノの会",
+  titleTemplate: "%s",
+  description: "東京理科大学ピアノの会は、葛飾・野田キャンパスで活動中！グランドピアノを備えた環境で、自由に演奏を楽しめます。",
   canonical: "https://tus-piano.vercel.app/",
   openGraph: {
     url: "https://tus-piano.vercel.app",
     type: "website",
-    title: "東京理科大学ピアノの会のホームページ",
-    description: "東京理科大学ピアノの会のホームページです",
+    title: "東京理科大学ピアノの会",
+    description: "東京理科大学ピアノの会は、葛飾・野田キャンパスで活動中！グランドピアノを備えた環境で、自由に演奏を楽しめます。",
     images: [
       {
         url: "https://tus-piano.vercel.app/svg/circleLogo.svg",
@@ -24,6 +24,7 @@ const config: DefaultSeoProps = {
     site: "@TUS_Piakai",
     handle: "TUS_Piakai",
   },
+
 };
 
 export default config;
