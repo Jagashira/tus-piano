@@ -136,6 +136,28 @@
   font-size: 16px;
   margin-top: 30vh;
 }
+.newMemberContainer {
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 10px;
+}
+.newMemberTitle{
+  font-size: bold;
+  font-size: 26px;
+  line-height: 45px;
+  color:black;
+  text-align: center;
+}
+.newMemberDescription{
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 27px;
+  color:black;
+  
+
+}
 
 @media screen and (min-width: 901px) and (max-width: 1100px) {
   .contactContainer {
@@ -157,6 +179,12 @@
     padding: 40px;
     margin: auto;
   }
+  .newMemberTitle{
+    font-size: 35px;
+  }
+  .newMemberDescription{
+    font-size: 18px;
+  }
 }
 @media screen and (max-width: 650px) {
   .contactHero {
@@ -167,6 +195,30 @@
     width: 300px;
     padding: 0x;
     margin: auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .newMemberTitle{
+    font-size: 30px;
+  }
+
+}
+@media screen and (max-width: 540px) {
+  .newMemberTitle{
+    font-size: 25px;
+  }
+  .newMemberDescription{
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 490px) {
+  .newMemberTitle{
+    font-size: 20px;
+  }
+  .newMemberDescription{
+    font-size: 12px;
+    line-height: 20px;
+    margin-top:8px;
   }
 }
 @media screen and (max-width: 460px) {

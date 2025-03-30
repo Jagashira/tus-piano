@@ -7,18 +7,12 @@ const ContactHero = () => {
   const info = [
     {
       id: 1,
-      icon: "mdi:gmail",
-      title: "Gmail",
-      content: "example@gmail.com",
+      icon: "mdi:yahoo",
+      title: "mail",
+      content: "piano_tus@yahoo.co.jp",
     },
     {
       id: 2,
-      icon: "mdi:phone",
-      title: "Phone number",
-      content: "080-0000-0000",
-    },
-    {
-      id: 3,
       icon: "mdi:map-marker",
       title: "Address",
       content: "〒278-8510",

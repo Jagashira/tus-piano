@@ -5,6 +5,7 @@ import { BigTitleContact } from "@/modules/lib/textStyle";
 import styles from "@/styles/Contact/Contact.module.css";
 import Form from "@/components/Contact/Form";
 import ContactHero from "@/components/Contact/ContactHero";
+import ContactEnter from "@/components/Contact/ContactEnter"
 
 const Contact: NextPage = () => {
   return (
@@ -27,6 +28,7 @@ const Contact: NextPage = () => {
           </div>
           <div className={styles.right}>
             <ContactHero />
+            <ContactEnter/>
           </div>
         </div>
       </div>
