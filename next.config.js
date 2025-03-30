@@ -4,6 +4,7 @@ const withPlugins = require("next-compose-plugins");
 const nextConfig = {
   reactStrictMode: true,
   webpack: (config) => {
+    config.resolve.alias.canvas = false;
     config.module.rules.push({
       test: /\.svg$/,
       use: [
