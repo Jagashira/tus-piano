@@ -5,6 +5,7 @@ import HomeBlog from "@/components/Home/HomeBlog";
 import Hero from "@/components/Home/Hero";
 import HomeCalendar from "@/components/Calendar/HomeCalendar";
 import styles from "@/styles/Home/Home.module.css";
+import HomeFlyer from "@/components/Home/HomeFlyer";
 
 export default function Home({ news, blog }: any) {
   return (
@@ -23,9 +24,13 @@ export default function Home({ news, blog }: any) {
           <div className={styles.homeBlog}>
             <HomeBlog blogGroup={blog} />
           </div>
-          <div className={styles.homeCalendar}>
-            <HomeCalendar />
+          <div>
+            <HomeFlyer/>
           </div>
+          {/* <div className={styles.homeCalendar}>
+            <HomeCalendar />
+          </div> */}
+          
         </div>
       </div>
     </>
