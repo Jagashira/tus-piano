@@ -18,6 +18,7 @@
     "@fullcalendar/react": "^6.1.8",
     "@fullcalendar/timegrid": "^6.1.8",
     "@next/bundle-analyzer": "^13.2.3",
+    "@react-pdf/renderer": "^4.3.0",
     "@react-three/drei": "^9.57.0",
     "@react-three/fiber": "^8.11.5",
     "@rive-app/react-canvas": "^4.1.6",
