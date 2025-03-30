@@ -155,8 +155,6 @@
   font-size: 15px;
   line-height: 27px;
   color:black;
-  
-
 }
 
 @media screen and (min-width: 901px) and (max-width: 1100px) {
@@ -179,6 +177,11 @@
     padding: 40px;
     margin: auto;
   }
+  .newMemberContainer{
+    margin-top: 50px;
+
+    
+  }
   .newMemberTitle{
     font-size: 35px;
   }
@@ -195,6 +198,9 @@
     width: 300px;
     padding: 0x;
     margin: auto;
+  }
+  .newMemberContainer{
+    margin: 0;
   }
 }
 @media screen and (max-width: 600px) {
