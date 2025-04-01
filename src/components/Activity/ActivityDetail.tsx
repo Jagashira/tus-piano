@@ -29,6 +29,7 @@ const ActivityDetail = () => {
                 key={`insight-${index}`}
                 {...date}
                 index={index + 1}
+                
               />
             );
           })}

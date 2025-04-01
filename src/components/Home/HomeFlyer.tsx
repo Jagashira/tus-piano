@@ -4,11 +4,11 @@ import { TypingText } from "../other/TypingText";
 const HomeFlyer = ()=> {
   
   return (
-    <div>
+    <div className="mt-20">
       <TypingText title={"Flyer"} textStyles="text-center text-[36px]" />
       <TypingText title={"新入生に向けて"} textStyles="text-center text-[13px] " />
      
-      <div className="w-100 mt-10 mr-2 ml-2 mb-20 text-center">
+      <div className="w-100 mt-10 mr-2 ml-2 pb-20 text-center">
       <Image
       src="/img/flyer.jpg"
       width={500}
@@ -19,7 +19,7 @@ const HomeFlyer = ()=> {
     />
       </div>
     </div>
-    
+
   )
 }
 

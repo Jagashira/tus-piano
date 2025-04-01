@@ -80,6 +80,7 @@ export const activityDetailDate = [
     title: "部会",
     subtitle:
       "定期的に部会を開催していてどのように部活を進めていくか話し合います。一昨年まではコロナのため、オンラインで行っていましたが、今は対面で行っているのでぜひ参加して交流を深めましょう",
+      id:"x_vmmagnmq",
   },
   {
     imgUrl:
@@ -87,6 +88,7 @@ export const activityDetailDate = [
     title: "部内演奏会",
     subtitle:
       "ピアノの会では部会で部員の前で演奏する慣習があります。",
+      id:"wmkjplsx74ki",
   },
   {
     imgUrl:
@@ -94,6 +96,7 @@ export const activityDetailDate = [
     title: "年５回の演奏会",
     subtitle:
       "ピアノの会の一番大きな活動である音楽発表会。部員たちはピアノ演奏で才能を披露し、誰でも自由に聴くことができます。準備に力を注いでいるので、美しい音楽を楽しんでもらえることを願っています。",
+      id:"p9_r4z00oq",
   },
   {
     imgUrl:
@@ -101,6 +104,7 @@ export const activityDetailDate = [
     title: "BBQや合宿などのイベント",
     subtitle:
       "ピアノの会ではBBQや合宿など、様々なイベントを企画しています。メンバー同士の交流を深めることを目的に行っており、参加者からは毎回大きな好評を得ています。",
+      id:"stfyea7x17h",
   },
 ];
 

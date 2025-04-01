@@ -2,14 +2,16 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { fadeIn } from "@/utils/motion";
+import Link from "next/link";
 
 interface Props {
   imgUrl: string;
   title: string;
   subtitle: string;
   index: number;
+  id: string;
 }
-const ActivityDetailCard = ({ imgUrl, title, subtitle, index }: Props) => {
+const ActivityDetailCard = ({ imgUrl, title, subtitle, index, id }: Props) => {
   return (
     <motion.div
       variants={fadeIn("up", "spring", index * 0.5, 1)}
@@ -31,6 +33,7 @@ const ActivityDetailCard = ({ imgUrl, title, subtitle, index }: Props) => {
             {subtitle}
           </p>
         </div>
+        <Link href={`/blog/id/${id}`}>
         <div
           className="lg:flex hidden items-center
          justify-center w-[100px] h-[100px] rounded-full bg-transparent border-[1px] border-black"
@@ -43,6 +46,7 @@ const ActivityDetailCard = ({ imgUrl, title, subtitle, index }: Props) => {
             className="w-[40%] h-[40%] object-contain"
           />
         </div>
+        </Link>
       </div>
     </motion.div>
   );
