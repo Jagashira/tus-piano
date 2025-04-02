@@ -13,6 +13,7 @@
   background-position: center;
   background-size: cover;
   transition-duration: 500ms;
+  object-fit: cover;
 }
 .leftArrow {
   display: none;

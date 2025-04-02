@@ -19,7 +19,7 @@ const HomeFlyer = ()=> {
   };
   
   const images= [
-    {img:"/img/flyer/20250401.jpg",publishedAt:"2024/04/01"},
+    {img:"/img/flyer/20250401.jpg",publishedAt:"2025/04/01"},
     {img:"/img/flyer/20250215.jpeg",publishedAt:"2024/02/01"},
     {img:"/img/flyer/20241222.jpeg",publishedAt:"2024/12/22"}
   ];
