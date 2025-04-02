@@ -128,6 +128,9 @@ importers:
       styled-components:
         specifier: ^5.3.8
         version: 5.3.8(react-dom@18.2.0(react@18.2.0))(react-is@18.2.0)(react@18.2.0)
+      swiper:
+        specifier: ^11.2.6
+        version: 11.2.6
       three:
         specifier: ^0.150.1
         version: 0.150.1
@@ -1142,8 +1145,8 @@ packages:
       react-native:
         optional: true
 
-  '@react-three/fiber@9.1.0':
-    resolution: {integrity: sha512-r/a0dpqdz5ci17yMIWE+70WwxiTScGFEyvtDj0o4isZ7YUvPu0k78Zl7cJGL+KhheKXCzbNNxEz4+lFan6atyg==}
+  '@react-three/fiber@9.1.1':
+    resolution: {integrity: sha512-S0De6e7xnlZd2QmnBm2rZVXxlknynCSAoCW1M8fF2yH93Q/cra3xwH8rAq4CMqNARsotbZSU/eNPGY/rdQaAhA==}
     peerDependencies:
       expo: '>=43.0'
       expo-asset: '>=8.4'
@@ -3308,6 +3311,10 @@ packages:
     engines: {node: '>=10.13.0'}
     hasBin: true
 
+  swiper@11.2.6:
+    resolution: {integrity: sha512-8aXpYKtjy3DjcbzZfz+/OX/GhcU5h+looA6PbAzHMZT6ESSycSp9nAjPCenczgJyslV+rUGse64LMGpWE3PX9Q==}
+    engines: {node: '>= 4.7.0'}
+
   synckit@0.8.5:
     resolution: {integrity: sha512-L1dapNV6vu2s/4Sputv8xGsCdAVlb5nRDMFU/E27D44l5U6cw1g0dGd45uLc+OXjNMmF4ntiMdCimzcjFKQI8Q==}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -4837,7 +4844,7 @@ snapshots:
     optionalDependencies:
       react-dom: 18.2.0(react@18.2.0)
 
-  '@react-three/fiber@9.1.0(@types/react@18.0.28)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(three@0.150.1)':
+  '@react-three/fiber@9.1.1(@types/react@18.0.28)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(three@0.150.1)':
     dependencies:
       '@babel/runtime': 7.21.0
       '@types/react-reconciler': 0.28.9(@types/react@18.0.28)
@@ -6935,7 +6942,7 @@ snapshots:
 
   react-three-fiber@6.0.13(@types/react@18.0.28)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(three@0.150.1):
     dependencies:
-      '@react-three/fiber': 9.1.0(@types/react@18.0.28)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(three@0.150.1)
+      '@react-three/fiber': 9.1.1(@types/react@18.0.28)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(three@0.150.1)
       react: 18.2.0
       three: 0.150.1
     optionalDependencies:
@@ -7233,6 +7240,8 @@ snapshots:
       csso: 4.2.0
       picocolors: 1.0.0
       stable: 0.1.8
+
+  swiper@11.2.6: {}
 
   synckit@0.8.5:
     dependencies:

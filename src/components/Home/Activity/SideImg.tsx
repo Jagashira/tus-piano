@@ -1,75 +1,57 @@
-import React, { useEffect, useState } from "react";
-import { Icon } from "@iconify/react";
+import Image from "next/image";
 import styles from "@/styles/Home/HomeActivity.module.css";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 function Slider() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const slides = [
-    {
-      url: "/img/slider/1.jpg",
-    },
-    {
-      url: "/img/slider/2.jpg",
-    },
-    {
-      url: "/img/slider/3.jpg",
-    },
-
-    {
-      url: "/img/slider/4.jpg",
-    },
-    {
-      url: "/img/slider/5.jpg",
-    },
+  const images = [
+    { img: "/img/slider/1.jpg" },
+    { img: "/img/slider/2.jpg" },
+    { img: "/img/slider/3.jpg" },
+    { img: "/img/slider/4.jpg" },
+    { img: "/img/slider/5.jpg" },
   ];
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     nextSlide();
-  //   }, 10000);
-  // });
-
-  const prevSlide = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
-
-  const nextSlide = () => {
-    const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  };
-
-  const goToSlide = (slideIndex: number) => {
-    setCurrentIndex(slideIndex);
+  const slideSettings = {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    1024: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
   };
 
   return (
-    <div className={styles.sliderContainer}>
-      <div
-        style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-        className={styles.imgContainer}
-      ></div>
-      {/* Left Arrow */}
-      <div className={styles.leftArrow}>
-        <button onClick={prevSlide}>
-          <Icon
-            icon="material-symbols:arrow-back-ios-rounded"
-            className={styles.icon}
+    <Swiper
+      modules={[Autoplay]}
+      breakpoints={slideSettings} // slidesPerViewを指定
+      slidesPerView={"auto"} // ハイドレーションエラー対策
+      centeredSlides={true} // スライドを中央に配置
+      loop={true} // スライドをループさせる
+      speed={1000} // スライドが切り替わる時の速度
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }} // スライド表示時間
+      className={styles.sliderContainer}
+    >
+      {images.map((image, index) => (
+        <SwiperSlide key={index}>
+          <Image
+            src={image.img}
+            alt="Slider Image"
+            sizes="(min-width: 1024px) 100vw, 60vw"
+            className={styles.imgContainer}
+            fill
           />
-        </button>
-      </div>
-      {/* Right Arrow */}
-      <div className={styles.rightArrow}>
-        <button onClick={nextSlide}>
-          <Icon
-            icon="material-symbols:arrow-forward-ios-rounded"
-            className={styles.icon}
-          />
-        </button>
-      </div>
-    </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 }
 
