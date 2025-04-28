@@ -10,11 +10,11 @@ import styles from "@/styles/Activity/Activity.module.css";
 
 const Activities = () => {
   const imageInfo = {
-    imgUrl: "/img/animePiano.png",
+    imgUrl: "/img/activity/activity_top.jpg",
     alt: "get-started",
     width: 500,
     height: 500,
-    classname: " object-contain",
+    classname: " object-cover",
   };
   return (
     <section className={styles.activitiesWrapper}>
