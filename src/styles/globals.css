@@ -15,3 +15,31 @@ body {
   /* background-color: #121212; */
   /* background-image: radial-gradient(at 30% 13%, hsla(182,26%,72%,1) 0px, transparent 50%), radial-gradient(at 96% 4%, hsla(166,40%,78%,1) 0px, transparent 50%), radial-gradient(at 10% 80%, hsla(198,45%,78%,1) 0px, transparent 50%), radial-gradient(at 87% 90%, hsla(213,37%,74%,1) 0px, transparent 50%);*/
 }
+
+/* markdown用 */
+.blogContainer {
+  color: black;
+  z-index: 10;
+  position: relative;
+  text-align: center;
+  width: 60%;
+  margin: 50px auto;
+}
+
+.blogContainer .content {
+  line-height: 3;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 1080px) {
+  .blogContainer {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .blogContainer .content {
+    line-height: 2.6;
+    font-size: 14px;
+  }
+}

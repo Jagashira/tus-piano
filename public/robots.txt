@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://tus-piano.vercel.app/
+
+# Sitemaps
+Sitemap: https://tus-piano.vercel.app/sitemap.xml
